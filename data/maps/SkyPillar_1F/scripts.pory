@@ -1,0 +1,47 @@
+raw `
+SkyPillar_1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SkyPillar_1F_OnTransition
+	.byte 0
+
+SkyPillar_1F_OnTransition:
+	call_if_lt VAR_SKY_PILLAR_STATE, 2, SkyPillar_1F_EventScript_CleanFloor
+	end
+
+SkyPillar_1F_EventScript_CleanFloor::
+	setmaplayoutindex LAYOUT_SKY_PILLAR_1F_CLEAN
+	return
+
+SkyPillar_1F_Fry::
+	goto_if_unset FLAG_FRY, SkyPillar_1F_Fry_Afer_Battle
+	msgbox SkyPillar_1F_Fry_FirstMeeting, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq FortreeCity_Gym_WarpDude_No
+	trainerbattle_single TRAINER_FRY_SKY_PILLAR, SkyPillarText_FryIntro, SkyPillarText_FryDefeated
+	clearflag FLAG_FRY
+	release
+	end
+
+SkyPillar_1F_Fry_Afer_Battle::
+	msgbox SkyPillar_1F_Fry_AskToWarp, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq FortreeCity_Gym_WarpDude_No
+	warp MAP_SKY_PILLAR_TOP, 14, 9
+	release
+	end
+
+SkyPillar_1F_Fry_FirstMeeting:
+	.string "Philip J. Fry: Hey!\n"
+	.string "Do you want me to warp you\l"
+	.string "straight to Rayquaza?$"
+
+SkyPillarText_FryIntro:
+	.string "You'll have to battle me first!$"
+
+SkyPillarText_FryDefeated:
+	.string "Wow!\n"
+	.string "You really know your stuff!$"
+
+SkyPillar_1F_Fry_AskToWarp:
+	.string "Do you want me to warp\n"
+	.string "you to Rayquaza?$"
+`

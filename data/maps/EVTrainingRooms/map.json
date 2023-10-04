@@ -1,0 +1,137 @@
+{
+  "id": "MAP_EV_TRAINING_ROOMS",
+  "name": "EvTrainingRooms",
+  "layout": "LAYOUT_EVTRAINING_ROOMS",
+  "music": "MUS_GYM",
+  "region_map_section": "MAPSEC_EVER_GRANDE_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": 0,
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 12,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_GRINDHAUS_RANCH",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 13,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_GRINDHAUS_RANCH",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 13,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_DEFENSE_ROOM",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_ATTACK_ROOM",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_HPROOM",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 18,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_SPECIAL_ATTACK_ROOM",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 28,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_SPEED_ROOM",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 23,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_SPECIAL_DEFENSE_ROOM",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 33,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_EXPERIENCE_ROOM",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 3,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EVTrainingRooms_Sign1"
+    },
+    {
+      "type": "sign",
+      "x": 31,
+      "y": 3,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EVTrainingRooms_Sign6"
+    },
+    {
+      "type": "sign",
+      "x": 26,
+      "y": 3,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EVTrainingRooms_Sign5"
+    },
+    {
+      "type": "sign",
+      "x": 21,
+      "y": 3,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EVTrainingRooms_Sign4"
+    },
+    {
+      "type": "sign",
+      "x": 16,
+      "y": 3,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EVTrainingRooms_Sign3"
+    },
+    {
+      "type": "sign",
+      "x": 10,
+      "y": 3,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EVTrainingRooms_Sign2"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+FallarborTown_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, FallarborTown_OnTransition
+	.byte 0
+
+FallarborTown_OnTransition:
+	setflag FLAG_VISITED_FALLARBOR_TOWN
+	setvar VAR_CONTEST_HALL_STATE, 0
+	clearflag FLAG_CONTEST_SKETCH_CREATED
+	end
+
+FallarborTown_EventScript_ExpertM::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY, FallarborTown_EventScript_ExpertMNormal
+	msgbox FallarborTown_Text_ShadyCharactersCozmosHome, MSGBOX_DEFAULT
+	release
+	end
+
+FallarborTown_EventScript_ExpertMNormal::
+	msgbox FallarborTown_Text_RegionKnownForMeteors, MSGBOX_DEFAULT
+	release
+	end
+
+FallarborTown_EventScript_Girl::
+	msgbox FallarborTown_Text_MyPreciousAzurill, MSGBOX_NPC
+	end
+
+FallarborTown_EventScript_Gentleman::
+	msgbox FallarborTown_Text_HaveYouChallengedFlannery, MSGBOX_NPC
+	end
+
+FallarborTown_EventScript_Azurill::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_AZURILL, CRY_MODE_NORMAL
+	msgbox FallarborTown_Text_Azurill, MSGBOX_DEFAULT
+	waitmoncry
+	release
+	end
+
+FallarborTown_EventScript_BattleTentSign::
+	msgbox FallarborTown_Text_BattleTentSign, MSGBOX_SIGN
+	end
+
+FallarborTown_EventScript_TownSign::
+	msgbox FallarborTown_Text_TownSign, MSGBOX_SIGN
+	end
+
+FallarborTown_EventScript_MoveTutorSign::
+	msgbox FallarborTown_Text_MoveTutorSign, MSGBOX_SIGN
+	end
+
+FallarborTown_NickInGameTradeSequence::
+ 
+	// Check a flag to see if the trade has already happened
+	lock
+	faceplayer
+	goto_if_set FLAG_INGAME_NICK_TRADE, FallarborTown_EventScript_TradeCompleted
+ 
+	// Buffer the trade and requested mon names and ask if you want to trade
+	setvar VAR_0x8008, INGAME_TRADE_NICK
+	copyvar VAR_0x8004, VAR_0x8008
+	specialvar VAR_0x8009, GetInGameTradeSpeciesInfo
+	msgbox FallarborTown_Text_WillingToTradeIt, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FallarborTown_DeclineTrade
+ 
+	// Handle the selection of the requested mon from the player
+	special ChoosePartyMon
+	waitstate
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, FallarborTown_DeclineTrade
+	copyvar VAR_0x8005, VAR_0x8004
+	specialvar VAR_RESULT, GetTradeSpecies 
+	goto_if_ne VAR_RESULT, VAR_0x8009, FallarborTown_EventScript_NotRequestedMon 
+ 
+	// Perform the actual trade
+	copyvar VAR_0x8004, VAR_0x8008
+	special CreateInGameTradePokemon 
+	special DoInGameTradeScene 
+	waitstate
+ 
+	msgbox FallarborTown_TradeThanks, MSGBOX_DEFAULT
+	setflag FLAG_INGAME_NICK_TRADE
+	release
+	end
+
+FallarborTown_NickInGameTradeSequence2::
+	lock
+	faceplayer
+	goto_if_set FLAG_INGAME_NICK_TRADE, FallarborTown_EventScript_TradeCompleted
+	setvar VAR_0x8008, INGAME_TRADE_NICK
+	copyvar VAR_0x8004, VAR_0x8008
+	specialvar VAR_RESULT, GetInGameTradeSpeciesInfo
+	copyvar VAR_0x8009, VAR_RESULT
+	msgbox FallarborTown_Text_WillingToTradeIt, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FallarborTown_DeclineTrade
+	special ChoosePartyMon
+	waitstate
+	copyvar VAR_0x800A, VAR_0x8004
+	goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, FallarborTown_DeclineTrade
+	copyvar VAR_0x8005, VAR_0x800A
+	specialvar VAR_RESULT, GetTradeSpecies
+	copyvar VAR_0x800B, VAR_RESULT
+	goto_if_ne VAR_RESULT, VAR_0x8009, FallarborTown_EventScript_NotRequestedMon
+	copyvar VAR_0x8004, VAR_0x8008
+	copyvar VAR_0x8005, VAR_0x800A
+	special CreateInGameTradePokemon
+	special DoInGameTradeScene
+	waitstate
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox FallarborTown_TradeThanks, MSGBOX_DEFAULT
+	setflag FLAG_INGAME_NICK_TRADE
+	release
+	end
+ 
+FallarborTown_DeclineTrade::
+	msgbox FallarborTown_DeclineTrade_Text, MSGBOX_DEFAULT
+	release
+	end
+ 
+FallarborTown_EventScript_NotRequestedMon::
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox FallarborTown_WrongMon_Text, MSGBOX_DEFAULT
+	release
+	end
+ 
+FallarborTown_EventScript_TradeCompleted::
+	msgbox FallarborTown_EventScript_TradeCompleted_Text, MSGBOX_DEFAULT
+	release
+	end
+ 
+FallarborTown_EventScript_TradeCompleted_Text::
+	.string "Thanks for trading with me!$"
+ 
+FallarborTown_Text_WillingToTradeIt::
+	.string "This {STR_VAR_2} of mine sucks ass.\n"
+	.string "Do you want it?\p"
+	.string "Since {STR_VAR_1}s are so fucking common,\n"
+	.string "I'll trade you it for that.$"
+ 
+FallarborTown_DeclineTrade_Text::
+	.string "That's too bad, maybe next time!$"
+ 
+FallarborTown_WrongMon_Text::
+	.string "I'm sorry but that's not\n"
+	.string "a {STR_VAR_1}, I can't trade with you.$"
+ 
+FallarborTown_TradeThanks::
+	.string "Thanks! Maybe I can evolve this\n"
+	.string "into an Obstagoon!$"
+
+FallarborTown_Text_ShadyCharactersCozmosHome:
+	.string "Something's happening,\n"
+	.string "and I don't like it!\p"
+	.string "I've seen shady characters wandering\n"
+	.string "in and out of Prof. Cozmo's home…$"
+
+FallarborTown_Text_RegionKnownForMeteors:
+	.string "This region's been known for meteors\n"
+	.string "since the olden days.\p"
+	.string "They say Meteor Falls was gouged out\n"
+	.string "by a falling meteorite long ago.$"
+
+FallarborTown_Text_MyPreciousAzurill:
+	.string "See! Take a look!\n"
+	.string "This is my precious Azurill!\p"
+	.string "It's slick and smooth and plushy, too!$"
+
+FallarborTown_Text_Azurill:
+	.string "Azurill: Rooreelooo.$"
+
+FallarborTown_Text_HaveYouChallengedFlannery:
+	.string "Have you already challenged Molly,\n"
+	.string "the Leader of Lavaridge Gym?\p"
+	.string "She defeated Flannery like three\n"
+	.string "months ago.\p"
+	.string "I have no idea how, but that girl\n"
+	.string "has a lot of talent!.$"
+
+FallarborTown_Text_BattleTentSign:
+	.string "BATTLE TENT FALLARBOR SITE\n"
+	.string "“May the Greatest Teams Gather!”$"
+
+FallarborTown_Text_TownSign:
+	.string "Fallarbor Town\n"
+	.string "“A knockoff of Lavaridge Town.”$"
+
+FallarborTown_Text_MoveTutorSign:
+	.string "Move Tutor's House\n"
+	.string "“New moves taught to POKéMON.”$"
