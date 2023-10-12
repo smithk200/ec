@@ -1,4 +1,4 @@
 	.align 2
-voicegroup194::
-	voice_keysplit_all voicegroup001
-	voice_directsound 60, 0, DirectSoundWaveData_saw_synth_high, 255, 226, 0, 99
+voicegroup195::
+    voice_directsound 60, 0, DirectSoundWaveData_bari_sax_low, 255, 249, 0, 165
+	voice_directsound 60, 64, DirectSoundWaveData_bari_sax_high, 255, 0, 255, 242

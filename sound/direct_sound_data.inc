@@ -7,6 +7,10 @@ DirectSoundWaveData_trumpet_high::
 	.incbin "sound/direct_sound_samples/trumpet_high.bin"
 
 	.align 2
+DirectSoundWaveData_soprano_sax::
+	.incbin "sound/direct_sound_samples/soprano_sax.bin"
+
+	.align 2
 DirectSoundWaveData_alto_sax_low::
 	.incbin "sound/direct_sound_samples/alto_sax_low.bin"
 
