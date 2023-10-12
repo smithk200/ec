@@ -64,14 +64,14 @@ voicegroup197:: @am using placeholder voices for sounds until I find the real so
 	voice_keysplit voicegroup198, KeySplitTable6 @brass
 	voice_keysplit voicegroup198, KeySplitTable6 @synth brass
 	voice_keysplit voicegroup198, KeySplitTable6 @synth brass
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @soprano sax
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @soprano sax TODO
 	voice_keysplit voicegroup192, KeySplitTable2 @alto sax
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @tenor sax
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @bari sax
+	voice_keysplit voicegroup195, KeySplitTable4 @tenor sax
+	voice_keysplit voicegroup195, KeySplitTable4 @bari sax
 	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_oboe, 255, 255, 0, 165 @oboe
 	voice_directsound 60, 0, DirectSoundWaveData_unused_sd90_oboe, 255, 255, 0, 165 @english horn
 	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_oboe, 255, 255, 0, 165 @bassoon
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @clarinet TODO
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_flute, 255, 0, 255, 16 @piccolo
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_flute, 255, 0, 255, 16 @flute
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_flute, 255, 0, 255, 16 @recorder
@@ -88,7 +88,7 @@ voicegroup197:: @am using placeholder voices for sounds until I find the real so
 	voice_directsound 60, 0, DirectSoundWaveData_classical_choir_voice_ahhs, 255, 226, 0, 99 @voice
 	voice_directsound 60, 0, DirectSoundWaveData_unused_guitar_separates_power_chord, 255, 165, 154, 165 @fifths TODO
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16 @bass + lead TODO
-	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16 @new age TODO
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16 @new age TODO ALL after this one
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16 @warmth
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16 @polysynth
 	voice_directsound 60, 0, DirectSoundWaveData_classical_choir_voice_ahhs, 255, 0, 255, 16 @choir
@@ -104,8 +104,27 @@ voicegroup197:: @am using placeholder voices for sounds until I find the real so
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16 @goblins
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16 @echoes
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16 @sci-fi
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16 @pads and stuff
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
-
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16

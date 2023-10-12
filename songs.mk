@@ -64,7 +64,7 @@ $(MID_SUBDIR)/vs_cynthia.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V080 -P1
 
 $(MID_SUBDIR)/leader_encounter.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G195 -V080 -P1
+	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V080 -P1
 
 $(MID_SUBDIR)/vs_fry.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V090 -P1

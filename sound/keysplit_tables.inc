@@ -444,12 +444,12 @@
 	.byte 0  @ 84
 	.byte 0  @ 85
 	.byte 0  @ 86
-	.byte 0  @ 87
-	.byte 0  @ 88
-	.byte 0  @ 89
-	.byte 0  @ 90
-	.byte 0  @ 91
-	.byte 0  @ 92
+	.byte 1  @ 87
+	.byte 1  @ 88
+	.byte 1  @ 89
+	.byte 1  @ 90
+	.byte 1  @ 91
+	.byte 1  @ 92
 	.byte 1  @ 93
 	.byte 1  @ 94
 	.byte 1  @ 95
