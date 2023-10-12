@@ -60,17 +60,17 @@ voicegroup197:: @am using placeholder voices for sounds until I find the real so
 	voice_keysplit voicegroup008, KeySplitTable2 @trombone
 	voice_keysplit voicegroup008, KeySplitTable2 @tuba
 	voice_keysplit voicegroup198, KeySplitTable6 @muted trumpet
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_distortion_guitar_low, 255, 165, 180, 165
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_keysplit voicegroup009, KeySplitTable5 @french horn
+	voice_keysplit voicegroup198, KeySplitTable6 @brass
+	voice_keysplit voicegroup198, KeySplitTable6 @synth brass
+	voice_keysplit voicegroup198, KeySplitTable6 @synth brass
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @soprano sax
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @alto sax
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @tenor sax
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0 @bari sax
+	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_oboe, 255, 255, 0, 165 @oboe
+	voice_directsound 60, 0, DirectSoundWaveData_unused_sd90_oboe, 255, 255, 0, 165 @english horn
+	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_oboe, 255, 255, 0, 165 @bassoon
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
