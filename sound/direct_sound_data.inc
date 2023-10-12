@@ -7,6 +7,34 @@ DirectSoundWaveData_trumpet_high::
 	.incbin "sound/direct_sound_samples/trumpet_high.bin"
 
 	.align 2
+DirectSoundWaveData_alto_sax_low::
+	.incbin "sound/direct_sound_samples/alto_sax_low.bin"
+
+	.align 2
+DirectSoundWaveData_alto_sax_high::
+	.incbin "sound/direct_sound_samples/alto_sax_high.bin"
+
+	.align 2
+DirectSoundWaveData_tenor_sax_low::
+	.incbin "sound/direct_sound_samples/tenor_sax_low.bin"
+
+	.align 2
+DirectSoundWaveData_tenor_sax_high::
+	.incbin "sound/direct_sound_samples/tenor_sax_high.bin"
+
+	.align 2
+DirectSoundWaveData_bari_sax_high::
+	.incbin "sound/direct_sound_samples/bari_sax_high.bin"
+
+	.align 2
+DirectSoundWaveData_bari_sax_low::
+	.incbin "sound/direct_sound_samples/bari_sax_low.bin"
+
+	.align 2
+DirectSoundWaveData_fingered_bass::
+	.incbin "sound/direct_sound_samples/fingered_bass.bin"
+
+	.align 2
 DirectSoundWaveData_saw_synth::
 	.incbin "sound/direct_sound_samples/saw_synth.bin"
 

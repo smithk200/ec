@@ -58,7 +58,7 @@ $(MID_SUBDIR)/sandstorm.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V120 -P1
 
 $(MID_SUBDIR)/bowsercastle3.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G192 -V080 -P1
+	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V080 -P1
 
 $(MID_SUBDIR)/vs_cynthia.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V080 -P1
