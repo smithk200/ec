@@ -436,14 +436,14 @@
 	.byte 0  @ 76
 	.byte 0  @ 77
 	.byte 0  @ 78
-	.byte 0  @ 79
-	.byte 0  @ 80
-	.byte 0  @ 81
-	.byte 0  @ 82
-	.byte 0  @ 83
-	.byte 0  @ 84
-	.byte 0  @ 85
-	.byte 0  @ 86
+	.byte 1  @ 79
+	.byte 1  @ 80
+	.byte 1  @ 81
+	.byte 1  @ 82
+	.byte 1  @ 83
+	.byte 1  @ 84
+	.byte 1  @ 85
+	.byte 1  @ 86
 	.byte 1  @ 87
 	.byte 1  @ 88
 	.byte 1  @ 89
