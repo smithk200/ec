@@ -56,7 +56,7 @@ voicegroup192::
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 0, DirectSoundWaveData_trumpet, 255, 0, 255, 16
+	voice_keysplit voicegroup198, KeySplitTable2
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_trumpet_60, 255, 0, 193, 127
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_french_horn_60, 255, 0, 224, 165
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0

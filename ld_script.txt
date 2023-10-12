@@ -1249,6 +1249,7 @@ SECTIONS {
 	sound/songs/midi/a_test.o(.rodata);
 	sound/songs/midi/leader_encounter.o(.rodata);
 	sound/songs/midi/vs_fry.o(.rodata);
+	sound/songs/midi/stick_figures.o(.rodata);
     } =0
 
     lib_rodata :

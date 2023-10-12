@@ -7608,6 +7608,8 @@ u16 GetBattleBGM(void)
             return MUS_SANDSTORM;
         case TRAINER_CLASS_PHILIP:
             return MUS_VS_FRY;
+        case TRAINER_CLASS_PHILIP_2:
+            return MUS_STICK_FIGURES;
         case TRAINER_CLASS_CHAMPION:
             return MUS_VS_CYNTHIA;
         case TRAINER_CLASS_RIVAL:

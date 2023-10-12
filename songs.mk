@@ -70,7 +70,10 @@ $(MID_SUBDIR)/vs_fry.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V090 -P1
 
 $(MID_SUBDIR)/a_test.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G194 -V084
+	$(MID) $< $@ -E -R$(STD_REVERB) -G194 -V084 -P1
+
+$(MID_SUBDIR)/stick_figures.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V127 -P1
 
 $(MID_SUBDIR)/mus_vs_champion.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G121 -V080 -P1

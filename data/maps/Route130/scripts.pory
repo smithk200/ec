@@ -60,9 +60,8 @@ Route130_Event_Script_CaveIsClosed::
 	end
 
 Route130_Text_AnIsland:
-	.string "An Island\p"
-	.string "The Cave of Sjwhale is also\n"
-	.string "here.\p"
+	.string "An Island\n"
+	.string "The Cave of Sjwhale is also here.\p"
 	.string "An island created by Team Mag-\p"
 	.string "(There are swastikas and graffiti\n"
 	.string "drawn all over the sign.)$"

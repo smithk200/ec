@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # pokeemerald Expansion
 
 ## What is the pokeemerald Expansion?
@@ -74,4 +73,7 @@ Other disassembly and/or decompilation projects:
 ## Contacts
 
 You can find us on [Discord](https://discord.gg/d5dubZ3) and [IRC](https://web.libera.chat/?#pret).
->>>>>>> 2a4f6600f074f5fcd9aca7c93e23c99f15543061
+
+##Other notes
+Also, the Clover sprites were NOT created by me, all credit for the sprite artwork goes to the creators!!!
+This is just a fangame and I do NOT intend to make any profit off it!!!

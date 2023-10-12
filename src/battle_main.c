@@ -361,7 +361,7 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     {TRAINER_CLASS_BUG_MANIAC, 15},
     {TRAINER_CLASS_PSYCHIC, 6},
     {TRAINER_CLASS_GENTLEMAN, 20},
-    {TRAINER_CLASS_ELITE_FOUR, 25},
+    {TRAINER_CLASS_ELITE_FOUR, 35},
     {TRAINER_CLASS_LEADER, 25},
     {TRAINER_CLASS_SCHOOL_KID, 5},
     {TRAINER_CLASS_SR_AND_JR, 4},
@@ -392,7 +392,8 @@ const struct TrainerMoney gTrainerMoneyTable[] =
     {TRAINER_CLASS_HIKER, 10},
     {TRAINER_CLASS_YOUNG_COUPLE, 8},
     {TRAINER_CLASS_WINSTRATE, 10},
-    {TRAINER_CLASS_PHILIP, 20},
+    {TRAINER_CLASS_PHILIP, 25},
+    {TRAINER_CLASS_PHILIP_2, 25},
     {0xFF, 5}, // Any trainer class not listed above uses this
 };
 

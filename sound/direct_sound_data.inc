@@ -3,6 +3,10 @@ DirectSoundWaveData_trumpet::
 	.incbin "sound/direct_sound_samples/trumpet.bin"
 
 	.align 2
+DirectSoundWaveData_trumpet_high::
+	.incbin "sound/direct_sound_samples/trumpet_high.bin"
+
+	.align 2
 DirectSoundWaveData_saw_synth::
 	.incbin "sound/direct_sound_samples/saw_synth.bin"
 
@@ -248,6 +252,10 @@ DirectSoundWaveData_unknown_koto_high::
 	.align 2
 DirectSoundWaveData_sd90_classical_shakuhachi::
 	.incbin "sound/direct_sound_samples/sd90_classical_shakuhachi.bin"
+
+	.align 2
+DirectSoundWaveData_sd90_classical_shakuhachi_low::
+	.incbin "sound/direct_sound_samples/sd90_classical_shakuhachi_low.bin"
 
 	.align 2
 DirectSoundWaveData_unknown_koto_low::

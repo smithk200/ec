@@ -1066,6 +1066,10 @@ u8 GetMostSuitableMonToSwitchInto(void)
     bestMonId = GetBestMonTypeMatchup(party, firstId, lastId, invalidMons, opposingBattler);
     if (bestMonId != PARTY_SIZE)
         return bestMonId;
+    
+    bestMonId = GetBestMonDmg(party, firstId, lastId, invalidMons, opposingBattler);
+    if (bestMonId != PARTY_SIZE)
+        return bestMonId;
 
     return PARTY_SIZE;
 }

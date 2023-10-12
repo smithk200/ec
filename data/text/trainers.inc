@@ -4337,30 +4337,26 @@ Route130_Text_RodneyPostBattle:
 	.string "and won. It suits you well!$"
 
 Route130_Text_KatieIntro:
-	.string "On the beach,\n"
-	.string "my shattered blue heart finds\l"
-	.string "comfort among waves.$"
+	.string "Hey!\p"
+	.string "Stop trespassing, you rapist!$"
 
 Route130_Text_KatieDefeat:
-	.string "Like the vast blue sea,\n"
-	.string "the world of Pokémon spans\l"
-	.string "depths beyond belief.$"
+	.string "Go to hell, you misogynist!$"
 
 Route130_Text_KatiePostBattle:
-	.string "The world's children dream\n"
-	.string "of one day becoming\l"
-	.string "the Pokémon Champion.$"
+	.string "Get off this island before the\n"
+	.string "Great Sjwhale comes!$"
 
 Route130_Text_SantiagoIntro:
-	.string "Floating on the open sea like this…\n"
-	.string "It's peaceful.$"
+	.string "I have no idea why there\n"
+	.string "is land here…$"
 
 Route130_Text_SantiagoDefeat:
-	.string "I needed to be a little less peaceful!$"
+	.string "I needed to know less!$"
 
 Route130_Text_SantiagoPostBattle:
-	.string "Swimming and battling like this…\n"
-	.string "I'm one happy guy…$"
+	.string "I wish I could swim again…\n"
+	.string "I'm one sad guy…$"
 
 Route131_Text_RichardIntro:
 	.string "The sea is teeming with Pokémon.\n"

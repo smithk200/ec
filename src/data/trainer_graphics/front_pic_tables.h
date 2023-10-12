@@ -102,6 +102,8 @@ const struct MonCoords gTrainerFrontPicCoords[] =
     [TRAINER_PIC_LEADER_NEW_FLANNERY] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_CYNTHIA] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_FRY] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_FEMINIST] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_SUPER_NERD] = {.size = 8, .y_offset = 1},
 };
 
 #define TRAINER_SPRITE(trainerPic, sprite, size) [TRAINER_PIC_##trainerPic] = {sprite, size, TRAINER_PIC_##trainerPic}
@@ -210,6 +212,8 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(LEAF, gTrainerFrontPic_Leaf, 0x800),
     TRAINER_SPRITE(RS_BRENDAN, gTrainerFrontPic_RubySapphireBrendan, 0x800),
     TRAINER_SPRITE(RS_MAY, gTrainerFrontPic_RubySapphireMay, 0x800),
+    TRAINER_SPRITE(FEMINIST, gTrainerFrontPic_Feminist, 0x800),
+    TRAINER_SPRITE(SUPER_NERD, gTrainerFrontPic_SuperNerd, 0x800),
 };
 
 #define TRAINER_PAL(trainerPic, pal) [TRAINER_PIC_##trainerPic] = {pal, TRAINER_PIC_##trainerPic}
@@ -318,4 +322,6 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(RS_BRENDAN, gTrainerPalette_RubySapphireBrendan),
     TRAINER_PAL(RS_MAY, gTrainerPalette_RubySapphireMay),
     TRAINER_PAL(FRY, gTrainerPalette_Fry),
+    TRAINER_PAL(FEMINIST, gTrainerPalette_Feminist),
+    TRAINER_PAL(SUPER_NERD, gTrainerPalette_SuperNerd),
 };

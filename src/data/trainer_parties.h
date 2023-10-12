@@ -6516,12 +6516,22 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Katie[] = {
     {
     .iv = 0,
     .lvl = 53,
-    .species = SPECIES_GOLDEEN,
+    .species = SPECIES_FISHNISM,
     },
     {
     .iv = 0,
     .lvl = 53,
-    .species = SPECIES_WALREIN,
+    .species = SPECIES_FISHNISM,
+    },
+        {
+    .iv = 0,
+    .lvl = 53,
+    .species = SPECIES_SJWHALE,
+    },
+    {
+    .iv = 0,
+    .lvl = 53,
+    .species = SPECIES_SJWHALE,
     }
 };
 

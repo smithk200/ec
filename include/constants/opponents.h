@@ -262,10 +262,10 @@
 #define TRAINER_WALTER_3                    258
 #define TRAINER_WALTER_4                    259
 #define TRAINER_WALTER_5                    260
-#define TRAINER_SIDNEY                      261
-#define TRAINER_PHOEBE                      262
-#define TRAINER_GLACIA                      263
-#define TRAINER_DRAKE                       264
+#define TRAINER_TUMBLRITA                   261
+#define TRAINER_CAPTAIN_FLOYD               262
+#define TRAINER_JOY                         263
+#define TRAINER_SNOOP                       264
 #define TRAINER_ROXANNE_1                   265
 #define TRAINER_BRAWLY_1                    266
 #define TRAINER_WATTSON_1                   267
@@ -379,7 +379,7 @@
 #define TRAINER_DEMETRIUS                   375
 #define TRAINER_ISAIAH_1                    376
 #define TRAINER_PABLO_1                     377
-#define TRAINER_FRY_2                       378
+#define TRAINER_FRY_EVER_GRANDE             378
 #define TRAINER_ISAIAH_2                    379
 #define TRAINER_ISAIAH_3                    380
 #define TRAINER_ISAIAH_4                    381

@@ -119,7 +119,9 @@
 #define TRAINER_PIC_CYNTHIA                 99
 #define TRAINER_PIC_LEADER_NEW_FLANNERY     100
 #define TRAINER_PIC_FRY                     101
-#define TRAINER_PIC_COUNT                   102
+#define TRAINER_PIC_FEMINIST                102
+#define TRAINER_PIC_SUPER_NERD              103
+#define TRAINER_PIC_COUNT                   104
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0
@@ -363,6 +365,8 @@
 #define TRAINER_CLASS_PYRAMID_KING   0x40
 #define TRAINER_CLASS_RS_PROTAG      0x41
 #define TRAINER_CLASS_PHILIP         0x42
+#define TRAINER_CLASS_PHILIP_2        0x43
+#define TRAINER_CLASS_FEMINIST         0x44
 
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music
 #define TRAINER_ENCOUNTER_MUSIC_FEMALE       1 // standard female encounter music

@@ -12,7 +12,7 @@ EverGrandeCity_Hall4_EventScript_TurnPlayerNorth::
 	end
 
 EverGrandeCity_Philip_J_Fry::
-	trainerbattle_single TRAINER_FRY_2, Philip_J_Fry_2_Intro, Philip_J_Fry_2_Defeat
+	trainerbattle_single TRAINER_FRY_EVER_GRANDE, Philip_J_Fry_2_Intro, Philip_J_Fry_2_Defeat
 	msgbox Philip_J_Fry_2_Post_Battle, MSGBOX_AUTOCLOSE
 	end
 

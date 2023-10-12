@@ -617,6 +617,7 @@ gSongTable::
 	song a_test, 0, 0
 	song leader_encounter, 0, 0
 	song vs_fry, 0, 0
+	song stick_figures, 0, 0
 
 	.align 2
 dummy_song_header:
