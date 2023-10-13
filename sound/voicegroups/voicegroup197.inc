@@ -107,8 +107,8 @@ voicegroup197:: @am using placeholder voices for sounds until I find the real so
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16 @pads and stuff
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
-	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
-	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
+	voice_directsound 60, 0, DirectSoundWaveData_unknown_koto_low, 255, 0, 255, 16 @shamisen
+	voice_directsound 60, 0, DirectSoundWaveData_unknown_koto_low, 255, 0, 255, 16 @koto
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 0, 255, 16

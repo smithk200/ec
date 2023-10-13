@@ -2,7 +2,7 @@
   "id": "MAP_WILD_AREA",
   "name": "WildArea",
   "layout": "LAYOUT_WILD_AREA",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

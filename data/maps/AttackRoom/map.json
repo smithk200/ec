@@ -2,7 +2,7 @@
   "id": "MAP_ATTACK_ROOM",
   "name": "AttackRoom",
   "layout": "LAYOUT_ATTACK_ROOM",
-  "music": "MUS_GYM",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_EVER_GRANDE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

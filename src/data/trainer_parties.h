@@ -1590,9 +1590,19 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Tammy[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Valerie1[] = {
     {
-    .iv = 0,
-    .lvl = 42,
-    .species = SPECIES_SABLEYE,
+    .iv = 255,
+    .lvl = 50,
+    .species = SPECIES_SYLVEON,
+    },
+    {
+    .iv = 255,
+    .lvl = 50,
+    .species = SPECIES_WAILMER,
+    }
+    {
+    .iv = 255,
+    .lvl = 50,
+    .species = SPECIES_TOGEKISS,
     }
 };
 
@@ -3636,7 +3646,7 @@ static const struct TrainerMonItemCustomMoves sParty_Snoop[] = {
     .heldItem = ITEM_MEADOW_PLATE,
     .abilityNums = 0,
     .evs = {6, 252, 0, 0, 0, 252},
-    .moves = {MOVE_SOLAR_BEAM, MOVE_NATURES_MADNESS, MOVE_CHAOS_DUNK, MOVE_HIGH_HORSEPOWER}
+    .moves = {MOVE_HORN_LEECH, MOVE_ZEN_HEADBUTT, MOVE_CHAOS_DUNK, MOVE_HIGH_HORSEPOWER}
     },
     {
     .iv = 255,
@@ -3654,7 +3664,7 @@ static const struct TrainerMonItemCustomMoves sParty_Snoop[] = {
     .heldItem = ITEM_LIGHT_BALL,
     .abilityNums = 2,
     .evs = {6, 0, 0, 252, 0, 252},
-    .moves = {MOVE_FLAMETHROWER, MOVE_GIGA_DRAIN, MOVE_SHADOW_BALL, MOVE_DAZZLING_GLEAM}
+    .moves = {MOVE_FLAMETHROWER, MOVE_GIGA_DRAIN, MOVE_SHADOW_BALL, MOVE_AURA_SPHERE}
     },
     {
     .iv = 255,
@@ -3923,7 +3933,7 @@ static const struct TrainerMonItemCustomMoves sParty_Ned1[] = {
     .heldItem = ITEM_YACHE_BERRY,
     .abilityNums = 0,
     .evs = {6, 0, 0, 252, 0, 252},
-    .moves = {MOVE_EARTHQUAKE, MOVE_FLAMETHROWER, MOVE_SYNTHESIS, MOVE_AERIAL_ACE}
+    .moves = {MOVE_EARTHQUAKE, MOVE_STEEL_WING, MOVE_SYNTHESIS, MOVE_AERIAL_ACE}
     },
     {
     .iv = 255,
@@ -3932,7 +3942,7 @@ static const struct TrainerMonItemCustomMoves sParty_Ned1[] = {
     .heldItem = ITEM_LEFTOVERS,
     .abilityNums = 0,
     .evs = {6, 252, 0, 0, 0, 252},
-    .moves = {MOVE_IRON_HEAD, MOVE_SCARY_FACE, MOVE_EARTHQUAKE, MOVE_BRAVE_BIRD}
+    .moves = {MOVE_STEEL_WING, MOVE_SCARY_FACE, MOVE_EARTHQUAKE, MOVE_BRAVE_BIRD}
     },
     {
     .iv = 255,

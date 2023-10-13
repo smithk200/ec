@@ -26,6 +26,14 @@ Route130_OnTransition:
 	setflag FLAG_VISITED_AN_ISLAND 
 	end
 
+AnIsland_EventScript_Woman::
+	msgbox AnIsland_Text_Woman, MSGBOX_AUTOCLOSE
+	end
+
+AnIsland_EventScript_Man::
+	msgbox AnIsland_Text_Man, MSGBOX_AUTOCLOSE
+	end
+
 Route130_EventScript_SetMirageIslandLayout::
 	setmaplayoutindex LAYOUT_ROUTE130_MIRAGE_ISLAND
 	end
@@ -39,12 +47,12 @@ Route130_EventScript_Rodney::
 	msgbox Route130_Text_RodneyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route130_EventScript_Katie::
+Route130_EventScript_Katie:: @put her in the Cave of Sjwhale
 	trainerbattle_single TRAINER_KATIE, Route130_Text_KatieIntro, Route130_Text_KatieDefeat
 	msgbox Route130_Text_KatiePostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route130_EventScript_Santiago::
+Route130_EventScript_Santiago:: @put him in the Cave of Sjwhale, but may need to change his gender
 	trainerbattle_single TRAINER_SANTIAGO, Route130_Text_SantiagoIntro, Route130_Text_SantiagoDefeat
 	msgbox Route130_Text_SantiagoPostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -71,4 +79,17 @@ Route130_Text_CaveIsClosed:
 	.string "Sjwhale is closed right now.\p"
 	.string "I don't want to get in the way\n"
 	.string "of the feminists!$"
+
+AnIsland_Text_Woman:
+	.string "This island was only formed\n"
+	.string "recently. What is Team Magma\l"
+	.string "up to now?$"
+
+AnIsland_Text_Man:
+	.string "They say that the legendary\n"
+	.string "Pokémon Adesign lurks in the\l"
+	.string "Cave of Sjwhale.\p"
+	.string "However, the creator is too busy\n"
+	.string "with school to actually work on it.\p"
+	.string "So it's closed now.$"
 `

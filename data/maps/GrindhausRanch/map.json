@@ -2,7 +2,7 @@
   "id": "MAP_GRINDHAUS_RANCH",
   "name": "GrindhausRanch",
   "layout": "LAYOUT_GRINDHAUS_RANCH",
-  "music": "MUS_GYM",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

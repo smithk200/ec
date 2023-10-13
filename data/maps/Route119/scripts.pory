@@ -126,11 +126,6 @@ Route119_EventScript_DefeatedBrendan::
 	goto Route119_EventScript_RivalExitScottArrive
 	end
 
-Route119_EventScript_GiveFlyHM::
-	giveitem ITEM_HM02
-	setflag FLAG_RECEIVED_HM02
-	return
-
 Route119_EventScript_RivalExitScottArrive::
 	closemessage
 	call_if_eq VAR_TEMP_1, 1, Route119_EventScript_SetRivalPos1

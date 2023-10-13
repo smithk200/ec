@@ -29,15 +29,16 @@ MtPyre_6F_EventScript_Cedric::
 	end
 
 MtPyre_6F_Text_ValerieIntro:
-	.string "When I'm here…\n"
-	.string "A curious power flows into me…$"
+	.string "I'm a Gym Leader!\n"
+	.string "Not here, though…$"
 
 MtPyre_6F_Text_ValerieDefeat:
-	.string "The power is ebbing away…$"
+	.string "I couldn't defeat you…$"
 
 MtPyre_6F_Text_ValeriePostBattle:
-	.string "Perhaps the power is from the spirits\n"
-	.string "of POKéMON in fitful sleep here…$"
+	.string "Did you know that I am from Kalos?\n"
+	.string "It's a nice place, you should visit\l"
+	.string "sometime.$"
 
 MtPyre_6F_Text_ValerieRegister:
 	.string "Fufufu… I lost the match, but…\n"

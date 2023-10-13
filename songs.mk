@@ -57,6 +57,9 @@ $(MID_SUBDIR)/mus_vs_gym_leader.s: %.s: %.mid
 $(MID_SUBDIR)/sandstorm.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V120 -P1
 
+$(MID_SUBDIR)/heavy_light.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V120 -P1
+
 $(MID_SUBDIR)/bowsercastle3.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V080 -P1
 

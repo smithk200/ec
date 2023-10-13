@@ -79,7 +79,7 @@ voicegroup191::
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 0, DirectSoundWaveData_saw_synth_high, 155, 226, 0, 99
+	voice_directsound 60, 0, DirectSoundWaveData_saw_synth, 255, 255, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_square_wave, 255, 226, 0, 99
-	voice_directsound 60, 0, DirectSoundWaveData_saw_synth, 255, 255, 0, 0
+	voice_directsound 60, 0, DirectSoundWaveData_saw_synth, 255, 255, 255, 0
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_string_ensemble_84, 255, 226, 0, 99
