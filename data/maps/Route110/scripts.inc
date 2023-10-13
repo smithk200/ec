@@ -646,10 +646,15 @@ Route110_EventScript_Fry3::
 	end
 
 Route110_EventScript_Fry3Defeated::
-	call Route119_EventScript_GiveFlyHM
+	call Route110_EventScript_GiveFlyHM
 	msgbox Route110_Text_FryExplainFly, MSGBOX_DEFAULT
 	release
 	end
+
+Route110_EventScript_GiveFlyHM::
+	giveitem ITEM_HM02
+	setflag FLAG_RECEIVED_HM02
+	return
 
 Route110_EventScript_BirchApproachPlayer1::
 	applymovement LOCALID_BIRCH, Route110_Movement_BirchApproachPlayer1

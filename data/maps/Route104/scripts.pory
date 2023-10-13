@@ -1009,7 +1009,7 @@ Route104_EventScript_FryPostBattle::
 	end
 
 Route104_EventScript_ItemTM30::
-	giveitem TM_30
+	giveitem ITEM_TM30
 	setflag FLAG_ITEM_MT_PYRE_6F_TM30
 	msgbox Route104_Text_FryExplainShadowBall, MSGBOX_DEFAULT
 	return

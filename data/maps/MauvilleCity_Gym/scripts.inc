@@ -293,7 +293,7 @@ MauvilleCity_Gym_Text_ShawnDefeat:
 	.string "Maybe I can't…$"
 
 MauvilleCity_Gym_Text_ShawnPostBattle:
-	.string "Inventing thing sure it fun!$"
+	.string "Inventing things sure is fun!$"
 
 MauvilleCity_Gym_Text_BenIntro:
 	.string "This Gym's got puzzles!\n"
