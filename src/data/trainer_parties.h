@@ -1598,7 +1598,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Valerie1[] = {
     .iv = 255,
     .lvl = 50,
     .species = SPECIES_WAILMER,
-    }
+    },
     {
     .iv = 255,
     .lvl = 50,
