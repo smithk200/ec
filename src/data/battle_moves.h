@@ -1869,7 +1869,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_RECOVER] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_4
-            .pp = 5,
+            .pp = 10,
         #else
             .pp = 20,
         #endif

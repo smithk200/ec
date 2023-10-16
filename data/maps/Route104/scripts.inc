@@ -1002,15 +1002,15 @@ Route104_Event_Script_Fry::
 	goto Route104_EventScript_FryPostBattle
 
 Route104_EventScript_FryPostBattle::
-	call Route104_EventScript_ItemTM30
+	call_if_unset FLAG_FRY_ROUTE104_TM58, Route104_EventScript_ItemTM58
 	msgbox Route104_Text_FryPostBattle, MSGBOX_AUTOCLOSE
 	release
 	end
 
-Route104_EventScript_ItemTM30::
-	giveitem ITEM_TM30
-	setflag FLAG_ITEM_MT_PYRE_6F_TM30
-	msgbox Route104_Text_FryExplainShadowBall, MSGBOX_DEFAULT
+Route104_EventScript_ItemTM58::
+	giveitem ITEM_TM58
+	setflag FLAG_FRY_ROUTE104_TM58
+	msgbox Route104_Text_FryExplainTM58, MSGBOX_DEFAULT
 	return
 
 Route104_Text_FryIntro:
@@ -1023,10 +1023,10 @@ Route104_Text_FryDefeat:
 Route104_Text_FryPostBattle:
 	.string "I look forward to seeing you again!$"
 
-Route104_Text_FryExplainShadowBall:
-	.string "This TM is Shadow Ball.\n"
-	.string "It's a powerful move that can\l"
-	.string "lower the target's Sp. Def.$"
+Route104_EventScript_ItemTM58:
+	.string "This TM is Recover.\n"
+	.string "It can restore your HP\l"
+	.string "in a pinch!$"
 
 Route104_Text_BrineyLivesInSeasideCottage:
 	.string "That seaside cottage is where\n"
