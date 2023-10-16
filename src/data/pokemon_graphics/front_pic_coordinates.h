@@ -923,7 +923,7 @@ const struct MonCoords gMonFrontPicCoords[] =
     [SPECIES_SINGLETS]					= { .size = MON_COORDS_SIZE(64, 64), .y_offset = 6 },
     [SPECIES_DUBUS]					    = { .size = MON_COORDS_SIZE(64, 64), .y_offset = 3 },
     [SPECIES_TRIPSIUS]					= { .size = MON_COORDS_SIZE(64, 64), .y_offset = 3 },
-    [SPECIES_SAPLEAF]					= { .size = MON_COORDS_SIZE(64, 64), .y_offset = 8 },
+    [SPECIES_SAPLEAF]					= { .size = MON_COORDS_SIZE(64, 64), .y_offset = 10 },
     [SPECIES_IGNUT]					    = { .size = MON_COORDS_SIZE(64, 64), .y_offset = 4 },
     [SPECIES_PHANTASH]					= { .size = MON_COORDS_SIZE(64, 64), .y_offset = 0 },
     [SPECIES_SMOGAROBEN]				= { .size = MON_COORDS_SIZE(64, 64), .y_offset = 5 },

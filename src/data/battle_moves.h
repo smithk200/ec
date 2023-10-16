@@ -1869,7 +1869,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     [MOVE_RECOVER] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_4
-            .pp = 10,
+            .pp = 5,
         #else
             .pp = 20,
         #endif
@@ -4032,7 +4032,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
         .effect = EFFECT_HIT,
         .power = 120,
         .type = TYPE_BUG,
-        .accuracy = 85,
+        .accuracy = 90,
         .pp = 10,
         .secondaryEffectChance = 0,
         .target = MOVE_TARGET_SELECTED,
