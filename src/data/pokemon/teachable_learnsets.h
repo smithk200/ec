@@ -35034,6 +35034,8 @@ static const u16 sUrswineTeachableLearnset[] = {
     MOVE_FIRE_BLAST,
     MOVE_ROCK_TOMB,
     MOVE_TORMENT,
+    MOVE_GIGA_DRAIN,
+    MOVE_SPORE,
     MOVE_FACADE,
     MOVE_SECRET_POWER,
     MOVE_REST,
@@ -35063,6 +35065,7 @@ static const u16 sTricientTeachableLearnset[] = {
     MOVE_SECRET_POWER,
     MOVE_REST,
     MOVE_ATTRACT,
+    MOVE_CHAOS_DUNK,
     MOVE_UNAVAILABLE,
 };
 static const u16 sTricillionTeachableLearnset[] = {
@@ -35088,6 +35091,7 @@ static const u16 sTricillionTeachableLearnset[] = {
     MOVE_SECRET_POWER,
     MOVE_REST,
     MOVE_ATTRACT,
+    MOVE_CHAOS_DUNK,
     MOVE_UNAVAILABLE,
 };
 static const u16 sClovenixTeachableLearnset[] = {
@@ -35129,6 +35133,9 @@ static const u16 sClovenixTeachableLearnset[] = {
     MOVE_STEEL_WING,
     MOVE_SKILL_SWAP,
     MOVE_OVERHEAT,
+    MOVE_CHAOS_DUNK,
+    MOVE_DAZZLING_GLEAM,
+    MOVE_THIEF,
     MOVE_UNAVAILABLE,
 };
 static const u16 sInbitweenTeachableLearnset[] = {
@@ -35153,6 +35160,7 @@ static const u16 sInbitweenTeachableLearnset[] = {
     MOVE_FACADE,
     MOVE_SECRET_POWER,
     MOVE_REST,
+    MOVE_DAZZLING_GLEAM,
     MOVE_UNAVAILABLE,
 };
 static const u16 sGeighTeachableLearnset[] = {
@@ -35179,6 +35187,7 @@ static const u16 sGeighTeachableLearnset[] = {
     MOVE_FACADE,
     MOVE_SECRET_POWER,
     MOVE_REST,
+    MOVE_DAZZLING_GLEAM,
     MOVE_UNAVAILABLE,
 };
 static const u16 sDragkingTeachableLearnset[] = {
@@ -35209,6 +35218,9 @@ static const u16 sDragkingTeachableLearnset[] = {
     MOVE_SECRET_POWER,
     MOVE_REST,
     MOVE_ATTRACT,
+    MOVE_THIEF,
+    MOVE_CHAOS_DUNK,
+    MOVE_DAZZLING_GLEAM,
     MOVE_UNAVAILABLE,
 };
 

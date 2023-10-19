@@ -1132,12 +1132,12 @@
               {
                 "min_level": 28,
                 "max_level": 30,
-                "species": "SPECIES_CAROLINE"
+                "species": "SPECIES_BACUB"
               },
               {
                 "min_level": 30,
                 "max_level": 32,
-                "species": "SPECIES_SLUGMA"
+                "species": "SPECIES_BACUB"
               },
               {
                 "min_level": 28,
@@ -2551,7 +2551,7 @@
               {
                 "min_level": 30,
                 "max_level": 30,
-                "species": "SPECIES_MACHOP"
+                "species": "SPECIES_BACUB"
               },
               {
                 "min_level": 29,
@@ -2757,64 +2757,64 @@
             "encounter_rate": 20,
             "mons": [
               {
-                "min_level": 21,
-                "max_level": 21,
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_TRICIENT"
+              },
+              {
+                "min_level": 31,
+                "max_level": 31,
                 "species": "SPECIES_NUMEL"
               },
               {
-                "min_level": 21,
-                "max_level": 21,
-                "species": "SPECIES_NUMEL"
-              },
-              {
-                "min_level": 21,
-                "max_level": 21,
+                "min_level": 30,
+                "max_level": 30,
                 "species": "SPECIES_MACHOP"
               },
               {
-                "min_level": 20,
-                "max_level": 20,
-                "species": "SPECIES_NUMEL"
+                "min_level": 31,
+                "max_level": 31,
+                "species": "SPECIES_TRICIENT"
               },
               {
-                "min_level": 20,
-                "max_level": 20,
+                "min_level": 30,
+                "max_level": 30,
                 "species": "SPECIES_SPOINK"
               },
               {
-                "min_level": 20,
-                "max_level": 20,
+                "min_level": 31,
+                "max_level": 31,
+                "species": "SPECIES_TRICIENT"
+              },
+              {
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_SPOINK"
+              },
+              {
+                "min_level": 31,
+                "max_level": 31,
                 "species": "SPECIES_MACHOP"
               },
               {
-                "min_level": 21,
-                "max_level": 21,
+                "min_level": 30,
+                "max_level": 30,
+                "species": "SPECIES_TRICIENT"
+              },
+              {
+                "min_level": 31,
+                "max_level": 31,
                 "species": "SPECIES_SPOINK"
               },
               {
-                "min_level": 22,
-                "max_level": 22,
-                "species": "SPECIES_MACHOP"
-              },
-              {
-                "min_level": 22,
-                "max_level": 22,
+                "min_level": 30,
+                "max_level": 30,
                 "species": "SPECIES_NUMEL"
               },
               {
-                "min_level": 22,
-                "max_level": 22,
-                "species": "SPECIES_SPOINK"
-              },
-              {
-                "min_level": 22,
-                "max_level": 22,
-                "species": "SPECIES_NUMEL"
-              },
-              {
-                "min_level": 22,
-                "max_level": 22,
-                "species": "SPECIES_SPOINK"
+                "min_level": 31,
+                "max_level": 31,
+                "species": "SPECIES_SJWHALE"
               }
             ]
           }
@@ -3725,7 +3725,7 @@
               {
                 "min_level": 43,
                 "max_level": 43,
-                "species": "SPECIES_MIGHTYENA"
+                "species": "SPECIES_INBITWEEN"
               },
               {
                 "min_level": 44,
@@ -3735,7 +3735,7 @@
               {
                 "min_level": 44,
                 "max_level": 44,
-                "species": "SPECIES_MIGHTYENA"
+                "species": "SPECIES_INBITWEEN"
               },
               {
                 "min_level": 43,

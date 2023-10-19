@@ -2849,7 +2849,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Shane[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Justin[] = {
     {
     .iv = 0,
-    .lvl = 24,
+    .lvl = 30,
+    .species = SPECIES_BACUB,
+    },
+    {
+    .iv = 0,
+    .lvl = 30,
     .species = SPECIES_KECLEON,
     }
 };
@@ -3642,11 +3647,11 @@ static const struct TrainerMonItemCustomMoves sParty_Snoop[] = {
     {
     .iv = 255,
     .lvl = 71,
-    .species = SPECIES_TAPU_BULU,
+    .species = SPECIES_CLOVENIX,
     .heldItem = ITEM_MEADOW_PLATE,
     .abilityNums = 0,
-    .evs = {6, 252, 0, 0, 0, 252},
-    .moves = {MOVE_HORN_LEECH, MOVE_ZEN_HEADBUTT, MOVE_CHAOS_DUNK, MOVE_HIGH_HORSEPOWER}
+    .evs = {6, 0, 0, 252, 0, 252},
+    .moves = {MOVE_FLAMETHROWER, MOVE_GIGA_DRAIN, MOVE_CHAOS_DUNK, MOVE_HIGH_HORSEPOWER}
     },
     {
     .iv = 255,
@@ -3690,19 +3695,18 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
     {
     .iv = 100,
     .lvl = 12,
-    .species = SPECIES_SOLROCK,//replace with Tricient
+    .species = SPECIES_TRICIENT,
     .heldItem = ITEM_STONE_PLATE,
     .evs = {6, 252, 0, 0, 0, 252},
-    .moves = {MOVE_CONFUSION, MOVE_DEFENSE_CURL, MOVE_ROCK_POLISH, MOVE_ROCK_TOMB}
+    .moves = {MOVE_METAL_CLAW, MOVE_DEFENSE_CURL, MOVE_ROCK_POLISH, MOVE_ROCK_TOMB}
     },
     {
     .iv = 100,
-    .lvl = 11,
-    .species = SPECIES_ARON,
-    .heldItem = ITEM_AIR_BALLOON,
-    .abilityNums = 1,
+    .lvl = 12,
+    .species = SPECIES_SOLROCK,
+    .heldItem = ITEM_STONE_PLATE,
     .evs = {6, 252, 0, 0, 0, 252},
-    .moves = {MOVE_TACKLE, MOVE_DEFENSE_CURL, MOVE_METAL_CLAW, MOVE_ROCK_TOMB}
+    .moves = {MOVE_CONFUSION, MOVE_DEFENSE_CURL, MOVE_ROCK_POLISH, MOVE_ROCK_TOMB}
     },
     {
     .iv = 200,
@@ -3851,11 +3855,11 @@ static const struct TrainerMonItemCustomMoves sParty_Molly1[] = {
     {
     .iv = 255,
     .lvl = 36,
-    .species = SPECIES_CHARIZARD,
+    .species = SPECIES_URSWINE,
     .heldItem = ITEM_CHARCOAL,
-    .abilityNums = 0,
+    .abilityNums = 2,
     .evs = {6, 0, 0, 252, 0, 252},
-    .moves = {MOVE_FLAMETHROWER, MOVE_AIR_SLASH, MOVE_GIGA_DRAIN, MOVE_SPORE}
+    .moves = {MOVE_FLAMETHROWER, MOVE_PSYCHIC_FANGS, MOVE_GIGA_DRAIN, MOVE_SPORE}
     },
     {
     .iv = 255,
@@ -4070,11 +4074,11 @@ static const struct TrainerMonItemCustomMoves sParty_Bender1[] = {
     {
     .iv = 255,
     .lvl = 61,
-    .species = SPECIES_TOGEKISS,
+    .species = SPECIES_GEIGH,
     .heldItem = ITEM_SHARP_BEAK,
     .abilityNums = 0,
     .evs = {6, 0, 0, 252, 0, 252},
-    .moves = {MOVE_MOONBLAST, MOVE_RAZOR_WING, MOVE_EARTH_POWER, MOVE_FLAMETHROWER}
+    .moves = {MOVE_MOONBLAST, MOVE_RAZOR_WING, MOVE_EARTH_POWER, MOVE_CHARM}
     },
     {
     .iv = 255,
@@ -4108,7 +4112,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Ted[] = {
     {
     .iv = 10,
     .lvl = 17,
-    .species = SPECIES_RALTS,
+    .species = SPECIES_INBITWEEN,
     }
 };
 
