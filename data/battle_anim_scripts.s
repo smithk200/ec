@@ -812,6 +812,7 @@ gBattleAnims_Moves::
 	.4byte Move_CHAOS_DUNK
 	.4byte Move_HOLY_DUTY_CPU
 	.4byte Move_AN_ATTACK
+	.4byte Move_GAY_AGENDA
 @@@@ Z MOVES
 	.4byte Move_BREAKNECK_BLITZ
 	.4byte Move_ALL_OUT_PUMMELING
@@ -15925,6 +15926,7 @@ Move_SPARK:
 	end
 
 Move_ATTRACT:
+Move_GAY_AGENDA:
 	loadspritegfx ANIM_TAG_RED_HEART
 	loopsewithpan SE_M_CHARM, SOUND_PAN_ATTACKER, 12, 3
 	createvisualtask AnimTask_SwayMon, 5, 0, 12, 4096, 4, ANIM_ATTACKER

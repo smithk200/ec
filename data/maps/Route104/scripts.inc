@@ -1023,10 +1023,9 @@ Route104_Text_FryDefeat:
 Route104_Text_FryPostBattle:
 	.string "I look forward to seeing you again!$"
 
-Route104_EventScript_ItemTM58:
-	.string "This TM is Recover.\n"
-	.string "It can restore your HP\l"
-	.string "in a pinch!$"
+Route104_Text_FryExplainTM58:
+	.string "This TM is Mega Drain.\n"
+	.string "It drains the opponent's HP.$"
 
 Route104_Text_BrineyLivesInSeasideCottage:
 	.string "That seaside cottage is where\n"

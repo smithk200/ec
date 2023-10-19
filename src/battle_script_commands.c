@@ -9986,16 +9986,51 @@ static void Cmd_various(void)
         else
             gBattleCommunication[0] = B_SIDE_OPPONENT;
         break;
-    case VARIOUS_SETTARHPTOZERO:
-        if (gBattleControllerExecFlags)
-            return;
+    case VARIOUS_GAY_AGENDA:
+        {
+            struct Pokemon *monAttacker, *monTarget;
+            u16 speciesAttacker, speciesTarget;
+            u32 personalityAttacker, personalityTarget;
 
-        gActiveBattler = gBattlerTarget;
-        gBattleMons[gActiveBattler].hp = 0;
-        BtlController_EmitSetMonData(BUFFER_A, REQUEST_HP_BATTLE, 0, sizeof(gBattleMons[gActiveBattler].hp), &gBattleMons[gActiveBattler].hp);
-        MarkBattlerForControllerExec(gActiveBattler);
-        return;
-        break;
+            if (GetBattlerSide(gBattlerAttacker) == B_SIDE_PLAYER)
+                monAttacker = &gPlayerParty[gBattlerPartyIndexes[gBattlerAttacker]];
+            else
+                monAttacker = &gEnemyParty[gBattlerPartyIndexes[gBattlerAttacker]];
+
+            if (GetBattlerSide(gBattlerTarget) == B_SIDE_PLAYER)
+                monTarget = &gPlayerParty[gBattlerPartyIndexes[gBattlerTarget]];
+            else
+                monTarget = &gEnemyParty[gBattlerPartyIndexes[gBattlerTarget]];
+
+            speciesAttacker = GetMonData(monAttacker, MON_DATA_SPECIES);
+            personalityAttacker = GetMonData(monAttacker, MON_DATA_PERSONALITY);
+
+            speciesTarget = GetMonData(monTarget, MON_DATA_SPECIES);
+            personalityTarget = GetMonData(monTarget, MON_DATA_PERSONALITY);
+
+            if (GetBattlerAbility(gBattlerTarget) == ABILITY_OBLIVIOUS)
+            {
+                gBattlescriptCurrInstr = BattleScript_NotAffectedAbilityPopUp;
+                gLastUsedAbility = ABILITY_OBLIVIOUS;
+                RecordAbilityBattle(gBattlerTarget, ABILITY_OBLIVIOUS);
+            }
+            else
+            {
+                if (GetGenderFromSpeciesAndPersonality(speciesAttacker, personalityAttacker) != GetGenderFromSpeciesAndPersonality(speciesTarget, personalityTarget)
+                    || gBattleMons[gBattlerTarget].status2 & STATUS2_INFATUATION
+                    || GetGenderFromSpeciesAndPersonality(speciesAttacker, personalityAttacker) == MON_GENDERLESS
+                    || GetGenderFromSpeciesAndPersonality(speciesTarget, personalityTarget) == MON_GENDERLESS)
+                {
+                    gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
+                }
+                else
+                {
+                    gBattleMons[gBattlerTarget].status2 |= STATUS2_INFATUATED_WITH(gBattlerAttacker);
+                    gBattlescriptCurrInstr += 5;
+                }
+            }
+        }
+    break;
     } // End of switch (gBattlescriptCurrInstr[2])
     gBattlescriptCurrInstr += 3;
 }

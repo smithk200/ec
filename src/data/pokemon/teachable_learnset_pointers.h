@@ -946,6 +946,14 @@ const u16 *const gTeachableLearnsets[NUM_SPECIES] =
     [SPECIES_PROBOSKITO] = sProboskitoTeachableLearnset,
     [SPECIES_VENOWATT] = sVenowattTeachableLearnset,
     [SPECIES_ADESIGN] = sAdesignTeachableLearnset,
+    [SPECIES_BACUB] = sBacubTeachableLearnset,
+    [SPECIES_URSWINE] = sUrswineTeachableLearnset,
+    [SPECIES_TRICIENT] = sTricientTeachableLearnset,
+    [SPECIES_TRICILLION] = sTricillionTeachableLearnset,
+    [SPECIES_CLOVENIX] = sClovenixTeachableLearnset,
+    [SPECIES_INBITWEEN] = sInbitweenTeachableLearnset,
+    [SPECIES_GEIGH] = sGeighTeachableLearnset,
+    [SPECIES_DRAGKING] = sDragkingTeachableLearnset,
 #endif
     // Megas
     [SPECIES_VENUSAUR_MEGA] = sVenusaurTeachableLearnset,

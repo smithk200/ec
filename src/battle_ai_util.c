@@ -367,6 +367,7 @@ static const u16 sIgnoredPowerfulMoveEffects[] =
     EFFECT_ERUPTION,
     EFFECT_OVERHEAT,
     EFFECT_MIND_BLOWN,
+    EFFECT_HOLY_DUTY,
     IGNORED_MOVES_END
 };
 

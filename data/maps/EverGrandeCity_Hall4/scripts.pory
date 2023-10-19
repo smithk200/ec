@@ -12,9 +12,13 @@ EverGrandeCity_Hall4_EventScript_TurnPlayerNorth::
 	end
 
 EverGrandeCity_Philip_J_Fry::
-	trainerbattle_single TRAINER_FRY_EVER_GRANDE, Philip_J_Fry_2_Intro, Philip_J_Fry_2_Defeat
-	msgbox Philip_J_Fry_2_Post_Battle, MSGBOX_AUTOCLOSE
+	trainerbattle_single TRAINER_FRY_EVER_GRANDE, Philip_J_Fry_2_Intro, Philip_J_Fry_2_Defeat, Event_Script_PhilipJ_Fry_2_Defeated
+	release
 	end
+
+Event_Script_PhilipJ_Fry_2_Defeated::
+	msgbox Philip_J_Fry_2_Post_Battle, MSGBOX_DEFAULT
+	return
 
 Philip_J_Fry_2_Intro:
 	.string "Hi there! Are you ready to face\n"

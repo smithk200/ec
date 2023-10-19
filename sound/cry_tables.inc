@@ -1373,6 +1373,14 @@ gCryTable::
 	cry Cry_Proboskito
 	cry Cry_Venowatt
 	cry Cry_Adesign
+	cry Cry_Bacub
+	cry Cry_Urswine
+	cry Cry_Tricient
+	cry Cry_Tricillion
+	cry Cry_Clovenix
+	cry Cry_Inbitween
+	cry Cry_Geigh
+	cry Cry_Dragking
 	cry Cry_Unown //Cry_Wyrdeer
 	cry Cry_Unown //Cry_Kleavor
 	cry Cry_Unown //Cry_Ursaluna
@@ -3526,6 +3534,14 @@ gCryTable_Reverse::
 	cry_reverse Cry_Proboskito
 	cry_reverse Cry_Venowatt
 	cry_reverse Cry_Adesign
+	cry_reverse Cry_Bacub
+	cry_reverse Cry_Urswine
+	cry_reverse Cry_Tricient
+	cry_reverse Cry_Tricillion
+	cry_reverse Cry_Clovenix
+	cry_reverse Cry_Inbitween
+	cry_reverse Cry_Geigh
+	cry_reverse Cry_Dragking
 	cry_reverse Cry_Unown //Cry_Wyrdeer
 	cry_reverse Cry_Unown //Cry_Kleavor
 	cry_reverse Cry_Unown //Cry_Ursaluna

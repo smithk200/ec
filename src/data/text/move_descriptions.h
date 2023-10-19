@@ -3076,6 +3076,10 @@ static const u8 sHolyDutyCPUDescription[] = _(
 static const u8 sAnAttackDescription[] = _(
     "This is an attack.");
 
+static const u8 sGayAgendaDescription[] = _(
+    "Makes the same gender\n"
+    "less likely to attack.");
+
 const u8 gNotDoneYetDescription[] = _(
     "This move can't be used. Its\n"
     "effect is in development.");
@@ -3872,4 +3876,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_CHAOS_DUNK - 1] = sChaosDunkDescription,
     [MOVE_HOLY_DUTY_CPU - 1] = sHolyDutyCPUDescription,
     [MOVE_AN_ATTACK - 1] = sAnAttackDescription,
+    [MOVE_GAY_AGENDA - 1] = sGayAgendaDescription,
 };

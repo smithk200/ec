@@ -2146,7 +2146,7 @@
 	various BS_ATTACKER, VARIOUS_TRY_SYMBIOSIS
 	.endm
 
-	@Alternate ohko because i'm too lazy
-	.macro settarhptozero
-	various BS_TARGET, VARIOUS_SETTARHPTOZERO
+	.macro gayagenda ptr:req
+	various \battler VARIOUS_GAY_AGENDA
+	.4byte \ptr
 	.endm

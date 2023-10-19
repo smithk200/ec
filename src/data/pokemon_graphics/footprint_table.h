@@ -940,6 +940,14 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_PROBOSKITO] = gMonFootprint_Proboskito,
     [SPECIES_VENOWATT] = gMonFootprint_Venowatt,
     [SPECIES_ADESIGN] = gMonFootprint_Adesign,
+    [SPECIES_BACUB] = gMonFootprint_Bacub,
+    [SPECIES_URSWINE] = gMonFootprint_Urswine,
+    [SPECIES_TRICIENT] = gMonFootprint_Tricient,
+    [SPECIES_TRICILLION] = gMonFootprint_Tricillion,
+    [SPECIES_CLOVENIX] = gMonFootprint_Clovenix,
+    [SPECIES_INBITWEEN] = gMonFootprint_Inbitween,
+    [SPECIES_GEIGH] = gMonFootprint_Geigh,
+    [SPECIES_DRAGKING] = gMonFootprint_Dragking,
 #endif
     [SPECIES_EGG] = gMonFootprint_Bulbasaur,
 };

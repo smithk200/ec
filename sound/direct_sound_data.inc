@@ -4187,6 +4187,39 @@ Cry_Adesign::
 
 	.align 2
 
+Cry_Bacub::
+	.incbin "sound/direct_sound_samples/cries/bacub.bin"
+
+    .align 2
+Cry_Urswine::
+	.incbin "sound/direct_sound_samples/cries/urswine.bin"
+
+    .align 2
+Cry_Tricient::
+	.incbin "sound/direct_sound_samples/cries/tricient.bin"
+
+    .align 2
+Cry_Tricillion::
+	.incbin "sound/direct_sound_samples/cries/tricillion.bin"
+
+    .align 2
+Cry_Clovenix::
+	.incbin "sound/direct_sound_samples/cries/clovenix.bin"
+
+    .align 2
+Cry_Inbitween::
+	.incbin "sound/direct_sound_samples/cries/inbitween.bin"
+
+    .align 2
+Cry_Geigh::
+	.incbin "sound/direct_sound_samples/cries/geigh.bin"
+
+    .align 2
+Cry_Dragking::
+	.incbin "sound/direct_sound_samples/cries/dragking.bin"
+
+    .align 2
+
 Cry_Wyrdeer::
 	.incbin "sound/direct_sound_samples/cries/unown.bin"
 

@@ -4,8 +4,8 @@ voicegroup191::
 	voice_keysplit voicegroup005, KeySplitTable1
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
-	voice_directsound 60, 0, DirectSoundWaveData_ep_major_chord, 255, 188, 103, 165
-	voice_directsound 60, 0, DirectSoundWaveData_ep_minor_chord, 255, 188, 103, 165
+	voice_directsound 60, 0, DirectSoundWaveData_ep_major_chord, 255, 255, 0, 99
+	voice_directsound 60, 0, DirectSoundWaveData_ep_minor_chord, 255, 255, 0, 99
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_synth_bass, 255, 226, 0, 99
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_trumpet_60, 255, 0, 224, 165
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_trumpet_60, 255, 0, 224, 165

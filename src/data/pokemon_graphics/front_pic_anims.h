@@ -9084,6 +9084,46 @@ static const union AnimCmd sAnim_ADESIGN[] =
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_END,
 };
+static const union AnimCmd sAnim_BACUB[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_URSWINE[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_TRICIENT[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_TRICILLION[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_CLOVENIX[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_INBITWEEN[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_GEIGH[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+static const union AnimCmd sAnim_DRAGKING[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
 static const union AnimCmd sAnim_DIGLETT_ALOLAN_1[] =
 {
     ANIMCMD_FRAME(0, 1),
@@ -9824,6 +9864,46 @@ static const union AnimCmd *const sAnims_ADESIGN[] =
 {
     sAnim_GeneralFrame0,
     sAnim_ADESIGN,
+};
+static const union AnimCmd *const sAnims_BACUB[] =
+{
+    sAnim_GeneralFrame0,
+    sAnim_BACUB,
+};
+static const union AnimCmd *const sAnims_URSWINE[] =
+{
+    sAnim_GeneralFrame0,
+    sAnim_URSWINE,
+};
+static const union AnimCmd *const sAnims_TRICIENT[] =
+{
+    sAnim_GeneralFrame0,
+    sAnim_TRICIENT,
+};
+static const union AnimCmd *const sAnims_TRICILLION[] =
+{
+    sAnim_GeneralFrame0,
+    sAnim_TRICILLION,
+};
+static const union AnimCmd *const sAnims_CLOVENIX[] =
+{
+    sAnim_GeneralFrame0,
+    sAnim_CLOVENIX,
+};
+static const union AnimCmd *const sAnims_INBITWEEN[] =
+{
+    sAnim_GeneralFrame0,
+    sAnim_INBITWEEN,
+};
+static const union AnimCmd *const sAnims_GEIGH[] =
+{
+    sAnim_GeneralFrame0,
+    sAnim_GEIGH,
+};
+static const union AnimCmd *const sAnims_DRAGKING[] =
+{
+    sAnim_GeneralFrame0,
+    sAnim_DRAGKING,
 };
 static const union AnimCmd *const sAnims_BULBASAUR[] =
 {
@@ -16462,6 +16542,14 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(PROBOSKITO),
     ANIM_CMD(VENOWATT),
     ANIM_CMD(ADESIGN),
+    ANIM_CMD(BACUB),
+    ANIM_CMD(URSWINE),
+    ANIM_CMD(TRICIENT),
+    ANIM_CMD(TRICILLION),
+    ANIM_CMD(CLOVENIX),
+    ANIM_CMD(INBITWEEN),
+    ANIM_CMD(GEIGH),
+    ANIM_CMD(DRAGKING),
     ANIM_CMD(BULBASAUR),
     ANIM_CMD(IVYSAUR),
     ANIM_CMD(VENUSAUR),

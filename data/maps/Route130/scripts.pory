@@ -59,6 +59,7 @@ Route130_EventScript_Santiago:: @put him in the Cave of Sjwhale, but may need to
 
 Route130_Sign_AnIsland::
 	msgbox Route130_Text_AnIsland, MSGBOX_DEFAULT
+	release
 	end
 
 Route130_Event_Script_CaveIsClosed::

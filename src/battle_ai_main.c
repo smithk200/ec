@@ -440,13 +440,13 @@ static u8 ChooseMoveOrAction_Singles(void)
         && AI_THINKING_STRUCT->aiFlags & (AI_FLAG_CHECK_VIABILITY | AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_PREFER_BATON_PASS))
     {
         // Consider switching if all moves are worthless to use.
-        if (GetTotalBaseStat(gBattleMons[sBattler_AI].species) >= 310 // Mon is not weak.
+        if (GetTotalBaseStat(gBattleMons[sBattler_AI].species) >= 400 // Mon is not weak. Originally 310.
             && gBattleMons[sBattler_AI].hp >= gBattleMons[sBattler_AI].maxHP / 2) // Mon has more than 50% of its HP
         {
-            s32 cap = AI_THINKING_STRUCT->aiFlags & (AI_FLAG_CHECK_VIABILITY) ? 95 : 93;
+            s32 cap = AI_THINKING_STRUCT->aiFlags & (AI_FLAG_CHECK_VIABILITY) ? 98 : 93; //originally 95
             for (i = 0; i < MAX_MON_MOVES; i++)
             {
-                if (AI_THINKING_STRUCT->score[i] > cap)
+                if (AI_THINKING_STRUCT->score[i] > cap) //a threshold where if any move score is above that, we don't decide to switch
                     break;
             }
 
@@ -456,7 +456,6 @@ static u8 ChooseMoveOrAction_Singles(void)
                 return AI_CHOICE_SWITCH;
             }
         }
-
         // Consider switching if your mon with truant is bodied by Protect spam.
         // Or is using a double turn semi invulnerable move(such as Fly) and is faster.
         if (GetBattlerAbility(sBattler_AI) == ABILITY_TRUANT
@@ -728,8 +727,14 @@ static s16 AI_CheckBadMove(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
             RETURN_SCORE_MINUS(20);
             break;
         case AI_EFFECTIVENESS_x0_5:
+            RETURN_SCORE_MINUS(10);
+            break;
+        case AI_EFFECTIVENESS_x1:
+            if (GetMoveDamageResult(move) == MOVE_POWER_WEAK) //don't want to use a weak move
+            {
             RETURN_SCORE_MINUS(5);
             break;
+            }
         }
 
         // target ability checks
@@ -989,10 +994,6 @@ static s16 AI_CheckBadMove(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
                 else
                     score--;
             }
-            break;
-        case EFFECT_HOLY_DUTY:
-            if ((AI_THINKING_STRUCT->aiFlags & AI_FLAG_WILL_SUICIDE))
-                RETURN_SCORE_PLUS(105)
             break;
         case EFFECT_DREAM_EATER:
             if (!(gBattleMons[battlerDef].status1 & STATUS1_SLEEP) || AI_DATA->abilities[battlerDef] == ABILITY_COMATOSE)
@@ -1588,6 +1589,7 @@ static s16 AI_CheckBadMove(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
                 score -= 8;
             break;
         case EFFECT_ATTRACT:
+        case EFFECT_GAY_AGENDA:
             if (!AI_CanBeInfatuated(battlerAtk, battlerDef, AI_DATA->abilities[battlerDef],
              GetGenderFromSpeciesAndPersonality(gBattleMons[battlerAtk].species, gBattleMons[battlerAtk].personality),
              GetGenderFromSpeciesAndPersonality(gBattleMons[battlerDef].species, gBattleMons[battlerDef].personality)))
@@ -2668,15 +2670,26 @@ static s16 AI_TryToFaint(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
             score += 10;
             break;
         case AI_EFFECTIVENESS_x4:
-            score += 6;
+            score += 5;
             break;
         case AI_EFFECTIVENESS_x2:
-            if (AI_RandLessThan(176))
+            if (GetMoveDamageResult(move) == MOVE_POWER_BEST) //if it's the most powerful move to use, use it
+            {  
                 score += 2;
-            else
-                score ++;
                 break;
-            break;
+            }
+            else //if it's not, make the ai unpredictable about whether it'll use it or not
+            {
+                if (AI_RandLessThan(128))
+                    score ++;
+                else
+                    break;
+            }
+        case AI_EFFECTIVENESS_x1:
+            if (GetMoveDamageResult(move) == MOVE_POWER_BEST) //if it's a good move, we should use it
+                score += 2;
+                break;
+        break;
         }
     }
 
@@ -3125,7 +3138,7 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
 
     // check damage
     if (gBattleMoves[move].power != 0 && GetMoveDamageResult(move) == MOVE_POWER_WEAK)
-        score--;
+        score -= 2;
 
     // check status move preference
     if (AI_THINKING_STRUCT->aiFlags & AI_FLAG_PREFER_STATUS_MOVES && IS_MOVE_STATUS(move) && effectiveness != AI_EFFECTIVENESS_x0)
@@ -3176,6 +3189,10 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
     {
     case EFFECT_HIT:
         break;
+    case EFFECT_HOLY_DUTY:
+        if ((AI_THINKING_STRUCT->aiFlags & AI_FLAG_WILL_SUICIDE))
+            score += 105;
+            break;
     case EFFECT_SLEEP:
     case EFFECT_YAWN:
         if ((gBattleMons[battlerAtk].species == SPECIES_MOTHERFUCK) & (AI_THINKING_STRUCT->aiFlags & AI_FLAG_OMNISCIENT)) //if the AI has Motherfuck, we should put them to sleep
@@ -3579,14 +3596,21 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
     case EFFECT_SPEED_DOWN_HIT:
         if (WillAIStrikeFirst())
             score -= 2;
-        else if (!AI_RandLessThan(70))
-            score++;
-        if (ShouldLowerSpeed(battlerAtk, battlerDef, AI_DATA->abilities[battlerDef]))
+        //else if (!AI_RandLessThan(70))
+            //score++;
+        if (gBattleMoves[move].secondaryEffectChance >= 50) //should increase score for bulldoze, which lowers speed 100% of the time. chaos dunk only does it 10% of the time.
         {
-            if (sereneGraceBoost && AI_DATA->abilities[battlerDef] != ABILITY_CONTRARY)
-                score += 5;
-            else
-                score += 2;
+            if (ShouldLowerSpeed(battlerAtk, battlerDef, AI_DATA->abilities[battlerDef]))
+            {
+                if (sereneGraceBoost && AI_DATA->abilities[battlerDef] != ABILITY_CONTRARY)
+                    score += 5;
+                else
+                    score += 2;
+            }
+        }
+        else
+        {
+            score --;
         }
         break;
     case EFFECT_SUBSTITUTE:
@@ -3623,8 +3647,8 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
         if (!HasDamagingMove(battlerDef) || IsBattlerTrapped(battlerDef, FALSE))
             score += 2;
         break;
-    case EFFECT_DO_NOTHING:
-        //todo - check z splash, z celebrate, z happy hour (lol)
+    case EFFECT_DO_NOTHING: //todo - check z splash, z celebrate, z happy hour (lol)
+        score -= 10;
         break;
     case EFFECT_TELEPORT:
         if (!(gBattleTypeFlags & BATTLE_TYPE_TRAINER) || GetBattlerSide(battlerAtk) != B_SIDE_PLAYER)
@@ -4084,6 +4108,7 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
             score += 3;
         break;
     case EFFECT_ATTRACT:
+    case EFFECT_GAY_AGENDA:
         if (!isDoubleBattle && BattlerWillFaintFromSecondaryDamage(battlerDef, AI_DATA->abilities[battlerDef])
           && AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER) // Target goes first
             break; // Don't use if the attract won't have a change to activate
@@ -4806,7 +4831,6 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
     //case EFFECT_SKY_DROP
         //break;
     } // move effect checks
-
     return score;
 }
 
@@ -4909,7 +4933,7 @@ static s16 AI_SetupFirstTurn(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
     case EFFECT_HAIL:
     case EFFECT_GEOMANCY:
     case EFFECT_SLEEP:
-        score += 2;
+        score += 4;
         break;
     default:
         break;
@@ -4940,6 +4964,7 @@ static s16 AI_Risky(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
     case EFFECT_DESTINY_BOND:
     case EFFECT_SWAGGER:
     case EFFECT_ATTRACT:
+    case EFFECT_GAY_AGENDA:
     case EFFECT_PRESENT:
     case EFFECT_ALL_STATS_UP_HIT:
     case EFFECT_BELLY_DRUM:

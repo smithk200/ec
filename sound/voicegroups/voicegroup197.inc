@@ -64,7 +64,7 @@ voicegroup197:: @am using placeholder voices for sounds until I find the real so
 	voice_keysplit voicegroup198, KeySplitTable6 @brass
 	voice_keysplit voicegroup198, KeySplitTable6 @synth brass
 	voice_keysplit voicegroup198, KeySplitTable6 @synth brass
-	voice_directsound 60, 0, DirectSoundWaveData_soprano_sax, 255, 226, 0, 9 @soprano sax TODO
+	voice_directsound 60, 0, DirectSoundWaveData_soprano_sax, 255, 226, 0, 9 @soprano sax
 	voice_keysplit voicegroup192, KeySplitTable2 @alto sax
 	voice_keysplit voicegroup195, KeySplitTable4 @tenor sax
 	voice_keysplit voicegroup194, KeySplitTable4 @bari sax

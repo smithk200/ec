@@ -20,6 +20,6 @@
 #define P_GEN_7_POKEMON         TRUE        // Generation 7 Pokémon (SM, USUM, LGPE)
 #define P_GEN_8_POKEMON         TRUE        // Generation 8 Pokémon (SwSh, BDSP, LA)
 
-#define P_ENABLE_DEBUG          FALSE        // Enables a debug menu for pokemon sprites and icons, accessed by pressing SELECT in the summary screen.
+#define P_ENABLE_DEBUG          TRUE        // Enables a debug menu for pokemon sprites and icons, accessed by pressing SELECT in the summary screen.
 
 #endif // GUARD_CONSTANTS_POKEMON_CONFIG_H

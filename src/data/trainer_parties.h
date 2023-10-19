@@ -3484,7 +3484,7 @@ static const struct TrainerMonItemCustomMoves sParty_Tumblrita[] = {
     .heldItem = ITEM_MYSTIC_WATER,
     .abilityNums = 0,
     .evs = {0, 100, 0, 158, 0, 252},
-    .moves = {MOVE_EARTHQUAKE, MOVE_SURF, MOVE_ICE_BEAM, MOVE_NASTY_PLOT}
+    .moves = {MOVE_EARTH_POWER, MOVE_SURF, MOVE_ICE_BEAM, MOVE_NASTY_PLOT}
     },
     {
     .iv = 255,
@@ -3598,7 +3598,7 @@ static const struct TrainerMonItemCustomMoves sParty_Joy[] = {
     .heldItem = ITEM_PAYAPA_BERRY,
     .abilityNums = 2,
     .evs = {6, 0, 0, 252, 0, 252},
-    .moves = {MOVE_PARABOLIC_CHARGE, MOVE_SLUDGE_WAVE, MOVE_GIGA_DRAIN, MOVE_SIGNAL_BEAM}
+    .moves = {MOVE_PARABOLIC_CHARGE, MOVE_SLUDGE_WAVE, MOVE_GIGA_DRAIN, MOVE_BUG_BUZZ}
     },
     {
     .iv = 255,
@@ -3615,7 +3615,7 @@ static const struct TrainerMonItemCustomMoves sParty_Joy[] = {
     .species = SPECIES_RAIKOU,
     .heldItem = ITEM_WISE_GLASSES,
     .abilityNums = 0,
-    .evs = {0, 129, 0, 129, 0, 252},
+    .evs = {0, 0, 0, 252, 0, 252},
     .moves = {MOVE_PSYCHIC, MOVE_THUNDERBOLT, MOVE_SCALD, MOVE_AURA_SPHERE}
     },
     {

@@ -11138,7 +11138,94 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 290,
         .trainerOffset = 2,
     },
-
+    [NATIONAL_DEX_BACUB] =
+   {
+        .categoryName = _("Bacon"),
+        .height = 15,
+        .weight = 330,
+        .description = gBacubPokedexText,
+        .pokemonScale = 100,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+[NATIONAL_DEX_URSWINE] =
+   {
+        .categoryName = _("Bacon Bear"),
+        .height = 15,
+        .weight = 330,
+        .description = gUrswinePokedexText,
+        .pokemonScale = 100,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+[NATIONAL_DEX_TRICIENT] =
+   {
+        .categoryName = _("EditHere"),
+        .height = 15,
+        .weight = 330,
+        .description = gTricientPokedexText,
+        .pokemonScale = 100,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+[NATIONAL_DEX_TRICILLION] =
+   {
+        .categoryName = _("EditHere"),
+        .height = 15,
+        .weight = 330,
+        .description = gTricillionPokedexText,
+        .pokemonScale = 100,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+[NATIONAL_DEX_CLOVENIX] =
+   {
+        .categoryName = _("EditHere"),
+        .height = 15,
+        .weight = 330,
+        .description = gClovenixPokedexText,
+        .pokemonScale = 100,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+[NATIONAL_DEX_INBITWEEN] =
+   {
+        .categoryName = _("Kind of Gay"),
+        .height = 15,
+        .weight = 330,
+        .description = gInbitweenPokedexText,
+        .pokemonScale = 100,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+[NATIONAL_DEX_GEIGH] =
+   {
+        .categoryName = _("Gay"),
+        .height = 15,
+        .weight = 330,
+        .description = gGeighPokedexText,
+        .pokemonScale = 100,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
+[NATIONAL_DEX_DRAGKING] =
+   {
+        .categoryName = _("Very Gay"),
+        .height = 15,
+        .weight = 330,
+        .description = gDragkingPokedexText,
+        .pokemonScale = 100,
+        .pokemonOffset = 0,
+        .trainerScale = 290,
+        .trainerOffset = 2,
+    },
     [NATIONAL_DEX_WYRDEER] =
     {
         .categoryName = _("Big Horn"),
