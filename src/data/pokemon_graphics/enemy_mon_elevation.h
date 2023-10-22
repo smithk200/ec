@@ -275,4 +275,5 @@ const u8 gEnemyMonElevation[NUM_SPECIES] =
     [SPECIES_SMOGAROBEN] = 6,
     [SPECIES_SMOXILON] = 6,
     [SPECIES_VENOWATT] = 3,
+    [SPECIES_CLOVENIX] = 6,
 };

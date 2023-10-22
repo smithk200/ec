@@ -727,8 +727,15 @@ static s16 AI_CheckBadMove(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
             RETURN_SCORE_MINUS(20);
             break;
         case AI_EFFECTIVENESS_x0_5:
-            RETURN_SCORE_MINUS(10);
-            break;
+            if (GetMoveDamageResult(move) == MOVE_POWER_BEST) //idk why this is but sometimes their best move will be a non-effective type
+            {
+                break;
+            }
+            else
+            {
+                RETURN_SCORE_MINUS(10);
+                break;
+            }
         case AI_EFFECTIVENESS_x1:
             if (GetMoveDamageResult(move) == MOVE_POWER_WEAK) //don't want to use a weak move
             {
@@ -2675,7 +2682,7 @@ static s16 AI_TryToFaint(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
         case AI_EFFECTIVENESS_x2:
             if (GetMoveDamageResult(move) == MOVE_POWER_BEST) //if it's the most powerful move to use, use it
             {  
-                score += 2;
+                score += 3;
                 break;
             }
             else //if it's not, make the ai unpredictable about whether it'll use it or not
@@ -3196,7 +3203,7 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
     case EFFECT_SLEEP:
     case EFFECT_YAWN:
         if ((gBattleMons[battlerAtk].species == SPECIES_MOTHERFUCK) & (AI_THINKING_STRUCT->aiFlags & AI_FLAG_OMNISCIENT)) //if the AI has Motherfuck, we should put them to sleep
-            score += 5;
+            score += 105;
         if (AI_RandLessThan(128))
             IncreaseSleepScore(battlerAtk, battlerDef, move, &score);
         break;
