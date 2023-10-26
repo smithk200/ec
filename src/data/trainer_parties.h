@@ -3999,20 +3999,20 @@ static const struct TrainerMonItemCustomMoves sParty_Tate[] = {
     {
     .iv = 255,
     .lvl = 49,
-    .species = SPECIES_XATU,
+    .species = SPECIES_BRONZONG,
     .heldItem = ITEM_LUM_BERRY,
-    .abilityNums = 1,
-    .evs = {6, 0, 0, 252, 0, 252},
-    .moves = {MOVE_PSYCHIC, MOVE_AIR_CUTTER, MOVE_CONFUSE_RAY, MOVE_CALM_MIND}
+    .abilityNums = 0,
+    .evs = {0, 0, 0, 252, 0, 252},
+    .moves = {MOVE_PSYCHIC, MOVE_GYRO_BALL, MOVE_CURSE, MOVE_EARTHQUAKE}
     },
     {
     .iv = 255,
     .lvl = 50,
-    .species = SPECIES_MEW,
+    .species = SPECIES_GARDEVOIR,
     .heldItem = ITEM_LUM_BERRY,
     .abilityNums = 0,
     .evs = {6, 0, 0, 252, 0, 252},
-    .moves = {MOVE_PSYCHIC, MOVE_DAZZLING_GLEAM, MOVE_ICE_BEAM, MOVE_NASTY_PLOT}
+    .moves = {MOVE_PSYCHIC, MOVE_MOONBLAST, MOVE_WISH, MOVE_NASTY_PLOT}
     },
     {
     .iv = 255,
@@ -4026,33 +4026,24 @@ static const struct TrainerMonItemCustomMoves sParty_Tate[] = {
     {
     .iv = 255,
     .lvl = 52,
-    .species = SPECIES_ESPEON,
-    .heldItem = ITEM_LUM_BERRY,
+    .species = SPECIES_LUNATONE,
+    .heldItem = ITEM_TWISTED_SPOON,
     .abilityNums = 0,
     .evs = {6, 0, 0, 252, 0, 252},
-    .moves = {MOVE_AURA_SPHERE, MOVE_PSYCHIC, MOVE_BABY_DOLL_EYES, MOVE_CALM_MIND}
+    .moves = {MOVE_CHAOS_DUNK, MOVE_PSYCHIC, MOVE_GRASS_KNOT, MOVE_CALM_MIND}
     },
     {
     .iv = 255,
     .lvl = 53,
-    .species = SPECIES_TRIPSIUS,
-    .heldItem = ITEM_LIFE_ORB,
+    .species = SPECIES_MEW,
+    .heldItem = ITEM_WISE_GLASSES,
     .abilityNums = 0,
     .evs = {6, 0, 0, 252, 0, 252},
-    .moves = {MOVE_THUNDERBOLT, MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_AURA_SPHERE}
+    .moves = {MOVE_PSYCHIC, MOVE_DAZZLING_GLEAM, MOVE_ICE_BEAM, MOVE_NASTY_PLOT}
     }
 };
 
 static const struct TrainerMonItemCustomMoves sParty_Liza[] = {
-    {
-    .iv = 255,
-    .lvl = 48,
-    .species = SPECIES_CLAYDOL,
-    .heldItem = ITEM_LIGHT_CLAY,
-    .abilityNums = 0,
-    .evs = {6, 0, 0, 252, 0, 252},
-    .moves = {MOVE_EARTH_POWER, MOVE_REFLECT, MOVE_PSYCHIC, MOVE_LIGHT_SCREEN}
-    },
     {
     .iv = 255,
     .lvl = 49,
@@ -4065,29 +4056,38 @@ static const struct TrainerMonItemCustomMoves sParty_Liza[] = {
     {
     .iv = 255,
     .lvl = 50,
-    .species = SPECIES_MEW,
-    .heldItem = ITEM_LUM_BERRY,
+    .species = SPECIES_HYLETRACK,
+    .heldItem = ITEM_AIR_BALLOON,
     .abilityNums = 0,
-    .evs = {6, 0, 0, 252, 0, 252},
-    .moves = {MOVE_PSYCHIC, MOVE_DAZZLING_GLEAM, MOVE_ICE_BEAM, MOVE_NASTY_PLOT}
+    .evs = {6, 252, 0, 0, 0, 252},
+    .moves = {MOVE_HEAT_CRASH, MOVE_BULLDOZE, MOVE_IRON_HEAD, MOVE_STEAMROLLER}
     },
     {
     .iv = 255,
     .lvl = 51,
-    .species = SPECIES_SJWHALE,
+    .species = SPECIES_LUCARIO,
     .heldItem = ITEM_LUM_BERRY,
     .abilityNums = 0,
-    .evs = {0, 0, 129, 0, 129, 252},
-    .moves = {MOVE_TRIGGER, MOVE_LIQUIDATION, MOVE_BELLY_DRUM, MOVE_SLACK_OFF}
+    .evs = {6, 0, 0, 252, 0, 252},
+    .moves = {MOVE_AURA_SPHERE, MOVE_FLASH_CANNON, MOVE_DRAGON_PULSE, MOVE_WATER_PULSE}
     },
     {
     .iv = 255,
     .lvl = 52,
-    .species = SPECIES_ESPEON,
+    .species = SPECIES_TOGEKISS,
     .heldItem = ITEM_LUM_BERRY,
     .abilityNums = 0,
+    .evs = {0, 0, 129, 0, 129, 252},
+    .moves = {MOVE_RAZOR_WING, MOVE_PSYCHIC, MOVE_MOONBLAST, MOVE_RECOVER}
+    },
+    {
+    .iv = 255,
+    .lvl = 52,
+    .species = SPECIES_SOLROCK,
+    .heldItem = ITEM_TWISTED_SPOON,
+    .abilityNums = 0,
     .evs = {6, 0, 0, 252, 0, 252},
-    .moves = {MOVE_AURA_SPHERE, MOVE_PSYCHIC, MOVE_BABY_DOLL_EYES, MOVE_CALM_MIND}
+    .moves = {MOVE_CHAOS_DUNK, MOVE_PSYCHIC, MOVE_GRASS_KNOT, MOVE_CALM_MIND}
     },
     {
     .iv = 255,
@@ -4096,7 +4096,7 @@ static const struct TrainerMonItemCustomMoves sParty_Liza[] = {
     .heldItem = ITEM_LIFE_ORB,
     .abilityNums = 0,
     .evs = {6, 0, 0, 252, 0, 252},
-    .moves = {MOVE_THUNDERBOLT, MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_AURA_SPHERE}
+    .moves = {MOVE_THUNDERBOLT, MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_CALM_MIND}
     }
 };
 
