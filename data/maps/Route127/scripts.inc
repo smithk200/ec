@@ -25,11 +25,6 @@ Route127_EventScript_Camden::
 	msgbox Route127_Text_CamdenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route127_EventScript_Donny::
-	trainerbattle_single TRAINER_DONNY, Route127_Text_DonnyIntro, Route127_Text_DonnyDefeat
-	msgbox Route127_Text_DonnyPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route127_EventScript_Jonah::
 	trainerbattle_single TRAINER_JONAH, Route127_Text_JonahIntro, Route127_Text_JonahDefeat
 	msgbox Route127_Text_JonahPostBattle, MSGBOX_AUTOCLOSE

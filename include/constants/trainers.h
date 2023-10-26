@@ -121,7 +121,9 @@
 #define TRAINER_PIC_FRY                     101
 #define TRAINER_PIC_FEMINIST                102
 #define TRAINER_PIC_SUPER_NERD              103
-#define TRAINER_PIC_COUNT                   104
+#define TRAINER_PIC_TATE                    104
+#define TRAINER_PIC_LIZA                    105
+#define TRAINER_PIC_COUNT                   106
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0

@@ -7428,6 +7428,8 @@ extern const u32 gTrainerFrontPic_RubySapphireMay[];
 extern const u32 gTrainerFrontPic_Fry[];
 extern const u32 gTrainerFrontPic_Feminist[];
 extern const u32 gTrainerFrontPic_SuperNerd[];
+extern const u32 gTrainerFrontPic_Tate[];
+extern const u32 gTrainerFrontPic_Liza[];
 
 extern const u32 gTrainerPalette_Hiker[];
 extern const u32 gTrainerPalette_AquaGruntM[];
@@ -7533,6 +7535,7 @@ extern const u32 gTrainerPalette_RubySapphireMay[];
 extern const u32 gTrainerPalette_Fry[];
 extern const u32 gTrainerPalette_Feminist[];
 extern const u32 gTrainerPalette_SuperNerd[];
+extern const u32 gTrainerPalette_LeaderTateAndLiza2[];
 
 extern const u8 gTrainerBackPic_Brendan[];
 extern const u8 gTrainerBackPic_May[];

@@ -17,7 +17,8 @@ EverGrandeCity_Philip_J_Fry::
 
 Event_Script_PhilipJ_Fry_2_Defeated::
 	msgbox Philip_J_Fry_2_Post_Battle, MSGBOX_DEFAULT
-	return
+	release
+	end
 
 Philip_J_Fry_2_Intro:
 	.string "Hi there! Are you ready to face\n"

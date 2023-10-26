@@ -272,7 +272,7 @@
 #define TRAINER_MOLLY_1                     268
 #define TRAINER_NORMAN_1                    269
 #define TRAINER_NED_1                       270
-#define TRAINER_TATE_AND_LIZA_1             271
+#define TRAINER_LIZA                        271 //Tate is somewhere else.
 #define TRAINER_BENDER_1                    272
 #define TRAINER_JERRY_1                     273
 #define TRAINER_TED                         274
@@ -385,7 +385,7 @@
 #define TRAINER_ISAIAH_4                    381
 #define TRAINER_ISAIAH_5                    382
 #define TRAINER_ISOBEL                      383
-#define TRAINER_DONNY                       384
+#define TRAINER_TATE                       384
 #define TRAINER_TALIA                       385
 #define TRAINER_KATELYN_1                   386
 #define TRAINER_ALLISON                     387

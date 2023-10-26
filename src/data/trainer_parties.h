@@ -3986,7 +3986,64 @@ static const struct TrainerMonItemCustomMoves sParty_Ned1[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_TateAndLiza1[] = {
+static const struct TrainerMonItemCustomMoves sParty_Tate[] = {
+    {
+    .iv = 255,
+    .lvl = 48,
+    .species = SPECIES_CLAYDOL,
+    .heldItem = ITEM_LIGHT_CLAY,
+    .abilityNums = 0,
+    .evs = {6, 0, 0, 252, 0, 252},
+    .moves = {MOVE_EARTH_POWER, MOVE_REFLECT, MOVE_PSYCHIC, MOVE_LIGHT_SCREEN}
+    },
+    {
+    .iv = 255,
+    .lvl = 49,
+    .species = SPECIES_XATU,
+    .heldItem = ITEM_LUM_BERRY,
+    .abilityNums = 1,
+    .evs = {6, 0, 0, 252, 0, 252},
+    .moves = {MOVE_PSYCHIC, MOVE_AIR_CUTTER, MOVE_CONFUSE_RAY, MOVE_CALM_MIND}
+    },
+    {
+    .iv = 255,
+    .lvl = 50,
+    .species = SPECIES_MEW,
+    .heldItem = ITEM_LUM_BERRY,
+    .abilityNums = 0,
+    .evs = {6, 0, 0, 252, 0, 252},
+    .moves = {MOVE_PSYCHIC, MOVE_DAZZLING_GLEAM, MOVE_ICE_BEAM, MOVE_NASTY_PLOT}
+    },
+    {
+    .iv = 255,
+    .lvl = 51,
+    .species = SPECIES_SJWHALE,
+    .heldItem = ITEM_LUM_BERRY,
+    .abilityNums = 0,
+    .evs = {0, 0, 129, 0, 129, 252},
+    .moves = {MOVE_TRIGGER, MOVE_LIQUIDATION, MOVE_BELLY_DRUM, MOVE_SLACK_OFF}
+    },
+    {
+    .iv = 255,
+    .lvl = 52,
+    .species = SPECIES_ESPEON,
+    .heldItem = ITEM_LUM_BERRY,
+    .abilityNums = 0,
+    .evs = {6, 0, 0, 252, 0, 252},
+    .moves = {MOVE_AURA_SPHERE, MOVE_PSYCHIC, MOVE_BABY_DOLL_EYES, MOVE_CALM_MIND}
+    },
+    {
+    .iv = 255,
+    .lvl = 53,
+    .species = SPECIES_TRIPSIUS,
+    .heldItem = ITEM_LIFE_ORB,
+    .abilityNums = 0,
+    .evs = {6, 0, 0, 252, 0, 252},
+    .moves = {MOVE_THUNDERBOLT, MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_AURA_SPHERE}
+    }
+};
+
+static const struct TrainerMonItemCustomMoves sParty_Liza[] = {
     {
     .iv = 255,
     .lvl = 48,
@@ -5595,19 +5652,6 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Isaiah5[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Isobel[] = {
     {
     .iv = 0,
-    .lvl = 54,
-    .species = SPECIES_STARMIE,
-    }
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_Donny[] = {
-    {
-    .iv = 0,
-    .lvl = 50,
-    .species = SPECIES_PELIPPER,
-    },
-    {
-    .iv = 160,
     .lvl = 54,
     .species = SPECIES_STARMIE,
     }
