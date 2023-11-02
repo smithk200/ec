@@ -156,7 +156,7 @@
 #define TRAINER_DOMINIK                     152
 #define TRAINER_DOUGLAS                     153
 #define TRAINER_DARRIN                      154
-#define TRAINER_TONY_1                      155
+#define TRAINER_TATE_2                      155
 #define TRAINER_JEROME                      156
 #define TRAINER_MATTHEW                     157
 #define TRAINER_DAVID                       158
@@ -783,7 +783,7 @@
 #define TRAINER_WATTSON_3                   779
 #define TRAINER_WATTSON_4                   780
 #define TRAINER_WATTSON_5                   781
-#define TRAINER_FLANNERY_2                  782
+#define TRAINER_MOLLY_2                     782
 #define TRAINER_FLANNERY_3                  783
 #define TRAINER_FLANNERY_4                  784
 #define TRAINER_FLANNERY_5                  785
@@ -791,11 +791,11 @@
 #define TRAINER_NORMAN_3                    787
 #define TRAINER_NORMAN_4                    788
 #define TRAINER_NORMAN_5                    789
-#define TRAINER_WINONA_2                    790
+#define TRAINER_NED_2                       790
 #define TRAINER_WINONA_3                    791
 #define TRAINER_WINONA_4                    792
 #define TRAINER_WINONA_5                    793
-#define TRAINER_TATE_AND_LIZA_2             794
+#define TRAINER_LIZA_2                      794
 #define TRAINER_TATE_AND_LIZA_3             795
 #define TRAINER_TATE_AND_LIZA_4             796
 #define TRAINER_TATE_AND_LIZA_5             797

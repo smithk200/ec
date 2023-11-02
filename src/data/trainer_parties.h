@@ -12023,19 +12023,28 @@ static const struct TrainerMonItemCustomMoves sParty_Norman5[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_Winona2[] = {
+static const struct TrainerMonItemCustomMoves sParty_Ned2[] = {
     {
     .iv = 255,
-    .lvl = 100,
+    .lvl = 80,
+    .species = SPECIES_BRAVIARY,
+    .heldItem = ITEM_YACHE_BERRY,
+    .abilityNums = 0,
+    .evs = {6, 252, 0, 0, 0, 252},
+    .moves = {MOVE_EARTHQUAKE, MOVE_STEEL_WING, MOVE_TAKE_DOWN, MOVE_SKY_DROP}
+    },
+    {
+    .iv = 255,
+    .lvl = 80,
     .species = SPECIES_STARAPTOR,
     .heldItem = ITEM_LEFTOVERS,
     .abilityNums = 0,
     .evs = {6, 252, 0, 0, 0, 252},
-    .moves = {MOVE_FLAMETHROWER, MOVE_SCARY_FACE, MOVE_EARTHQUAKE, MOVE_BRAVE_BIRD}
+    .moves = {MOVE_STEEL_WING, MOVE_SCARY_FACE, MOVE_EARTHQUAKE, MOVE_BRAVE_BIRD}
     },
     {
     .iv = 255,
-    .lvl = 100,
+    .lvl = 80,
     .species = SPECIES_SMOXILON,
     .heldItem = ITEM_TOXIC_PLATE,
     .abilityNums = 0,
@@ -12044,7 +12053,7 @@ static const struct TrainerMonItemCustomMoves sParty_Winona2[] = {
     },
     {
     .iv = 255,
-    .lvl = 100,
+    .lvl = 80,
     .species = SPECIES_CORVIKNIGHT,
     .heldItem = ITEM_METAL_COAT,
     .abilityNums = 0,
@@ -12053,30 +12062,21 @@ static const struct TrainerMonItemCustomMoves sParty_Winona2[] = {
     },
     {
     .iv = 255,
-    .lvl = 100,
-    .species = SPECIES_TALONFLAME,
-    .heldItem = ITEM_CHARTI_BERRY,
+    .lvl = 80,
+    .species = SPECIES_ZAPDOS,
+    .heldItem = ITEM_ZAP_PLATE,
     .abilityNums = 0,
-    .evs = {6, 252, 0, 0, 0, 252},
-    .moves = {MOVE_EARTHQUAKE, MOVE_FLAMETHROWER, MOVE_WILL_O_WISP, MOVE_BRAVE_BIRD}
+    .evs = {0, 129, 0, 129, 0, 252},
+    .moves = {MOVE_THUNDERBOLT, MOVE_DRILL_PECK, MOVE_IRON_HEAD, MOVE_ROOST}
     },
     {
     .iv = 255,
-    .lvl = 100,
+    .lvl = 80,
     .species = SPECIES_SPRUCIFIX,
     .heldItem = ITEM_POWER_HERB,
     .abilityNums = 0,
     .evs = {6, 0, 0, 252, 0, 252},
     .moves = {MOVE_PHANTOM_FORCE, MOVE_GIGA_DRAIN, MOVE_FLAMETHROWER, MOVE_DAZZLING_GLEAM}
-    },
-    {
-    .iv = 255,
-    .lvl = 100,
-    .species = SPECIES_CAROLINE,
-    .heldItem = ITEM_YACHE_BERRY,
-    .abilityNums = 0,
-    .evs = {6, 0, 0, 252, 0, 252},
-    .moves = {MOVE_EARTHQUAKE, MOVE_FLAMETHROWER, MOVE_SYNTHESIS, MOVE_AERIAL_ACE}
     }
 };
 
