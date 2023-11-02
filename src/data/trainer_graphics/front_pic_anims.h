@@ -507,5 +507,6 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_SUPER_NERD] = sAnims_Cynthia,
     [TRAINER_PIC_TATE] = sAnims_LeaderTateAndLiza,
     [TRAINER_PIC_LIZA] = sAnims_LeaderTateAndLiza,
+    [TRAINER_PIC_LEADER_BILL_NYE] = sAnims_LeaderWattson,
 
 };

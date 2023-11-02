@@ -106,6 +106,7 @@ const struct MonCoords gTrainerFrontPicCoords[] =
     [TRAINER_PIC_SUPER_NERD] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_TATE] = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_LIZA] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_LEADER_BILL_NYE] = {.size = 8, .y_offset = 1},
 };
 
 #define TRAINER_SPRITE(trainerPic, sprite, size) [TRAINER_PIC_##trainerPic] = {sprite, size, TRAINER_PIC_##trainerPic}
@@ -218,7 +219,7 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(SUPER_NERD, gTrainerFrontPic_SuperNerd, 0x800),
     TRAINER_SPRITE(TATE, gTrainerFrontPic_Tate, 0x800),
     TRAINER_SPRITE(LIZA, gTrainerFrontPic_Liza, 0x800),
-    
+    TRAINER_SPRITE(LEADER_BILL_NYE, gTrainerFrontPic_BillNye, 0x800),
     
 };
 
@@ -332,4 +333,5 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(SUPER_NERD, gTrainerPalette_SuperNerd),
     TRAINER_PAL(TATE, gTrainerPalette_LeaderTateAndLiza2),
     TRAINER_PAL(LIZA, gTrainerPalette_LeaderTateAndLiza2),
+    TRAINER_PAL(LEADER_BILL_NYE, gTrainerPalette_LeaderBillNye),
 };

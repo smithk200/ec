@@ -77,12 +77,12 @@
 #define OBJ_EVENT_GFX_SPENSER                     73
 #define OBJ_EVENT_GFX_NOLAND                      74
 #define OBJ_EVENT_GFX_LUCY                        75
-#define OBJ_EVENT_GFX_UNUSED_NATU_DOLL            76
-#define OBJ_EVENT_GFX_UNUSED_MAGNEMITE_DOLL       77
-#define OBJ_EVENT_GFX_UNUSED_SQUIRTLE_DOLL        78
-#define OBJ_EVENT_GFX_UNUSED_WOOPER_DOLL          79
-#define OBJ_EVENT_GFX_UNUSED_PIKACHU_DOLL         80
-#define OBJ_EVENT_GFX_UNUSED_PORYGON2_DOLL        81
+#define OBJ_EVENT_GFX_NED                         76
+#define OBJ_EVENT_GFX_BENDER                      77
+#define OBJ_EVENT_GFX_SNOOP                       78
+#define OBJ_EVENT_GFX_JOY                         79
+#define OBJ_EVENT_GFX_CYNTHIA                     80
+#define OBJ_EVENT_GFX_CAPTAIN_FLOYD               81
 #define OBJ_EVENT_GFX_CUTTABLE_TREE               82
 #define OBJ_EVENT_GFX_MART_EMPLOYEE               83
 #define OBJ_EVENT_GFX_ROOFTOP_SALE_WOMAN          84
@@ -129,7 +129,7 @@
 #define OBJ_EVENT_GFX_ROXANNE                    125
 #define OBJ_EVENT_GFX_BRAWLY                     126
 #define OBJ_EVENT_GFX_WATTSON                    127
-#define OBJ_EVENT_GFX_FLANNERY                   128
+#define OBJ_EVENT_GFX_NEW_FLANNERY               128
 #define OBJ_EVENT_GFX_NORMAN                     129
 #define OBJ_EVENT_GFX_WINONA                     130
 #define OBJ_EVENT_GFX_LIZA                       131
@@ -143,7 +143,7 @@
 #define OBJ_EVENT_GFX_HOT_SPRINGS_OLD_WOMAN      139
 #define OBJ_EVENT_GFX_SS_TIDAL                   140
 #define OBJ_EVENT_GFX_SUBMARINE_SHADOW           141
-#define OBJ_EVENT_GFX_PICHU_DOLL                 142
+#define OBJ_EVENT_GFX_TUMBLRITA                  142
 #define OBJ_EVENT_GFX_PIKACHU_DOLL               143
 #define OBJ_EVENT_GFX_MARILL_DOLL                144
 #define OBJ_EVENT_GFX_TOGEPI_DOLL                145
@@ -240,14 +240,7 @@
 #define OBJ_EVENT_GFX_LINK_RS_MAY                236
 #define OBJ_EVENT_GFX_LUGIA                      237
 #define OBJ_EVENT_GFX_HOOH                       238
-#define OBJ_EVENT_GFX_NED                        239
-#define OBJ_EVENT_GFX_BENDER                     240
-#define OBJ_EVENT_GFX_SNOOP                      241
-#define OBJ_EVENT_GFX_JOY                        242
-#define OBJ_EVENT_GFX_NEW_FLANNERY               243
-#define OBJ_EVENT_GFX_TUMBLRITA                  244
-#define OBJ_EVENT_GFX_CAPTAIN_FLOYD              245
-#define OBJ_EVENT_GFX_CYNTHIA                    246
+#define OBJ_EVENT_GFX_BILL_NYE                   239
 
 // NOTE: By default, the max value for NUM_OBJ_EVENT_GFX is 239.
 //
@@ -258,7 +251,7 @@
 // object graphics that can be removed. If more graphics are needed, anything that
 // stores graphics ids will need to be increased in size. See wiki entry below:
 // https://github.com/pret/pokeemerald/wiki/Feature-Branches#overworld-expansion
-#define NUM_OBJ_EVENT_GFX                        247
+#define NUM_OBJ_EVENT_GFX                        240
 
 
 // These are dynamic object gfx ids.

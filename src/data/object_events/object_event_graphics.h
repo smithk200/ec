@@ -384,6 +384,7 @@ const u32 gObjectEventPic_Captain_Floyd[] = INCBIN_U32("graphics/object_events/p
 const u32 gObjectEventPic_Tumblrita[] = INCBIN_U32("graphics/object_events/pics/people/elite_four/tumblrita.4bpp");
 const u32 gObjectEventPic_Cynthia[] = INCBIN_U32("graphics/object_events/pics/people/cynthia.4bpp");
 const u32 gObjectEventPic_Adesign[] = INCBIN_U32("graphics/object_events/pics/pokemon/adesign.4bpp");
+const u32 gObjectEventPic_BillNye[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/bill.4bpp");
 const u16 gObjectEventPal_Ned[] = INCBIN_U16("graphics/object_events/palettes/ned.gbapal");
 const u16 gObjectEventPal_Bender[] = INCBIN_U16("graphics/object_events/palettes/bender.gbapal");
 const u16 gObjectEventPal_Snoop[] = INCBIN_U16("graphics/object_events/palettes/snoop.gbapal");
@@ -391,4 +392,4 @@ const u16 gObjectEventPal_Joy[] = INCBIN_U16("graphics/object_events/palettes/jo
 const u16 gObjectEventPal_Captain_Floyd[] = INCBIN_U16("graphics/object_events/palettes/captain_floyd.gbapal");
 const u16 gObjectEventPal_Tumblrita[] = INCBIN_U16("graphics/object_events/palettes/tumblrita.gbapal");
 const u16 gObjectEventPal_Cynthia[] = INCBIN_U16("graphics/object_events/palettes/cynthia.gbapal");
-
+const u16 gObjectEventPal_BillNye[] = INCBIN_U16("graphics/object_events/palettes/bill.gbapal");

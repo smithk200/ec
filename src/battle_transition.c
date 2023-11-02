@@ -643,7 +643,8 @@ static const s16 sMugshotsOpponentRotationScales[TRAINER_PIC_COUNT] =
     [TRAINER_PIC_FEMINIST] = 0x200, 
     [TRAINER_PIC_SUPER_NERD] = 0x200,
     [TRAINER_PIC_TATE] = 0x200,
-    [TRAINER_PIC_LIZA] = 0x200,              
+    [TRAINER_PIC_LIZA] = 0x200,
+    [TRAINER_PIC_LEADER_BILL_NYE] = 0x200,               
 };
 
 static const s16 sMugshotsOpponentCoords[TRAINER_PIC_COUNT][2] =
@@ -754,6 +755,7 @@ static const s16 sMugshotsOpponentCoords[TRAINER_PIC_COUNT][2] =
     [TRAINER_PIC_SUPER_NERD] = { 0,  0},
     [TRAINER_PIC_TATE] = { 0,  0},
     [TRAINER_PIC_LIZA] = { 0,  0},
+    [TRAINER_PIC_LEADER_BILL_NYE] = { 0,  0},
 };
 
 static const TransitionSpriteCallback sMugshotTrainerPicFuncs[] =

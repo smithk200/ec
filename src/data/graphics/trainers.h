@@ -164,6 +164,9 @@ const u32 gTrainerFrontPic_Tate[] = INCBIN_U32("graphics/trainers/front_pics/lea
 const u32 gTrainerFrontPic_Liza[] = INCBIN_U32("graphics/trainers/front_pics/leader_liza.4bpp.lz");
 const u32 gTrainerPalette_LeaderTateAndLiza2[] = INCBIN_U32("graphics/trainers/front_pics/leader_tate.gbapal.lz");
 
+const u32 gTrainerFrontPic_BillNye[] = INCBIN_U32("graphics/trainers/front_pics/leader_bill.4bpp.lz");
+const u32 gTrainerPalette_LeaderBillNye[] = INCBIN_U32("graphics/trainers/front_pics/leader_bill.gbapal.lz");
+
 const u32 gTrainerFrontPic_LeaderJuan[] = INCBIN_U32("graphics/trainers/front_pics/leader_juan.4bpp.lz");
 const u32 gTrainerPalette_LeaderJuan[] = INCBIN_U32("graphics/trainers/front_pics/leader_juan.gbapal.lz");
 

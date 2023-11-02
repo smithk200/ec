@@ -75,12 +75,12 @@ MauvilleCity_Gym_EventScript_DeactivatePuzzle::
 
 MauvilleCity_Gym_EventScript_Wattson::
 	setvar VAR_MUGSHOT_ID, MUGSHOT_WATTSON
-	trainerbattle_single TRAINER_WATTSON_1, MauvilleCity_Gym_Text_WattsonIntro, MauvilleCity_Gym_Text_WattsonDefeat, MauvilleCity_Gym_EventScript_WattsonDefeated
+	trainerbattle_single TRAINER_WATTSON_1, MauvilleCity_Gym_Text_BillNyeIntro, MauvilleCity_Gym_Text_WattsonDefeat, MauvilleCity_Gym_EventScript_WattsonDefeated
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_Gym_EventScript_WattsonRematch
 	goto_if_unset FLAG_RECEIVED_TM34, MauvilleCity_Gym_EventScript_GiveShockWave2
 	goto_if_eq VAR_NEW_MAUVILLE_STATE, 2, MauvilleCity_Gym_EventScript_CompletedNewMauville
-	msgbox MauvilleCity_Gym_Text_WattsonPostBattle, MSGBOX_DEFAULT
+	msgbox MauvilleCity_Gym_Text_BillNyePostBattle, MSGBOX_DEFAULT
 	release
 	end
 
@@ -202,9 +202,9 @@ MauvilleCity_Gym_EventScript_Kirk::
 	msgbox MauvilleCity_Gym_Text_KirkPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-MauvilleCity_Gym_EventScript_Shawn::
-	trainerbattle_single TRAINER_SEYMOUR, MauvilleCity_Gym_Text_ShawnIntro, MauvilleCity_Gym_Text_ShawnDefeat
-	msgbox MauvilleCity_Gym_Text_ShawnPostBattle, MSGBOX_AUTOCLOSE
+MauvilleCity_Gym_EventScript_Seymour::
+	trainerbattle_single TRAINER_SEYMOUR, MauvilleCity_Gym_Text_SeymourIntro, MauvilleCity_Gym_Text_SeymourDefeat
+	msgbox MauvilleCity_Gym_Text_SeymourPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MauvilleCity_Gym_EventScript_Ben::
@@ -258,14 +258,14 @@ MauvilleCity_Gym_EventScript_GymStatue::
 	end
 
 MauvilleCity_Gym_Text_GymGuideAdvice:
-	.string "Hey, how's it going, CHAMPION-\n"
+	.string "Hey, how's it going, Champion-\n"
 	.string "bound {PLAYER}?\p"
-	.string "Wattson, the LEADER of MAUVILLE\n"
-	.string "GYM, uses ELECTRIC-type Pokémon.\p"
-	.string "If you challenge him with WATER-type\n"
+	.string "Bill Nye, the Leader of Mauville\n"
+	.string "Gym, uses Electric-type Pokémon.\p"
+	.string "If you challenge him with Water-type\n"
 	.string "Pokémon, he'll zap them! Bzzt!\p"
 	.string "And, he's put in switch-controlled\n"
-	.string "doors all over his GYM! Eccentric!\p"
+	.string "doors all over his gym! Eccentric!\p"
 	.string "Hey, go for it!$"
 
 MauvilleCity_Gym_Text_GymGuidePostVictory:
@@ -284,15 +284,15 @@ MauvilleCity_Gym_Text_KirkPostBattle:
 	.string "Pokémon and rock, it's all about heart,\n"
 	.string "whoa-yeah!$"
 
-MauvilleCity_Gym_Text_ShawnIntro:
+MauvilleCity_Gym_Text_SeymourIntro:
 	.string "With mechanical chickens and\n"
 	.string "plastic eggs I can make Easter\p"
 	.string "bigger than before!$"
 
-MauvilleCity_Gym_Text_ShawnDefeat:
+MauvilleCity_Gym_Text_SeymourDefeat:
 	.string "Maybe I can't…$"
 
-MauvilleCity_Gym_Text_ShawnPostBattle:
+MauvilleCity_Gym_Text_SeymourPostBattle:
 	.string "Inventing things sure is fun!$"
 
 MauvilleCity_Gym_Text_BenIntro:
@@ -303,7 +303,7 @@ MauvilleCity_Gym_Text_BenDefeat:
 	.string "It's no fun to lose…$"
 
 MauvilleCity_Gym_Text_BenPostBattle:
-	.string "Wattson says he likes setting up\n"
+	.string "Bill Nye says he likes setting up\n"
 	.string "little traps with switches.$"
 
 MauvilleCity_Gym_Text_VivianIntro:
@@ -314,11 +314,11 @@ MauvilleCity_Gym_Text_VivianDefeat:
 	.string "I'm shocked by your power!$"
 
 MauvilleCity_Gym_Text_VivianPostBattle:
-	.string "I've heard that MAUVILLE was founded\n"
-	.string "by WATTSON.\p"
-	.string "He was a TRAINER long before we\n"
-	.string "became TRAINERS.\l"
-	.string "He must know all sorts of things!$"
+	.string "I've heard that Mauville was founded\n"
+	.string "by Wattson.\p"
+	.string "He's no longer the Gym Leader\n"
+	.string "anymore, but Bill Nye!\p"
+	.string "He's a man of science!$"
 
 MauvilleCity_Gym_Text_AngeloIntro:
 	.string "I love shiny things!$"
@@ -328,8 +328,16 @@ MauvilleCity_Gym_Text_AngeloDefeat:
 	.string "My eyes are frazzled…$"
 
 MauvilleCity_Gym_Text_AngeloPostBattle:
-	.string "MAUVILLE GYM's WATTSON has a shiny\n"
-	.string "forehead. It makes me happy!$"
+	.string "Mauville Gym's Bill Nye has a smart\n"
+	.string "brain. It makes me happy!$"
+
+MauvilleCity_Gym_Text_BillNyeIntro:
+	.string "Hello!\n"
+	.string "I'm Bill Nye, the Science Guy!\p"
+	.string "Me and my amazing Electric-type\n"
+	.string "Pokémon are not afraid to shock you!\p"
+	.string "Prepare for some SCIENCE!\p"
+	.string "SCIENCE RULES!!!$"
 
 MauvilleCity_Gym_Text_WattsonIntro:
 	.string "I've given up on my plans to convert\n"
@@ -344,14 +352,14 @@ MauvilleCity_Gym_Text_WattsonIntro:
 	.string "Mauville Gym, shall electrify you!$"
 
 MauvilleCity_Gym_Text_WattsonDefeat:
-	.string "Wahahahah!\n"
-	.string "Fine, I lost!\p"
-	.string "You ended up giving me a thrill!\n"
-	.string "Take this Badge!$"
+	.string "No, not my science!\n"
+	.string "I will avenge you, my Pokémon!\p"
+	.string "Well, that's that.\n"
+	.string "Here, take this badge!$"
 
 MauvilleCity_Gym_Text_ReceivedDynamoBadge:
 	.string "{PLAYER} received the Dynamo Badge\n"
-	.string "from Wattson.$"
+	.string "from Bill Nye.$"
 
 MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis:
 	.string "With the Dynamo Badge, Pokémon can\n"
@@ -368,13 +376,17 @@ MauvilleCity_Gym_Text_ExplainShockWave:
 	.string "… … … … … …$"
 
 MauvilleCity_Gym_Text_RegisteredWattson:
-	.string "Registered GYM LEADER WATTSON\n"
-	.string "in the POKéNAV.$"
+	.string "Registered Gym Leader Bill\n"
+	.string "in the Pokénav.$"
 
 MauvilleCity_Gym_Text_WattsonPostBattle:
 	.string "W3 d0 n07 f0rg1v3, 4nd w3 d0 n0t\n"
 	.string "f0rg37!\p"
 	.string "I learned that from Guy!$"
+
+MauvilleCity_Gym_Text_BillNyePostBattle:
+	.string "Remember, always trust in science\n"
+	.string "as your tool to discover the world!$"
 
 MauvilleCity_Gym_Text_WattsonGoForthAndEndeavor:
 	.string "Wahahahah!\n"
@@ -385,11 +397,11 @@ MauvilleCity_Gym_Text_GymStatue:
 
 MauvilleCity_Gym_Text_GymStatueCertified:
 	.string "Mauville City Pokémon Gym\p"
-	.string "Wattson's Certified Trainers:\n"
+	.string "Bill Nye's Certified Trainers:\n"
 	.string "{PLAYER}$"
 
 MauvilleCity_Gym_Text_WattsonPreRematch:
-	.string "Wattson: Ah-ha! Here at last!\n"
+	.string "Bill Nye: Ah-ha! Here at last!\n"
 	.string "I know what you want.\l"
 	.string "You want to battle my Pokémon!\p"
 	.string "Wahahahaha!\p"
@@ -401,7 +413,7 @@ MauvilleCity_Gym_Text_WattsonRematchDefeat:
 	.string "Our batteries ran dry…$"
 
 MauvilleCity_Gym_Text_WattsonPostRematch:
-	.string "Wattson: We'll have to recharge our\n"
+	.string "Bill Nye: We'll have to recharge our\n"
 	.string "batteries again.\p"
 	.string "When we're fully charged up, we'll\n"
 	.string "gladly accept your challenge.\p"
@@ -409,7 +421,7 @@ MauvilleCity_Gym_Text_WattsonPostRematch:
 	.string "won't you?$"
 
 MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons:
-	.string "Wattson: Ah-ha! Here at last!\n"
+	.string "Bill Nye: Ah-ha! Here at last!\n"
 	.string "I know what you want.\l"
 	.string "You want to battle my Pokémon!\p"
 	.string "Wahahahaha!\p"

@@ -3697,6 +3697,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
     .lvl = 12,
     .species = SPECIES_TRICIENT,
     .heldItem = ITEM_STONE_PLATE,
+    .abilityNums = 0,
     .evs = {6, 252, 0, 0, 0, 252},
     .moves = {MOVE_METAL_CLAW, MOVE_DEFENSE_CURL, MOVE_ROCK_POLISH, MOVE_ROCK_TOMB}
     },
@@ -3705,6 +3706,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
     .lvl = 12,
     .species = SPECIES_SOLROCK,
     .heldItem = ITEM_STONE_PLATE,
+    .abilityNums = 0,
     .evs = {6, 252, 0, 0, 0, 252},
     .moves = {MOVE_CONFUSION, MOVE_DEFENSE_CURL, MOVE_ROCK_POLISH, MOVE_ROCK_TOMB}
     },
@@ -3712,7 +3714,8 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
     .iv = 200,
     .lvl = 13,
     .species = SPECIES_BONGECKO,
-    .heldItem = ITEM_MIRACLE_SEED,
+    .heldItem = ITEM_EVIOLITE,
+    .abilityNums = 1,
     .evs = {6, 252, 0, 0, 0, 252},
     .moves = {MOVE_FLAME_CHARGE, MOVE_SPEED_WEED, MOVE_AQUA_JET, MOVE_ACID}
     },
@@ -3721,6 +3724,7 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
     .lvl = 14,
     .species = SPECIES_NOSEPASS,
     .heldItem = ITEM_PASSHO_BERRY,
+    .abilityNums = 0,
     .evs = {6, 252, 0, 0, 0, 252},
     .moves = {MOVE_BLOCK, MOVE_HARDEN, MOVE_ICE_SHARD, MOVE_ROCK_TOMB}
     }
@@ -3770,22 +3774,24 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly1[] = {
     }
 };
 
-static const struct TrainerMonItemCustomMoves sParty_Wattson1[] = {
+static const struct TrainerMonItemCustomMoves sParty_BillNye1[] = {
     {
     .iv = 200,
     .lvl = 22,
     .species = SPECIES_VOLTORB,
     .heldItem = ITEM_AIR_BALLOON,
-    .evs = {6, 252, 0, 0, 0, 252},
-    .moves = {MOVE_ROCK_THROW, MOVE_SPARK, MOVE_SPEED_WEED, MOVE_SHOCK_WAVE}
+    .abilityNums = 2,
+    .evs = {0, 0, 0, 252, 0, 252},
+    .moves = {MOVE_SHOCK_WAVE, MOVE_SPEED_WEED, MOVE_SWIFT, MOVE_THUNDER_WAVE}
     },
     {
     .iv = 200,
     .lvl = 23,
-    .species = SPECIES_ELECTRIKE,
+    .species = SPECIES_BLITZLE,
     .heldItem = ITEM_SHUCA_BERRY,
-    .evs = {6, 252, 0, 0, 0, 252},
-    .moves = {MOVE_SHOCK_WAVE, MOVE_LEER, MOVE_QUICK_ATTACK, MOVE_CONFUSION}
+    .abilityNums = 2,
+    .evs = {252, 0, 0, 0, 0, 252},
+    .moves = {MOVE_SHOCK_WAVE, MOVE_FLAME_CHARGE, MOVE_THUNDER_WAVE, MOVE_PURSUIT}
     },
     {
     .iv = 220,
@@ -3801,6 +3807,7 @@ static const struct TrainerMonItemCustomMoves sParty_Wattson1[] = {
     .lvl = 24,
     .species = SPECIES_LUXIO,
     .heldItem = ITEM_ZAP_PLATE,
+    .abilityNums = 1,
     .evs = {6, 252, 0, 0, 0, 252},
     .moves = {MOVE_AQUA_JET, MOVE_SPARK, MOVE_SCARY_FACE, MOVE_BITE}
     },
@@ -3866,7 +3873,7 @@ static const struct TrainerMonItemCustomMoves sParty_Molly1[] = {
     .lvl = 37,
     .species = SPECIES_MARLEYZARD,
     .heldItem = ITEM_WHITE_HERB,
-    .abilityNums = 0,
+    .abilityNums = 1,
     .evs = {6, 0, 0, 252, 0, 252},
     .moves = {MOVE_FLAME_BURST, MOVE_GIGA_DRAIN, MOVE_SHELL_SMASH, MOVE_DRAGON_PULSE}
     }
