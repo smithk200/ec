@@ -566,9 +566,11 @@
 #define MAP_NAVEL_ROCK_BOTTOM                               (87 | (26 << 8))
 #define MAP_TRAINER_HILL_ELEVATOR                           (88 | (26 << 8))
 
-// gMapGroup_IndoorRoute104Prototype
-#define MAP_ROUTE104_PROTOTYPE                          (0 | (27 << 8))
-#define MAP_ROUTE104_PROTOTYPE_PRETTY_PETAL_FLOWER_SHOP (1 | (27 << 8))
+// gMapGroup_IndoorRoute130
+#define MAP_ROUTE130HOUSE1 (0 | (27 << 8))
+#define MAP_ROUTE130HOUSE2 (1 | (27 << 8))
+#define MAP_ROUTE130HOUSE3 (2 | (27 << 8))
+#define MAP_ROUTE130HOUSE4 (3 | (27 << 8))
 
 // gMapGroup_IndoorRoute109
 #define MAP_ROUTE109_SEASHORE_HOUSE (0 | (28 << 8))

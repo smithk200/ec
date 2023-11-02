@@ -187,4 +187,4 @@ FallarborTown_Text_TownSign:
 
 FallarborTown_Text_MoveTutorSign:
 	.string "Move Tutor's House\n"
-	.string "“New moves taught to POKéMON.”$"
+	.string "“New moves taught to Pokémon.”$"

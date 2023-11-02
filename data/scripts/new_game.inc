@@ -277,5 +277,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_MOSSDEEP_GYM_NPC
 	setflag FLAG_SOOTOPOLIS_GYM_NPC
 	setflag FLAG_FRY
+	setflag FLAG_GYM_LEADERS_REMATCH_APPEAR
 	call EventScript_ResetAllBerries
 	end

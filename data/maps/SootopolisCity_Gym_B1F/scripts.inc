@@ -137,7 +137,7 @@ SootopolisCity_Gym_B1F_Text_TiffanyPostBattle:
 	.string "with how young or old you are.$"
 
 SootopolisCity_Gym_B1F_Text_BethanyIntro:
-	.string "When I'm with my POKéMON, the time\n"
+	.string "When I'm with my Pokémon, the time\n"
 	.string "flies by before you can say, “Oops!”$"
 
 SootopolisCity_Gym_B1F_Text_BethanyDefeat:
@@ -148,16 +148,16 @@ SootopolisCity_Gym_B1F_Text_BethanyPostBattle:
 	.string "before I can manage an “Oops!”$"
 
 SootopolisCity_Gym_B1F_Text_AnnikaIntro:
-	.string "I can battle with really rare POKéMON\n"
+	.string "I can battle with really rare Pokémon\n"
 	.string "if you'd like.$"
 
 SootopolisCity_Gym_B1F_Text_AnnikaDefeat:
 	.string "Oh, there now! Did you have a good look\n"
-	.string "at my POKéMON?$"
+	.string "at my Pokémon?$"
 
 SootopolisCity_Gym_B1F_Text_AnnikaPostBattle:
 	.string "I came to this GYM because Bender\n"
-	.string "praised me for my darling POKéMON.\p"
+	.string "praised me for my darling Pokémon.\p"
 	.string "Oh, if only I'd met Bender years ago\n"
 	.string "when I was younger…$"
 

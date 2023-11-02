@@ -2862,16 +2862,6 @@
       "blockdata_filepath": "data/layouts/VictoryRoad_B2F/map.bin"
     },
     {
-      "id": "LAYOUT_ROUTE104_PROTOTYPE",
-      "name": "Route104_Prototype_Layout",
-      "width": 1,
-      "height": 1,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Rustboro",
-      "border_filepath": "data/layouts/Route104_Prototype/border.bin",
-      "blockdata_filepath": "data/layouts/Route104_Prototype/map.bin"
-    },
-    {
       "id": "LAYOUT_GRANITE_CAVE_STEVENS_ROOM",
       "name": "GraniteCave_StevensRoom_Layout",
       "width": 15,
@@ -4470,6 +4460,46 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Cave_Of_Sjwhale_1F/border.bin",
       "blockdata_filepath": "data/layouts/Cave_Of_Sjwhale_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE130HOUSE1",
+      "name": "Route130House1_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Route130House1/border.bin",
+      "blockdata_filepath": "data/layouts/Route130House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE130HOUSE2",
+      "name": "Route130House2_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Route130House2/border.bin",
+      "blockdata_filepath": "data/layouts/Route130House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE130HOUSE3",
+      "name": "Route130House3_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Route130House3/border.bin",
+      "blockdata_filepath": "data/layouts/Route130House3/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE130HOUSE4",
+      "name": "Route130House4_Layout",
+      "width": 11,
+      "height": 16,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/Route130House4/border.bin",
+      "blockdata_filepath": "data/layouts/Route130House4/map.bin"
     }
   ]
 }

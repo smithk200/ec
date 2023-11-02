@@ -233,19 +233,22 @@ EverGrandeCity_ChampionsRoom_Text_IntroSpeech:
 	.string "I, Cynthia, accept your challenge!$"
 
 EverGrandeCity_ChampionsRoom_Text_Defeat:
-	.string "Wonderful! Excellent!\p"
-	.string "You managed to defeat me!\p"
-	.string "Magificent! Marvelous!\n"
-	.string "The battle skills you pulled\l"
-	.string "off were truly phenomenal!\p"
-	.string "You are officially the best\n"
-	.string "Pokémon trainer in New Hoenn!\p"
-	.string "Maybe in the world!$"
+	.string "That was excellent.\p"
+	.string "You managed to defeat me, the\n"
+	.string "mighty Champion.\p"
+	.string "I have every bit of confidence that\n"
+	.string "the skills you used in battle are the\l"
+	.string "result of the bond you share with\l"
+	.string "your Pokémon.\p"
+	.string "Congratulations!\p"
+	.string "You are officially the strongest\n"
+	.string "Pokémon trainer in New Hoenn!$"
 
 EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech:
-	.string "Cynthia: You did well.\p"
-	.string "Let's go to the\n"
-	.string "Hall of Fame!$"
+	.string "Cynthia: You did well.\n"
+	.string "Truly, an outstanding battle.\p"
+	.string "Now, let us go to the\n"
+	.string "Hall of Fame.$"
 
 EverGrandeCity_ChampionsRoom_Text_MayAdvice:
 	.string "May: {PLAYER}{KUN}!\p"

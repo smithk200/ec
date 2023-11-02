@@ -34,14 +34,27 @@ SlateportCity_Mart_EventScript_Man::
 	msgbox SlateportCity_Mart_Text_GreatBallIsBetter, MSGBOX_NPC
 	end
 
+SlateportCity_Mart_EventScript_Woman::
+	msgbox SlateportCity_Mart_Text_Woman, MSGBOX_NPC
+	end
+
 SlateportCity_Mart_Text_SomeItemsOnlyAtMart:
-	.string "The MARKET does have some interesting\n"
+	.string "The market does have some interesting\n"
 	.string "merchandise.\p"
 	.string "But there are some items you can only\n"
-	.string "get at a POKéMON MART.$"
+	.string "get at a Pokémon Mart.$"
 
 SlateportCity_Mart_Text_GreatBallIsBetter:
-	.string "A GREAT BALL is better than a POKé BALL\n"
-	.string "at catching POKéMON.\p"
-	.string "With this, I should be able to get that\n"
-	.string "elusive POKéMON…$"
+	.string "A Great Ball is better than a Poké Ball\n"
+	.string "at catching Pokémon.\p"
+	.string "OH!\p"
+	.string "You shake my nerves and you\n"
+	.string "rattle my brain\p"
+	.string "Too much love drives a man insane\n"
+	.string "You broke my will, but what a thrill\l"
+	.string "Goodness gracious, great balls of fire!$"
+
+SlateportCity_Mart_Text_Woman:
+	.string "The guy next to me is obsessed with\n"
+	.string "Jerry Lee Lewis.\p"
+	.string "I can't stand him, he's too old!$"

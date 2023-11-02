@@ -46,8 +46,8 @@
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
       "movement_range_y": 4,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "5",
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
       "script": "AnIsland_EventScript_Woman",
       "flag": "0"
     },
@@ -72,8 +72,8 @@
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
       "movement_range_y": 4,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "5",
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
       "script": "AnIsland_EventScript_Man",
       "flag": "0"
     },
@@ -103,29 +103,29 @@
       "x": 33,
       "y": 19,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE130",
-      "dest_warp_id": 3
+      "dest_map": "MAP_ROUTE130HOUSE1",
+      "dest_warp_id": 0
     },
     {
       "x": 14,
       "y": 21,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE130",
-      "dest_warp_id": 3
+      "dest_map": "MAP_ROUTE130HOUSE3",
+      "dest_warp_id": 0
     },
     {
       "x": 8,
       "y": 21,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE130",
-      "dest_warp_id": 1
+      "dest_map": "MAP_ROUTE130HOUSE4",
+      "dest_warp_id": 0
     },
     {
       "x": 11,
       "y": 28,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE130",
-      "dest_warp_id": 3
+      "dest_map": "MAP_ROUTE130HOUSE2",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [

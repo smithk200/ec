@@ -1768,6 +1768,8 @@ static s16 AI_CheckBadMove(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
                 score -= 10;
             break;
         case EFFECT_ABSORB:
+            if (GetMoveDamageResult(move) == MOVE_POWER_WEAK) 
+                score -= 5;
             if (AI_DATA->abilities[battlerDef] == ABILITY_LIQUID_OOZE)
                 score -= 6;
             break;
@@ -2677,9 +2679,13 @@ static s16 AI_TryToFaint(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
             score += 10;
             break;
         case AI_EFFECTIVENESS_x4:
+            if (ShouldRecover(battlerAtk, battlerDef, move, 50))
+                score -= 5;
             score += 5;
             break;
         case AI_EFFECTIVENESS_x2:
+            if (ShouldRecover(battlerAtk, battlerDef, move, 50))
+                score -= 3;
             if (GetMoveDamageResult(move) == MOVE_POWER_BEST) //if it's the most powerful move to use, use it
             {  
                 score += 3;
@@ -2693,6 +2699,8 @@ static s16 AI_TryToFaint(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
                     break;
             }
         case AI_EFFECTIVENESS_x1:
+            if (ShouldRecover(battlerAtk, battlerDef, move, 50)) //want to recover if has a recovering move
+                score -= 2;
             if (GetMoveDamageResult(move) == MOVE_POWER_BEST) //if it's a good move, we should use it
                 score += 2;
                 break;
@@ -4323,6 +4331,11 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
     case EFFECT_OVERHEAT:
         if (AI_DATA->abilities[battlerAtk] == ABILITY_CONTRARY)
             score += 10;
+        if (GetMoveDamageResult(move) == MOVE_POWER_BEST) //if it's the most powerful move to use, use it
+            {  
+                score += 5;
+                break;
+            }
         break;
     case EFFECT_MAGIC_COAT:
         if (IS_MOVE_STATUS(predictedMove) && AI_GetBattlerMoveTargetType(battlerDef, predictedMove) & (MOVE_TARGET_SELECTED | MOVE_TARGET_OPPONENTS_FIELD | MOVE_TARGET_BOTH))

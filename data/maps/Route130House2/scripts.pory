@@ -1,0 +1,32 @@
+raw `
+Route130House2_MapScripts::
+	.byte 0
+
+Route130_House2_Event_Script_Woman::
+    msgbox Route130_House2_Text_Woman, MSGBOX_DEFAULT
+	release
+	end
+
+Route130_House2_Event_Script_Girl1::
+    msgbox Route130_House2_Text_Girl1, MSGBOX_DEFAULT
+	release
+	end
+
+Route130_House2_Event_Script_Girl2::
+    msgbox Route130_House2_Text_Girl2, MSGBOX_DEFAULT
+	release
+	end
+
+Route130_House2_Text_Woman::
+    .string "My children are running all around\n"
+    .string "the place.\p"
+    .string "I tried telling them to stop, but they\n"
+    .string "won't listen!\p"
+    .string "Am I a bad mom?$"
+
+Route130_House2_Text_Girl1:
+    .string "Whee!$"
+
+Route130_House2_Text_Girl2:
+    .string "I'm gonna get you!$"
+`

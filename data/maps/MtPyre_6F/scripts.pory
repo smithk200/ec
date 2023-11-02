@@ -54,7 +54,7 @@ MtPyre_6F_Text_ValerieRematchDefeat:
 	.string "Something faded away…$"
 
 MtPyre_6F_Text_ValeriePostRematch:
-	.string "The POKéMON at rest here…\n"
+	.string "The Pokémon at rest here…\n"
 	.string "Sometimes, they play…$"
 
 MtPyre_6F_Text_CedricIntro:

@@ -21,6 +21,7 @@ EverGrandeCity_HallOfFame_OnFrame:
 EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame::
 	lockall
 	setflag FLAG_CHAMP
+	clearflag FLAG_GYM_LEADERS_REMATCH_APPEAR
 	applymovement LOCALID_WALLACE, EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame1
 	applymovement OBJ_EVENT_ID_PLAYER, EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame1
 	waitmovement 0
@@ -88,7 +89,7 @@ EverGrandeCity_HallOfFame_Movement_WalkIntoHallOfFame2:
 EverGrandeCity_HallOfFame_Text_HereWeHonorLeagueChampions:
 	.string "Cynthia: This room…\p"
 	.string "This is where we keep records of\n"
-	.string "POKéMON that prevailed through\l"
+	.string "Pokémon that prevailed through\l"
 	.string "harsh battles.\p"
 	.string "It is here that the LEAGUE CHAMPIONS\n"
 	.string "are honored.$"
@@ -96,7 +97,7 @@ EverGrandeCity_HallOfFame_Text_HereWeHonorLeagueChampions:
 EverGrandeCity_HallOfFame_Text_LetsRecordYouAndYourPartnersNames:
 	.string "Cynthia: Come on, let's record your\n"
 	.string "name as a Trainer who triumphed over\l"
-	.string "the POKéMON LEAGUE, and the names of\l"
+	.string "the Pokémon LEAGUE, and the names of\l"
 	.string "the partners who battled with you.$"
 
 `
