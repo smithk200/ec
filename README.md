@@ -12,6 +12,7 @@ The Pokeemerald Expansion is a collection of feature branches that can be integr
     - Options to change behaviors and data by generation.
     - Mega Evolution and Primal Reversion
     - Z-Moves
+    - Optional dynamic levels
 - Pokémon Species from newer Generations (with the option to disable them if needed).
     - Updates Hoenn's Regional Dex to match ORAS'.
     - Updates National Dex incorporating all the new species.
@@ -29,6 +30,8 @@ Certain mechanics, moves, abilities and species sprites are missing. For more in
 The project was originally started by DizzyEgg alongside other contributors.
 
 The project has now gotten larger and DizzyEgg is now maintaining the project as part of the ROM Hacking Hideout community. Some members of this community are taking on larger roles to help maintain the project.
+
+This version of the project is now maintained by smithj200. This repository was based off the October 2022 version of pokeemerald-expansion.
 
 ### Please consider crediting the entire [list of contributors](https://github.com/rh-hideout/pokeemerald-expansion/wiki/Credits) in your project, as they have all worked hard to develop this project :)
 

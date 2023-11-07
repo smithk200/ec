@@ -12075,7 +12075,8 @@ static const struct TrainerMonItemCustomMoves sParty_Norman5[] = {
 static const struct TrainerMonItemCustomMoves sParty_Ned2[] = {
     {
     .iv = 255,
-    .lvl = 80,
+    .lvl = 80, //as a backup
+    .lvlmodifier = -2, //dynamic trainer attempt
     .species = SPECIES_BRAVIARY,
     .heldItem = ITEM_YACHE_BERRY,
     .abilityNums = 0,
@@ -12085,6 +12086,7 @@ static const struct TrainerMonItemCustomMoves sParty_Ned2[] = {
     {
     .iv = 255,
     .lvl = 80,
+    .lvlmodifier = -1,
     .species = SPECIES_STARAPTOR,
     .heldItem = ITEM_LEFTOVERS,
     .abilityNums = 0,
@@ -12103,6 +12105,7 @@ static const struct TrainerMonItemCustomMoves sParty_Ned2[] = {
     {
     .iv = 255,
     .lvl = 80,
+    .lvlmodifier = 1,
     .species = SPECIES_CORVIKNIGHT,
     .heldItem = ITEM_METAL_COAT,
     .abilityNums = 0,
@@ -12112,6 +12115,7 @@ static const struct TrainerMonItemCustomMoves sParty_Ned2[] = {
     {
     .iv = 255,
     .lvl = 80,
+    .lvlmodifier = 1,
     .species = SPECIES_ZAPDOS,
     .heldItem = ITEM_ZAP_PLATE,
     .abilityNums = 0,
@@ -12121,6 +12125,7 @@ static const struct TrainerMonItemCustomMoves sParty_Ned2[] = {
     {
     .iv = 255,
     .lvl = 80,
+    .lvlmodifier = 3,
     .species = SPECIES_SPRUCIFIX,
     .heldItem = ITEM_POWER_HERB,
     .abilityNums = 0,

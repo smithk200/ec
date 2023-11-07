@@ -1912,6 +1912,9 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
                 if (gTrainers[gTrainerBattleOpponent_A].isDynamic)
                 {
+                    highest = (highest + partyData[i].lvlmodifier);
+                    if (highest > 100)
+                        highest = 100;
                     CreateMon(&party[i], partyData[i].species, highest, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0); 
                 }
                 else
@@ -1935,6 +1938,9 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
                 if (gTrainers[gTrainerBattleOpponent_A].isDynamic)
                 {
+                    highest = (highest + partyData[i].lvlmodifier);
+                    if (highest > 100)
+                        highest = 100;
                     CreateMon(&party[i], partyData[i].species, highest, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                 }
                 else
@@ -1964,6 +1970,9 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
                 if (gTrainers[gTrainerBattleOpponent_A].isDynamic)
                 {
+                    highest = (highest + partyData[i].lvlmodifier);
+                    if (highest > 100)
+                        highest = 100;
                     CreateMon(&party[i], partyData[i].species, highest, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                 }
                 else
@@ -1990,6 +1999,9 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
                 if (gTrainers[gTrainerBattleOpponent_A].isDynamic)
                 {
+                    highest = (highest + partyData[i].lvlmodifier);
+                    if (highest > 100)
+                        highest = 100;
                     CreateMon(&party[i], partyData[i].species, highest, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                 }
                 else
