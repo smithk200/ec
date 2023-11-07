@@ -20,6 +20,7 @@ Route130House4_EventScriptMolly_andLiza::
         end
 Route130House4_EventScriptNed::
         trainerbattle_single TRAINER_NED_2, Route130House4_Text_NedIntro, Route130House4_Text_NedDefeat, Route130House4_EventScript_NedDefeated
+		setflag FLAG_RECEIVED_SS_TICKET
         release
         end
 

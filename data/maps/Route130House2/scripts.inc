@@ -2,6 +2,8 @@ Route130House2_MapScripts::
 	.byte 0
 
 Route130_House2_Event_Script_Woman::
+    lock
+    faceplayer
     msgbox Route130_House2_Text_Woman, MSGBOX_DEFAULT
 	release
 	end

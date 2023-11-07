@@ -2656,6 +2656,10 @@ static s16 AI_TryToFaint(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
     if (gBattleMoves[move].power == 0)
         return score;   // can't make anything faint with no power
 
+    if (gBattleMoves[move].effect == EFFECT_HOLY_DUTY) //&& (AI_THINKING_STRUCT->aiFlags & AI_FLAG_WILL_SUICIDE)) 
+    //previous line had unused code, it should acticvate the suicide flag
+        score += 105;
+    
     if (CanIndexMoveFaintTarget(battlerAtk, battlerDef, AI_THINKING_STRUCT->movesetIndex, 0) && gBattleMoves[move].effect != EFFECT_EXPLOSION)
     {
         // this move can faint the target
@@ -2679,12 +2683,12 @@ static s16 AI_TryToFaint(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
             score += 10;
             break;
         case AI_EFFECTIVENESS_x4:
-            if (ShouldRecover(battlerAtk, battlerDef, move, 50))
+            if (ShouldRecover(battlerAtk, battlerDef, move, 50)) //want to recover if has a recovering move
                 score -= 5;
             score += 5;
             break;
         case AI_EFFECTIVENESS_x2:
-            if (ShouldRecover(battlerAtk, battlerDef, move, 50))
+            if (ShouldRecover(battlerAtk, battlerDef, move, 50)) //want to recover if has a recovering move
                 score -= 3;
             if (GetMoveDamageResult(move) == MOVE_POWER_BEST) //if it's the most powerful move to use, use it
             {  

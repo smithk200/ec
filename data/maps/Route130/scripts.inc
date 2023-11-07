@@ -27,12 +27,14 @@ Route130_OnTransition:
 
 AnIsland_EventScript_Woman::
 	lock
+	faceplayer
 	msgbox AnIsland_Text_Woman, MSGBOX_AUTOCLOSE
 	release
 	end
 
 AnIsland_EventScript_Man::
 	lock
+	faceplayer
 	msgbox AnIsland_Text_Man, MSGBOX_AUTOCLOSE
 	release
 	end
@@ -65,6 +67,11 @@ Route130_Sign_AnIsland::
 	release
 	end
 
+Route130_GymLeadersHouse::
+	msgbox Route130_Text_GymLeadersHouse, MSGBOX_DEFAULT
+	release
+	end
+
 Route130_Event_Script_CaveIsClosed::
 	faceplayer
 	msgbox Route130_Text_CaveIsClosed, MSGBOX_DEFAULT
@@ -77,6 +84,11 @@ Route130_Text_AnIsland:
 	.string "An island created by Team Mag-\p"
 	.string "(There are swastikas and graffiti\n"
 	.string "drawn all over the sign.)$"
+
+Route130_Text_GymLeadersHouse:
+	.string "Gym Leader Resort House\p"
+	.string "Notice: Only people who have defeated\n"
+	.string "the Champion may enter here!$"
 
 Route130_Text_CaveIsClosed:
 	.string "Philip J. Fry: The Cave of\n"

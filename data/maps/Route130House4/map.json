@@ -3,14 +3,14 @@
   "name": "Route130House4",
   "layout": "LAYOUT_ROUTE130HOUSE4",
   "music": "MUS_HEAVY_LIGHT",
-  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "region_map_section": "MAPSEC_ROUTE_130",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": false,
-  "show_map_name": true,
+  "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route130House4_EventScriptMolly_andLiza",
       "flag": "FLAG_GYM_LEADERS_REMATCH_APPEAR"
     },
     {
@@ -50,7 +50,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route130House4_EventScriptBrawly_and_Norman",
       "flag": "FLAG_GYM_LEADERS_REMATCH_APPEAR"
     },
     {
@@ -63,7 +63,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route130House4_EventScriptNed",
       "flag": "FLAG_GYM_LEADERS_REMATCH_APPEAR"
     },
     {
@@ -76,7 +76,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route130House4_EventScriptBill_and_Bender",
       "flag": "FLAG_GYM_LEADERS_REMATCH_APPEAR"
     },
     {
@@ -89,7 +89,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route130House4_EventScriptBill_and_Bender",
       "flag": "FLAG_GYM_LEADERS_REMATCH_APPEAR"
     },
     {
@@ -102,7 +102,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "FLAG_GYM_LEADERS_REMATCH_APPEAR",
+      "script": "Route130House4_EventScriptRoxanne_and_Tate",
       "flag": "FLAG_GYM_LEADERS_REMATCH_APPEAR"
     },
     {
@@ -115,7 +115,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route130House4_EventScriptRoxanne_and_Tate",
       "flag": "FLAG_GYM_LEADERS_REMATCH_APPEAR"
     },
     {
@@ -128,7 +128,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route130House4_EventScriptBrawly_and_Norman",
       "flag": "FLAG_GYM_LEADERS_REMATCH_APPEAR"
     }
   ],
