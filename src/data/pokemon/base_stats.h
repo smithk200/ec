@@ -13041,7 +13041,7 @@ const struct BaseStats gBaseStats[] =
     [SPECIES_REGIGIGAS] =
     {
         .baseHP        = 110,
-        .baseAttack    = 160,
+        .baseAttack    = 140,
         .baseDefense   = 110,
         .baseSpeed     = 100,
         .baseSpAttack  = 80,
@@ -13057,7 +13057,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_SLOW,
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
-        .abilities = {ABILITY_SLOW_START, ABILITY_NONE},
+        .abilities = {ABILITY_SLOW_START, ABILITY_NONE, ABILITY_SUPER_START},
         .bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
         .flags = SPECIES_FLAG_LEGENDARY,
@@ -22735,7 +22735,7 @@ const struct BaseStats gBaseStats[] =
         .friendship = 45,
         .growthRate = GROWTH_SLOW,
         .eggGroup1 = EGG_GROUP_WATER_2,
-        .abilities = {ABILITY_RIVALRY, ABILITY_THICK_FAT, ABILITY_GLUTTONY},
+        .abilities = {ABILITY_MANHATING, ABILITY_THICK_FAT, ABILITY_GLUTTONY},
         .bodyColor = BODY_COLOR_PINK,
         .noFlip = FALSE,
     },
@@ -22758,8 +22758,8 @@ const struct BaseStats gBaseStats[] =
         .friendship = 70,
         .growthRate = GROWTH_SLOW,
         .eggGroup1 = EGG_GROUP_WATER_2,
-        .abilities = {ABILITY_RIVALRY, ABILITY_THICK_FAT, ABILITY_GLUTTONY},
-        .bodyColor = BODY_COLOR_PINK,
+        .abilities = {ABILITY_MANHATING, ABILITY_THICK_FAT, ABILITY_GLUTTONY},
+        .bodyColor = BODY_COLOR_BLUE,
         .noFlip = FALSE,
     },
     [SPECIES_BONGECKO] =
@@ -23428,9 +23428,10 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_FLUCTUATING,
         .eggGroup1 = EGG_GROUP_UNDISCOVERED,
         .eggGroup2 = EGG_GROUP_UNDISCOVERED,
-        .abilities = {ABILITY_NONE, ABILITY_NONE, ABILITY_NONE},
+        .abilities = {ABILITY_AN_ABILITY, ABILITY_NONE, ABILITY_NONE},
         .bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
+        .flags = SPECIES_FLAG_LEGENDARY,
     },
 
 [SPECIES_BACUB] =
@@ -23553,6 +23554,7 @@ const struct BaseStats gBaseStats[] =
         .abilities = {ABILITY_REGENERATOR, ABILITY_NONE, ABILITY_SUPER_LUCK},
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
+        .flags = SPECIES_FLAG_LEGENDARY,
     },
 [SPECIES_INBITWEEN] =
     {

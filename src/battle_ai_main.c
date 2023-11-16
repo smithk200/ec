@@ -22,6 +22,7 @@
 #include "constants/items.h"
 #include "constants/region_map_sections.h"
 #include "constants/species.h"
+#include "constants/opponents.h"
 
 #define AI_ACTION_DONE          0x0001
 #define AI_ACTION_FLEE          0x0002
@@ -443,7 +444,7 @@ static u8 ChooseMoveOrAction_Singles(void)
         if (GetTotalBaseStat(gBattleMons[sBattler_AI].species) >= 400 // Mon is not weak. Originally 310.
             && gBattleMons[sBattler_AI].hp >= gBattleMons[sBattler_AI].maxHP / 2) // Mon has more than 50% of its HP
         {
-            s32 cap = AI_THINKING_STRUCT->aiFlags & (AI_FLAG_CHECK_VIABILITY) ? 98 : 93; //originally 95
+            s32 cap = AI_THINKING_STRUCT->aiFlags & (AI_FLAG_CHECK_VIABILITY) ? 98 : 93; //the first one was originally 95
             for (i = 0; i < MAX_MON_MOVES; i++)
             {
                 if (AI_THINKING_STRUCT->score[i] > cap) //a threshold where if any move score is above that, we don't decide to switch
@@ -1432,6 +1433,11 @@ static s16 AI_CheckBadMove(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
                 score -= 10;
             else if (AI_DATA->abilities[battlerDef] == ABILITY_LIQUID_OOZE)
                 score -= 3;
+            if ((gTrainerBattleOpponent_A == TRAINER_SNOOP) && (!(gStatuses3[battlerDef] & STATUS3_LEECHSEED))) 
+            //Snoop will need to set up a leech seed combo with Ferrothorn
+                score += 50;
+                if (AI_RandLessThan(128)) //random chance for either Leech Seed or Spikes
+                    score -= 10;
             break;
         case EFFECT_DISABLE:
             if (gDisableStructs[battlerDef].disableTimer == 0
@@ -1768,8 +1774,22 @@ static s16 AI_CheckBadMove(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
                 score -= 10;
             break;
         case EFFECT_ABSORB:
-            if (GetMoveDamageResult(move) == MOVE_POWER_WEAK) 
-                score -= 5;
+            if (gTrainerBattleOpponent_A == TRAINER_SNOOP) ///stuff for Snoop Dogg only
+            if (GetMoveDamageResult(move) == MOVE_POWER_BEST)
+                score += 2;
+                switch (AI_DATA->effectiveness[battlerAtk][battlerDef][AI_THINKING_STRUCT->movesetIndex]) //only for Snoop
+                {
+                    case AI_EFFECTIVENESS_x4:
+                        score += 10;
+                    case AI_EFFECTIVENESS_x2:
+                        score += 5;
+                    case AI_EFFECTIVENESS_x1:
+                        score += 2;
+                    case AI_EFFECTIVENESS_x0_5:
+                        score -4;
+                    case AI_EFFECTIVENESS_x0_25:
+                        score -= 10;
+                }
             if (AI_DATA->abilities[battlerDef] == ABILITY_LIQUID_OOZE)
                 score -= 6;
             break;
@@ -2658,7 +2678,8 @@ static s16 AI_TryToFaint(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
 
     if (gBattleMoves[move].effect == EFFECT_HOLY_DUTY) //&& (AI_THINKING_STRUCT->aiFlags & AI_FLAG_WILL_SUICIDE)) 
     //previous line had unused code, it should acticvate the suicide flag
-        score += 105;
+    //Holy Duty can KO, but at the cost of the opponent's mon (this only applies to Lizakbar currently)
+        score += 70;
     
     if (CanIndexMoveFaintTarget(battlerAtk, battlerDef, AI_THINKING_STRUCT->movesetIndex, 0) && gBattleMoves[move].effect != EFFECT_EXPLOSION)
     {
@@ -2685,11 +2706,54 @@ static s16 AI_TryToFaint(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
         case AI_EFFECTIVENESS_x4:
             if (ShouldRecover(battlerAtk, battlerDef, move, 50)) //want to recover if has a recovering move
                 score -= 5;
+            if (HasMoveEffect(EFFECT_ATTACK_UP, battlerAtk) || HasMoveEffect(EFFECT_ATTACK_UP_2, battlerAtk))
+                if (gBattleMons[battlerAtk].statStages[STAT_ATK] < 9) //want the ai to revert to default score if attack should be raised
+                {
+                    if (AI_DATA->hpPercents[battlerAtk] > 90 && AI_RandLessThan(128))
+                    {
+                        score -= 5;
+                        break;
+                    }
+                }
+            if (HasMoveEffect(EFFECT_SPECIAL_ATTACK_UP, battlerAtk) || HasMoveEffect(EFFECT_SPECIAL_ATTACK_UP_2, battlerAtk) || HasMoveEffect(EFFECT_SPECIAL_ATTACK_UP_3, battlerAtk))
+                if (gBattleMons[battlerAtk].statStages[STAT_SPATK] < 9) //want the ai to revert to default score if sp. attack should be raised
+                {
+                    if (AI_DATA->hpPercents[battlerAtk] > 90 && AI_RandLessThan(128))
+                    {
+                        score -= 5;
+                        break;
+                    }
+                }
+            if (GetMoveDamageResult(move) != MOVE_POWER_BEST) //if it's not the most powerful move to use, we should refrain from using it 100% of the time to make the AI less predictable
+            {  
+                if (AI_RandLessThan(128))
+                    score -= 2;
+                else
+                    score --;
+            }
             score += 5;
             break;
         case AI_EFFECTIVENESS_x2:
             if (ShouldRecover(battlerAtk, battlerDef, move, 50)) //want to recover if has a recovering move
                 score -= 3;
+            if (HasMoveEffect(EFFECT_ATTACK_UP, battlerAtk) || HasMoveEffect(EFFECT_ATTACK_UP_2, battlerAtk))
+                    if (gBattleMons[battlerAtk].statStages[STAT_ATK] < 9) //want the ai to revert to default score if attack should be raised
+                    {
+                        if (AI_DATA->hpPercents[battlerAtk] > 90 && AI_RandLessThan(128))
+                        {
+                            score -= 3;
+                            break;
+                        }
+                    }
+            if (HasMoveEffect(EFFECT_SPECIAL_ATTACK_UP, battlerAtk) || HasMoveEffect(EFFECT_SPECIAL_ATTACK_UP_2, battlerAtk) || HasMoveEffect(EFFECT_SPECIAL_ATTACK_UP_3, battlerAtk))
+                if (gBattleMons[battlerAtk].statStages[STAT_SPATK] < 9) //want the ai to revert to default score if sp. attack should be raised
+                {
+                    if (AI_DATA->hpPercents[battlerAtk] > 90 && AI_RandLessThan(128))
+                    {
+                        score -= 3;
+                        break;
+                    }
+                }
             if (GetMoveDamageResult(move) == MOVE_POWER_BEST) //if it's the most powerful move to use, use it
             {  
                 score += 3;
@@ -2705,6 +2769,24 @@ static s16 AI_TryToFaint(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
         case AI_EFFECTIVENESS_x1:
             if (ShouldRecover(battlerAtk, battlerDef, move, 50)) //want to recover if has a recovering move
                 score -= 2;
+            if (HasMoveEffect(EFFECT_ATTACK_UP, battlerAtk) || HasMoveEffect(EFFECT_ATTACK_UP_2, battlerAtk))
+                    if (gBattleMons[battlerAtk].statStages[STAT_ATK] < 9) //want the ai to revert to default score if attack should be raised
+                    {
+                        if (AI_DATA->hpPercents[battlerAtk] > 90 && AI_RandLessThan(128))
+                        {
+                            score -= 2;
+                            break;
+                        }
+                    }
+            if (HasMoveEffect(EFFECT_SPECIAL_ATTACK_UP, battlerAtk) || HasMoveEffect(EFFECT_SPECIAL_ATTACK_UP_2, battlerAtk) || HasMoveEffect(EFFECT_SPECIAL_ATTACK_UP_3, battlerAtk))
+                if (gBattleMons[battlerAtk].statStages[STAT_SPATK] < 9) //want the ai to revert to default score if sp. attack should be raised
+                {
+                    if (AI_DATA->hpPercents[battlerAtk] > 90 && AI_RandLessThan(128))
+                    {
+                        score -= 2;
+                        break;
+                    }
+                }
             if (GetMoveDamageResult(move) == MOVE_POWER_BEST) //if it's a good move, we should use it
                 score += 2;
                 break;
@@ -3210,12 +3292,13 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
         break;
     case EFFECT_HOLY_DUTY:
         if ((AI_THINKING_STRUCT->aiFlags & AI_FLAG_WILL_SUICIDE))
-            score += 105;
+            score += 50;
             break;
     case EFFECT_SLEEP:
     case EFFECT_YAWN:
-        if ((gBattleMons[battlerAtk].species == SPECIES_MOTHERFUCK) & (AI_THINKING_STRUCT->aiFlags & AI_FLAG_OMNISCIENT)) //if the AI has Motherfuck, we should put them to sleep
-            score += 105;
+        if ((gTrainerBattleOpponent_A == TRAINER_BENDER_1) && (!(gBattleMons[battlerDef].status1 & STATUS1_SLEEP)) && (!(IS_BATTLER_OF_TYPE(battlerDef, TYPE_GRASS)))) 
+        //Bender needs to set up a spore combo with Motherfuck, but we don't want to use Spore on a grass type or while the other mon is asleep
+            score += 50;
         if (AI_RandLessThan(128))
             IncreaseSleepScore(battlerAtk, battlerDef, move, &score);
         break;
@@ -3629,7 +3712,7 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
         }
         else
         {
-            score --;
+            score -= 0;
         }
         break;
     case EFFECT_SUBSTITUTE:
@@ -3929,6 +4012,8 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
     case EFFECT_STEALTH_ROCK:
     case EFFECT_STICKY_WEB:
     case EFFECT_TOXIC_SPIKES:
+        if ((gTrainerBattleOpponent_A == TRAINER_SNOOP) && (gBattleMons[battlerAtk].species == SPECIES_FERROTHORN) && (gSideTimers[GetBattlerSide(battlerDef)].spikesAmount < 2)) //(gDisableStructs[battlerAtk].isFirstTurn)
+            score += 50;
         if (AI_DATA->abilities[battlerDef] == ABILITY_MAGIC_BOUNCE || CountUsablePartyMons(battlerDef) == 0)
             break;
         if (gDisableStructs[battlerAtk].isFirstTurn)
@@ -4335,11 +4420,20 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
     case EFFECT_OVERHEAT:
         if (AI_DATA->abilities[battlerAtk] == ABILITY_CONTRARY)
             score += 10;
-        if (GetMoveDamageResult(move) == MOVE_POWER_BEST) //if it's the most powerful move to use, use it
-            {  
-                score += 5;
-                break;
-            }
+        if ((gTrainerBattleOpponent_A == TRAINER_SNOOP)  && gBattleMons[battlerDef].statStages[STAT_SPATK] >= 4)//stuff for Snoop Dogg only
+              switch (AI_DATA->effectiveness[battlerAtk][battlerDef][AI_THINKING_STRUCT->movesetIndex]) //only for Snoop
+                {
+                    case AI_EFFECTIVENESS_x4:
+                        score += 6;
+                    case AI_EFFECTIVENESS_x2:
+                        score += 4;
+                    case AI_EFFECTIVENESS_x1:
+                        score += 2;
+                    case AI_EFFECTIVENESS_x0_5:
+                        score -4;
+                    case AI_EFFECTIVENESS_x0_25:
+                        score -= 10;
+                }
         break;
     case EFFECT_MAGIC_COAT:
         if (IS_MOVE_STATUS(predictedMove) && AI_GetBattlerMoveTargetType(battlerDef, predictedMove) & (MOVE_TARGET_SELECTED | MOVE_TARGET_OPPONENTS_FIELD | MOVE_TARGET_BOTH))

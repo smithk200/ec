@@ -6005,7 +6005,14 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
     [MOVE_AN_ATTACK] =
     {
         .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
-        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .comboStarterId = COMBO_STARTER_POUND,
+        .comboMoves = {0}
+    },
+    [MOVE_TRAILBLAZE] =
+    {
+        .effect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_CUTE,
         .comboStarterId = COMBO_STARTER_POUND,
         .comboMoves = {0}
     },

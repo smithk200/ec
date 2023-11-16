@@ -1521,7 +1521,7 @@ static const u8 sHealBlockDescription[] = _(
     "recovering any HP.");
 
 static const u8 sWringOutDescription[] = _(
-    "The higher the foe's HP\n"
+    "The higher the foe's HP,\n"
     "the more damage caused.");
 
 static const u8 sPowerTrickDescription[] = _(
@@ -2217,8 +2217,8 @@ static const u8 sIonDelugeDescription[] = _(
     "moves with charged atoms.");
 
 static const u8 sParabolicChargeDescription[] = _(
-    "Damages adjacent Pokémon and\n"
-    "heals up by half of it.");
+    "Damages adjacent Pokémon\n"
+    "and heals up by half of it.");
 
 static const u8 sForestsCurseDescription[] = _(
     "Puts a curse on the foe\n"
@@ -3080,6 +3080,10 @@ static const u8 sGayAgendaDescription[] = _(
     "Makes the same gender\n"
     "less likely to attack.");
 
+static const u8 sTrailblazeDescription[] = _(
+    "The user attacks from tall\n"
+    "grass, boosting its Speed.");
+
 const u8 gNotDoneYetDescription[] = _(
     "This move can't be used. Its\n"
     "effect is in development.");
@@ -3877,4 +3881,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_HOLY_DUTY_CPU - 1] = sHolyDutyCPUDescription,
     [MOVE_AN_ATTACK - 1] = sAnAttackDescription,
     [MOVE_GAY_AGENDA - 1] = sGayAgendaDescription,
+    [MOVE_TRAILBLAZE -1] = sTrailblazeDescription,
 };

@@ -118,6 +118,7 @@ Route104_EventScript_MayEncounter::
 	copyobjectxytoperm LOCALID_RIVAL
 	msgbox Route104_Text_MayMinesDecentLetsBattle, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Route104_EventScript_BattleMay
+	goto_if_eq VAR_RESULT, NO, Route104_EventScript_GoFYourself_Battle_May
 	msgbox Route104_Text_MayHaventRaisedPokemon, MSGBOX_DEFAULT
 	call Route104_EventScript_RestoreMusic
 	releaseall
@@ -140,12 +141,21 @@ Route104_Movement_PlayerFaceRival:
 Route104_EventScript_MayAskToBattle::
 	msgbox Route104_Text_MayLetsBattle, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Route104_EventScript_BattleMay
+	goto_if_eq VAR_RESULT, NO, Route104_EventScript_GoFYourself_Battle_May
 	msgbox Route104_Text_MayHaventRaisedPokemon, MSGBOX_DEFAULT
 	releaseall
 	end
 
 Route104_EventScript_BattleMay::
 	msgbox Route104_Text_MayIntro, MSGBOX_DEFAULT
+	switch VAR_STARTER_MON
+	case 0, Route104_EventScript_BattleMayTreecko
+	case 1, Route104_EventScript_BattleMayTorchic
+	case 2, Route104_EventScript_BattleMayMudkip
+	end
+
+Route104_EventScript_GoFYourself_Battle_May::
+	msgbox Route104_Text_MayIntroBad, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
 	case 0, Route104_EventScript_BattleMayTreecko
 	case 1, Route104_EventScript_BattleMayTorchic
@@ -204,6 +214,7 @@ Route104_EventScript_BrendanEncounter::
 	copyobjectxytoperm LOCALID_RIVAL
 	msgbox Route104_Text_BrendanDoingGreatLetsBattle, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Route104_EventScript_BattleBrendan
+	goto_if_eq VAR_RESULT, NO, Route104_EventScript_BrendanGoFYourself
 	msgbox Route104_Text_BrendanNoConfidence, MSGBOX_DEFAULT
 	call Route104_EventScript_RestoreMusic
 	releaseall
@@ -212,12 +223,21 @@ Route104_EventScript_BrendanEncounter::
 Route104_EventScript_BrendanAskToBattle::
 	msgbox Route104_Text_BrendanLetsBattle, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Route104_EventScript_BattleBrendan
+	goto_if_eq VAR_RESULT, NO, Route104_EventScript_BrendanGoFYourself
 	msgbox Route104_Text_BrendanNoConfidence, MSGBOX_DEFAULT
 	releaseall
 	end
 
 Route104_EventScript_BattleBrendan::
 	msgbox Route104_Text_BrendanIntro, MSGBOX_DEFAULT
+	switch VAR_STARTER_MON
+	case 0, Route104_EventScript_BattleBrendanTreecko
+	case 1, Route104_EventScript_BattleBrendanTorchic
+	case 2, Route104_EventScript_BattleBrendanMudkip
+	end
+
+Route104_EventScript_BrendanGoFYourself::
+	msgbox Route104_Text_BrendanIntroBad, MSGBOX_DEFAULT
 	switch VAR_STARTER_MON
 	case 0, Route104_EventScript_BattleBrendanTreecko
 	case 1, Route104_EventScript_BattleBrendanTorchic
@@ -1003,15 +1023,15 @@ Route104_Event_Script_Fry::
 	goto Route104_EventScript_FryPostBattle
 
 Route104_EventScript_FryPostBattle::
-	call_if_unset FLAG_FRY_ROUTE104_TM58, Route104_EventScript_ItemTM58
+	call_if_unset FLAG_FRY_ROUTE104_GIVE_TM, Route104_EventScript_Item_A_TM
 	msgbox Route104_Text_FryPostBattle, MSGBOX_AUTOCLOSE
 	release
 	end
 
-Route104_EventScript_ItemTM58::
-	giveitem ITEM_TM58
-	setflag FLAG_FRY_ROUTE104_TM58
-	msgbox Route104_Text_FryExplainTM58, MSGBOX_DEFAULT
+Route104_EventScript_Item_A_TM::
+	giveitem ITEM_TM59
+	setflag FLAG_FRY_ROUTE104_GIVE_TM
+	msgbox Route104_Text_FryExplainTM, MSGBOX_DEFAULT
 	return
 
 Route104_Text_FryIntro:
@@ -1024,9 +1044,13 @@ Route104_Text_FryDefeat:
 Route104_Text_FryPostBattle:
 	.string "I look forward to seeing you again!$"
 
-Route104_Text_FryExplainTM58:
-	.string "This TM is Mega Drain.\n"
-	.string "It drains the opponent's HP.$"
+Route104_Text_FryExplainTM:
+	.string "This TM is Trailblaze.\n"
+	.string "It blazes a trail!\p"
+	.string "No, seriously, it's a good move\n"
+	.string "that hits and always ups your Speed.\p"
+	.string "However, you can only teach it to\n"
+	.string "certain Pokémon.$"
 
 Route104_Text_BrineyLivesInSeasideCottage:
 	.string "That seaside cottage is where\n"
@@ -1052,8 +1076,8 @@ Route104_Text_OnlyThrowBallAtWildPokemon:
 	.string "wild Pokémon.$"
 
 Route104_Text_ImNotATrainer:
-	.string "Oh, no, I'm not a TRAINER.\p"
-	.string "But that's right, if TRAINERS lock eyes,\n"
+	.string "Oh, no, I'm not a Trainer.\p"
+	.string "But that's right, if Trainer lock eyes,\n"
 	.string "it's a challenge to battle.\p"
 	.string "If you don't want to battle, stay out\n"
 	.string "of their sight.$"
@@ -1066,36 +1090,36 @@ Route104_Text_LikeFillingMouthWithSeedsTakeThis:
 	.string "a move for firing seeds rapidly.$"
 
 Route104_Text_TMsAreOneTimeUse:
-	.string "By the way, a TM, TECHNICAL MACHINE,\n"
+	.string "By the way, a TM, Technical Machine,\n"
 	.string "can be used as many times as you want!$"
 
 Route104_Text_DontNeedThisTakeIt:
-	.string "This FLOWER SHOP started selling\n"
+	.string "This flower shop started selling\n"
 	.string "saplings recently.\p"
 	.string "It made me so happy, I went overboard\n"
 	.string "shopping.\p"
-	.string "I don't need this WHITE HERB anymore.\n"
+	.string "I don't need this White Herb anymore.\n"
 	.string "Would you take it, please?$"
 
 Route104_Text_FlowerShopSellingSaplings:
-	.string "This FLOWER SHOP started selling\n"
+	.string "This flower shop started selling\n"
 	.string "saplings recently.\p"
 	.string "It made me so happy, I went overboard\n"
 	.string "shopping. Where should I put them?$"
 
 Route104_Text_MrBrineysCottage:
-	.string "MR. BRINEY'S COTTAGE$"
+	.string "Mr. Briney's Cottage$"
 
 Route104_Text_RouteSignPetalburg:
-	.string "ROUTE 1O4\n"
-	.string "{RIGHT_ARROW} PETALBURG CITY$"
+	.string "Route 1O4\n"
+	.string "{RIGHT_ARROW} Petalburg City$"
 
 Route104_Text_RouteSignRustboro:
 	.string "ROUTE 1O4\n"
-	.string "{UP_ARROW} RUSTBORO CITY$"
+	.string "{UP_ARROW} Rustboro City$"
 
 Route104_Text_PrettyPetalFlowShop:
-	.string "PRETTY PETAL FLOWER SHOP$"
+	.string "Pretty Petal Flower Shop$"
 
 Route104_Text_TrainerTipsDoubleBattles:
 	.string "Trainer Tips\p"
@@ -1124,25 +1148,30 @@ Route104_Text_MayMinesDecentLetsBattle:
 	.string "How about a little battle?$"
 
 Route104_Text_MayHaventRaisedPokemon:
-	.string "MAY: Oh, what's the matter?\p"
+	.string "May: Oh, what's the matter?\p"
 	.string "Haven't you caught or raised your\n"
 	.string "Pokémon very much?\p"
-	.string "That's not very good for a TRAINER!$"
+	.string "That's not very good for a Trainer!$"
 
 Route104_Text_MayLetsBattle:
-	.string "MAY: So, what do you think?\n"
+	.string "May: So, what do you think?\n"
 	.string "How about a little battle here?$"
 
 Route104_Text_MayIntro:
-	.string "MAY: You just became a TRAINER,\n"
+	.string "May: You just became a Trainer,\n"
 	.string "{PLAYER}{KUN}. I'm not going to lose!$"
+
+Route104_Text_MayIntroBad:
+	.string "May: Well, too fucking bad!\n"
+	.string "Yes, I said 'fucking'!\l"
+	.string "You got a problem with that?$"
 
 Route104_Text_MayDefeat:
 	.string "Yikes!\n"
 	.string "You're better than I expected!$"
 
 Route104_Text_MayPostBattle:
-	.string "MAY: I can tell you've gotten pretty\n"
+	.string "May: I can tell you've gotten pretty\n"
 	.string "good with the way you handle Pokémon.\p"
 	.string "But instead of only making them\n"
 	.string "battle, you should be like MR. BRINEY.\p"
@@ -1150,7 +1179,7 @@ Route104_Text_MayPostBattle:
 	.string "Pokémon, too.$"
 
 Route104_Text_BrendanWeShouldRegister:
-	.string "BRENDAN: Oh, hey, {PLAYER}!\p"
+	.string "Brendan: Oh, hey, {PLAYER}!\p"
 	.string "Cool, you had DEVON install the MATCH\n"
 	.string "CALL system on your POKéNAV!\p"
 	.string "Let's register each other in our\n"
@@ -1161,7 +1190,7 @@ Route104_Text_RegisteredBrendan:
 	.string "in the POKéNAV.$"
 
 Route104_Text_BrendanHowsYourPokedex:
-	.string "BRENDAN: {PLAYER}, how's your POKéDEX?\n"
+	.string "Brendan: {PLAYER}, how's your POKéDEX?\n"
 	.string "Have you filled in any pages yet?$"
 
 Route104_Text_BrendanDoingGreatLetsBattle:
@@ -1170,23 +1199,28 @@ Route104_Text_BrendanDoingGreatLetsBattle:
 	.string "a battle?$"
 
 Route104_Text_BrendanNoConfidence:
-	.string "BRENDAN: What's the matter? Don't have\n"
+	.string "Brendan: What's the matter? Don't have\n"
 	.string "any confidence in your Pokémon?$"
 
 Route104_Text_BrendanLetsBattle:
-	.string "BRENDAN: What's up?\n"
+	.string "Brendan: What's up?\n"
 	.string "Want to have a battle with me?$"
 
 Route104_Text_BrendanIntro:
-	.string "BRENDAN: I know you just became\n"
-	.string "a TRAINER, but I won't go easy!$"
+	.string "Brendan: I know you just became\n"
+	.string "a Trainer, but I won't go easy!$"
+
+Route104_Text_BrendanIntroBad:
+	.string "Brendan: Well, too fucking bad!\n"
+	.string "Yes, I said 'fucking'!\l"
+	.string "You got a problem with that?$"
 
 Route104_Text_BrendanDefeat:
 	.string "Hmm…\n"
 	.string "You're pretty good.$"
 
 Route104_Text_BrendanPostBattle:
-	.string "BRENDAN: You've gotten pretty decent\n"
+	.string "Brendan: You've gotten pretty decent\n"
 	.string "at handling Pokémon.\p"
 	.string "But, you know, you shouldn't just be\n"
 	.string "making Pokémon battle.\p"

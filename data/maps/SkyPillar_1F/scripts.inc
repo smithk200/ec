@@ -11,12 +11,12 @@ SkyPillar_1F_EventScript_CleanFloor::
 	return
 
 SkyPillar_1F_Fry::
-	goto_if_unset FLAG_FRY, SkyPillar_1F_Fry_Afer_Battle
+	goto_if_unset FLAG_FRY_SKY_PILLAR, SkyPillar_1F_Fry_Afer_Battle
 	msgbox SkyPillar_1F_Fry_FirstMeeting, MSGBOX_YESNO
 	compare VAR_RESULT, 0
 	goto_if_eq FortreeCity_Gym_WarpDude_No
 	trainerbattle_single TRAINER_FRY_SKY_PILLAR, SkyPillarText_FryIntro, SkyPillarText_FryDefeated
-	clearflag FLAG_FRY
+	clearflag FLAG_FRY_SKY_PILLAR
 	release
 	end
 

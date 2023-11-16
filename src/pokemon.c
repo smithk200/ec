@@ -7624,6 +7624,8 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_LEADER:
             return MUS_SANDSTORM;
         case TRAINER_CLASS_PHILIP:
+            if (gTrainerBattleOpponent_A == TRAINER_FRY_EVER_GRANDE)
+                return MUS_STICK_FIGURES;
             return MUS_VS_FRY;
         case TRAINER_CLASS_PHILIP_2:
             return MUS_STICK_FIGURES;

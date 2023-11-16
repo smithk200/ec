@@ -211,7 +211,7 @@
 #define TRAINER_BERNIE_2                    207
 #define TRAINER_BERNIE_3                    208
 #define TRAINER_BERNIE_4                    209
-#define TRAINER_BERNIE_5                    210
+#define TRAINER_FRY_MOSSDEEP                210
 #define TRAINER_DREW                        211
 #define TRAINER_BEAU                        212
 #define TRAINER_LARRY                       213
@@ -385,7 +385,7 @@
 #define TRAINER_ISAIAH_4                    381
 #define TRAINER_ISAIAH_5                    382
 #define TRAINER_ISOBEL                      383
-#define TRAINER_TATE                       384
+#define TRAINER_TATE                        384
 #define TRAINER_TALIA                       385
 #define TRAINER_KATELYN_1                   386
 #define TRAINER_ALLISON                     387

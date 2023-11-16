@@ -94,7 +94,7 @@ static bool8 HasBadOdds(void)
 	return FALSE;
 }
 
-static bool8 AiCanSuicide(void)
+static bool8 AiCanSuicide(void) //unused and leftover
 {
     u16 move;
 	s32 i, j;
@@ -1003,13 +1003,14 @@ static u32 GetBestMonDmg(struct Pokemon *party, int firstId, int lastId, u8 inva
 u8 GetMostSuitableMonToSwitchInto(void)
 {
     u32 opposingBattler = 0;
-    u32 bestMonId = 0;
+    u32 bestMonId = 0; //in upcomming it's PARTY_SIZE, but no need to mess with it
     u8 battlerIn1 = 0, battlerIn2 = 0;
     s32 firstId = 0;
     s32 lastId = 0; // + 1
     struct Pokemon *party;
     s32 i, j, aliveCount = 0;
     u8 invalidMons = 0;
+    u8 aceMonId = PARTY_SIZE;
 
     if (*(gBattleStruct->monToSwitchIntoId + gActiveBattler) != PARTY_SIZE)
         return *(gBattleStruct->monToSwitchIntoId + gActiveBattler);
@@ -1070,6 +1071,9 @@ u8 GetMostSuitableMonToSwitchInto(void)
     bestMonId = GetBestMonDmg(party, firstId, lastId, invalidMons, opposingBattler);
     if (bestMonId != PARTY_SIZE)
         return bestMonId;
+
+    if (aceMonId != PARTY_SIZE)
+        return aceMonId;
 
     return PARTY_SIZE;
 }

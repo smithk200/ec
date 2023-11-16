@@ -31,7 +31,7 @@ The project was originally started by DizzyEgg alongside other contributors.
 
 The project has now gotten larger and DizzyEgg is now maintaining the project as part of the ROM Hacking Hideout community. Some members of this community are taking on larger roles to help maintain the project.
 
-This version of the project is now maintained by smithj200. This repository was based off the October 2022 version of pokeemerald-expansion.
+This version of the project is now maintained by smithk200 (also known as smithk200 or IAmAwesome2). This repository was based off the October 2022 version of pokeemerald-expansion.
 
 ### Please consider crediting the entire [list of contributors](https://github.com/rh-hideout/pokeemerald-expansion/wiki/Credits) in your project, as they have all worked hard to develop this project :)
 

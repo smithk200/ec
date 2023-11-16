@@ -1914,7 +1914,9 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                 {
                     highest = (highest + partyData[i].lvlmodifier);
                     if (highest > 100)
-                        highest = 100;
+                        highest = 100; //making sure the level doesn't go above 100
+                    if (highest < 1)
+                        highest = 1; //making sure the level doesn't go below 1
                     CreateMon(&party[i], partyData[i].species, highest, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0); 
                 }
                 else
@@ -1941,6 +1943,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                     highest = (highest + partyData[i].lvlmodifier);
                     if (highest > 100)
                         highest = 100;
+                    if (highest < 1)
+                        highest = 1;
                     CreateMon(&party[i], partyData[i].species, highest, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                 }
                 else
@@ -1973,6 +1977,8 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                     highest = (highest + partyData[i].lvlmodifier);
                     if (highest > 100)
                         highest = 100;
+                    if (highest < 1)
+                        highest = 1;
                     CreateMon(&party[i], partyData[i].species, highest, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                 }
                 else
@@ -2002,6 +2008,10 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
                     highest = (highest + partyData[i].lvlmodifier);
                     if (highest > 100)
                         highest = 100;
+                    if (highest < 1)
+                        highest = 1;
+                    if (highest < 1)
+                        highest = 1;
                     CreateMon(&party[i], partyData[i].species, highest, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
                 }
                 else
@@ -4540,6 +4550,8 @@ u32 GetBattlerTotalSpeedStat(u8 battlerId)
         speed *= 2;
     else if (ability == ABILITY_SLOW_START && gDisableStructs[battlerId].slowStartTimer != 0)
         speed /= 2;
+    else if (ability == ABILITY_SUPER_START && gDisableStructs[battlerId].superStartTimer == 0)
+        speed *= 2;
 
     // stat stages
     speed *= gStatStageRatios[gBattleMons[battlerId].statStages[STAT_SPEED]][0];
@@ -4550,7 +4562,7 @@ u32 GetBattlerTotalSpeedStat(u8 battlerId)
         && ShouldGetStatBadgeBoost(FLAG_BADGE03_GET, battlerId)
         && GetBattlerSide(battlerId) == B_SIDE_PLAYER)
     {
-        speed = (speed * 110) / 100;
+        speed = (speed * 100) / 100;
     }
 
     // item effects

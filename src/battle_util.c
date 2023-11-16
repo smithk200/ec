@@ -2668,6 +2668,7 @@ enum
     ENDTURN_THROAT_CHOP,
     ENDTURN_SLOW_START,
     ENDTURN_PLASMA_FISTS,
+    ENDTURN_SUPER_START,
     ENDTURN_BATTLER_COUNT
 };
 
@@ -3208,6 +3209,16 @@ u8 DoBattlerEndTurnEffects(void)
         case ENDTURN_PLASMA_FISTS:
             for (i = 0; i < gBattlersCount; i++)
                 gStatuses4[i] &= ~STATUS4_PLASMA_FISTS;
+            gBattleStruct->turnEffectsTracker++;
+            break;
+        case ENDTURN_SUPER_START:
+            if (gDisableStructs[gActiveBattler].superStartTimer
+                && --gDisableStructs[gActiveBattler].superStartTimer == 0
+                && ability == ABILITY_SUPER_START)
+            {
+                BattleScriptExecute(BattleScript_SuperStartEnds);
+                effect++;
+            }
             gBattleStruct->turnEffectsTracker++;
             break;
         case ENDTURN_BATTLER_COUNT:  // done
@@ -4432,6 +4443,16 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u16 ability, u8 special, u16 move
             {
                 gDisableStructs[battler].slowStartTimer = 5;
                 gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_SWITCHIN_SLOWSTART;
+                gSpecialStatuses[battler].switchInAbilityDone = TRUE;
+                BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
+                effect++;
+            }
+            break;
+        case ABILITY_SUPER_START:
+            if (!gSpecialStatuses[battler].switchInAbilityDone)
+            {
+                gDisableStructs[battler].superStartTimer = 5;
+                gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_SWITCHIN_SUPERSTART;
                 gSpecialStatuses[battler].switchInAbilityDone = TRUE;
                 BattleScriptPushCursorAndCallback(BattleScript_SwitchInAbilityMsg);
                 effect++;
@@ -8474,6 +8495,14 @@ static u32 CalcMoveBasePowerAfterModifiers(u16 move, u8 battlerAtk, u8 battlerDe
                MulModifier(&modifier, UQ_4_12(0.75));
         }
         break;
+        case ABILITY_MANHATING:
+        {
+        if (GetGenderFromSpeciesAndPersonality(gBattleMons[battlerDef].species, gBattleMons[battlerDef].personality) == MON_MALE)
+            MulModifier(&modifier, UQ_4_12(1.25));
+        else
+            MulModifier(&modifier, UQ_4_12(0.75));
+        }
+        break;
     case ABILITY_ANALYTIC:
         if (GetBattlerTurnOrderNum(battlerAtk) == gBattlersCount - 1 && move != MOVE_FUTURE_SIGHT && move != MOVE_DOOM_DESIRE)
            MulModifier(&modifier, UQ_4_12(1.3));
@@ -8818,6 +8847,10 @@ static u32 CalcAttackStat(u16 move, u8 battlerAtk, u8 battlerDef, u8 moveType, b
     case ABILITY_SLOW_START:
         if (gDisableStructs[battlerAtk].slowStartTimer != 0)
             MulModifier(&modifier, UQ_4_12(0.5));
+        break;
+    case ABILITY_SUPER_START:
+        if (gDisableStructs[battlerAtk].superStartTimer == 0)
+            MulModifier(&modifier, UQ_4_12(2));
         break;
     case ABILITY_SOLAR_POWER:
         if (IS_MOVE_SPECIAL(move) && IsBattlerWeatherAffected(battlerAtk, B_WEATHER_SUN))

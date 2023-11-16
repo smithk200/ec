@@ -111,6 +111,7 @@ static const u8 sUnawareDescription[] = _("Ignores stat changes.");
 static const u8 sTintedLensDescription[] = _("Ups “not very effective”.");
 static const u8 sFilterDescription[] = _("Weakens “supereffective”.");
 static const u8 sSlowStartDescription[] = _("Takes a while to get going.");
+static const u8 sSuperStartDescription[] = _("Doubles Attack and Speed.");
 static const u8 sScrappyDescription[] = _("Hits Ghost-type Pokémon.");
 static const u8 sStormDrainDescription[] = _("Draws in Water moves.");
 static const u8 sIceBodyDescription[] = _("Slight HP recovery in Hail.");
@@ -254,6 +255,8 @@ static const u8 sChillingNeighDescription[] = _("KOs boost Attack stat.");
 static const u8 sGrimNeighDescription[] = _("KOs boost Sp. Atk stat.");
 static const u8 sAsOneIceRiderDescription[] = _("Unnerve and Chilling Neigh.");
 static const u8 sAsOneShadowRiderDescription[] = _("Unnerve and Grim Neigh.");
+static const u8 sManhatingDescription[] = _("Deals more damage to males.");
+static const u8 sAnAbilityDescription[] = _("This is an ability.");
 
 #if B_EXPANDED_ABILITY_NAMES == TRUE
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -526,6 +529,9 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_GRIM_NEIGH] = _("Grim Neigh"),
     [ABILITY_AS_ONE_ICE_RIDER] = _("As One"),
     [ABILITY_AS_ONE_SHADOW_RIDER] = _("As One"),
+    [ABILITY_SUPER_START] = _("Super Start"),
+    [ABILITY_MANHATING] = _("Manhating"),
+    [ABILITY_AN_ABILITY] = _("An Ability"),
 };
 #else   // 12 characters
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -798,6 +804,9 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_GRIM_NEIGH] = _("Grim Neigh"),
     [ABILITY_AS_ONE_ICE_RIDER] = _("As One"),
     [ABILITY_AS_ONE_SHADOW_RIDER] = _("As One"),
+    [ABILITY_SUPER_START] = _("Super Start"),
+    [ABILITY_MANHATING] = _("Manhating"),
+    [ABILITY_AN_ABILITY] = _("An Ability"),
 };
 #endif
 
@@ -1071,4 +1080,7 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_GRIM_NEIGH] = sGrimNeighDescription,
     [ABILITY_AS_ONE_ICE_RIDER] = sAsOneIceRiderDescription,
     [ABILITY_AS_ONE_SHADOW_RIDER] = sAsOneShadowRiderDescription,
+    [ABILITY_SUPER_START] = sSuperStartDescription,
+    [ABILITY_MANHATING] = sManhatingDescription,
+    [ABILITY_AN_ABILITY] = sAnAbilityDescription,
 };

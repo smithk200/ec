@@ -2,31 +2,66 @@ Route130House4_MapScripts::
 	.byte 0
 
 Route130House4_EventScriptRoxanne_and_Tate::
-        trainerbattle_two_trainers TRAINER_ROXANNE_2, Route130House4_Text_RoxanneDefeat, TRAINER_TATE_2, Route130House4_Text_TateDefeat
-        release
-        end
+	msgbox Route130House4_Text_RoxanneandTateIntro, MSGBOX_DEFAULT
+	trainerbattle_two_trainers TRAINER_ROXANNE_2, Route130House4_Text_RoxanneDefeat, TRAINER_TATE_2, Route130House4_Text_TateDefeat
+	goto Route130House4_EventScriptCommonReceivedSSTicket
+	release
+	end
 Route130House4_EventScriptBrawly_and_Norman::
-        trainerbattle_two_trainers TRAINER_BRAWLY_2, Route130House4_Text_BrawlyDefeat, TRAINER_NORMAN_2, Route130House4_Text_NormanDefeat
-        release
-        end
+	msgbox Route130House4_Text_BrawlyandNormanIntro, MSGBOX_DEFAULT
+	trainerbattle_two_trainers TRAINER_BRAWLY_2, Route130House4_Text_BrawlyDefeat, TRAINER_NORMAN_2, Route130House4_Text_NormanDefeat
+	goto Route130House4_EventScriptCommonReceivedSSTicket
+	release
+	end
 Route130House4_EventScriptBill_and_Bender::
-        trainerbattle_two_trainers TRAINER_WATTSON_2, Route130House4_Text_BillDefeat, TRAINER_JUAN_2, Route130House4_Text_BenderDefeat
-        release
-        end
+	msgbox Route130House4_Text_BillandBenderIntro, MSGBOX_DEFAULT
+	trainerbattle_two_trainers TRAINER_WATTSON_2, Route130House4_Text_BillDefeat, TRAINER_JUAN_2, Route130House4_Text_BenderDefeat
+	goto Route130House4_EventScriptCommonReceivedSSTicket
+	release
+	end
 Route130House4_EventScriptMolly_andLiza::
-        trainerbattle_two_trainers TRAINER_MOLLY_2, Route130House4_Text_MollyDefeat, TRAINER_LIZA_2, Route130House4_Text_LizaDefeat
-        release
-        end
+	msgbox Route130House4_Text_MollyandLizaIntro, MSGBOX_DEFAULT
+	trainerbattle_two_trainers TRAINER_MOLLY_2, Route130House4_Text_MollyDefeat, TRAINER_LIZA_2, Route130House4_Text_LizaDefeat
+	goto Route130House4_EventScriptCommonReceivedSSTicket
+	release
+	end
 Route130House4_EventScriptNed::
-        trainerbattle_single TRAINER_NED_2, Route130House4_Text_NedIntro, Route130House4_Text_NedDefeat, Route130House4_EventScript_NedDefeated
-		setflag FLAG_RECEIVED_SS_TICKET
-        release
-        end
+	msgbox Route130House4_Text_NedIntro, MSGBOX_DEFAULT
+	trainerbattle_single TRAINER_NED_2, Route130House4_Text_NedIntro, Route130House4_Text_NedDefeat, Route130House4_EventScript_NedDefeated
+	goto Route130House4_EventScriptCommonReceivedSSTicket
+	release
+	end
+
+Route130House4_EventScriptCommonReceivedSSTicket::
+	setflag FLAG_RECEIVED_SS_TICKET
+	giveitem ITEM_SS_TICKET
+	return
+
 
 Route130House4_EventScript_NedDefeated::
 	msgbox Route130_House4_NedPostBattle, MSGBOX_DEFAULT	
 	release
 	end
+
+Route130House4_Text_RoxanneandTateIntro:
+    .string "You are a strong Trainer!$"
+        
+Route130House4_Text_BrawlyandNormanIntro:
+    .string "You are a strong Trainer!$"
+        
+Route130House4_Text_MollyandLizaIntro:
+    .string "You are a strong Trainer!$"
+        
+Route130House4_Text_BillandBenderIntro:
+    .string "You are a strong Trainer!$"
+        
+Route130House4_Text_NedIntro:
+    .string "Hidey-ho, neighborino!\p"
+	.string "The other Gym Leaders didn't want\n"
+	.string "to partner with me.\p"
+	.string "Something about how I worship God?\p"
+	.string "No matter, because the LORD is here to\n"
+	.string "give me victory over you!$"
 
 Route130House4_Text_RoxanneDefeat:
 	.string "Aw, this sucks!$" 
@@ -35,7 +70,7 @@ Route130House4_Text_BrawlyDefeat:
 Route130House4_Text_BillDefeat:
 	.string "Aw, this sucks!$" 
 Route130House4_Text_MollyDefeat:
-	.string "Aw, this sucks!$" 
+	.string "Okay.$" 
 Route130House4_Text_NormanDefeat:
 	.string "Aw, this sucks!$" 
 Route130House4_Text_TateDefeat:
@@ -44,9 +79,6 @@ Route130House4_Text_LizaDefeat:
 	.string "Aw, this sucks!$" 
 Route130House4_Text_BenderDefeat:
 	.string "Aw, this sucks!$" 
-
-Route130House4_Text_NedIntro:
-	.string "Hi, neighbor!$"
 
 Route130House4_Text_NedDefeat:
 	.string "Aw, this sucks!$" 

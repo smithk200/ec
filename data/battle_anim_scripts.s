@@ -813,6 +813,7 @@ gBattleAnims_Moves::
 	.4byte Move_HOLY_DUTY_CPU
 	.4byte Move_AN_ATTACK
 	.4byte Move_GAY_AGENDA
+	.4byte Move_TRAILBLAZE
 @@@@ Z MOVES
 	.4byte Move_BREAKNECK_BLITZ
 	.4byte Move_ALL_OUT_PUMMELING
@@ -16716,6 +16717,7 @@ Move_TELEPORT:
 	end
 
 Move_DOUBLE_TEAM:
+Move_TRAILBLAZE:
 	createvisualtask AnimTask_DoubleTeam, 2
 	setalpha 12, 8
 	monbg ANIM_ATK_PARTNER

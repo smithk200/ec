@@ -509,7 +509,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "6",
       "script": "Route110_EventScript_Fry3",
-      "flag": "0"
+      "flag": "FLAG_FRY_ROUTE_110"
     }
   ],
   "warp_events": [

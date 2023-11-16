@@ -47,16 +47,16 @@
 #define FLAG_FORTREE_GYM_NPC    0x23 // Unused Flag
 #define FLAG_MOSSDEEP_GYM_NPC   0x24 // Unused Flag
 #define FLAG_SOOTOPOLIS_GYM_NPC   0x25 // Unused Flag
-#define FLAG_FRY             0x26 // Unused Flag
+#define FLAG_FRY_SKY_PILLAR             0x26 // Unused Flag
 #define FLAG_EXP_SHARE     0x27 // Unused Flag
 #define FLAG_FUNDAMENTALISTS    0x28 // Unused Flag
 #define FLAG_VS_SEEKER    0x29 // Unused Flag
 #define FLAG_FRY_ROUTE_104    0x2A // Unused Flag
 #define FLAG_VISITED_AN_ISLAND    0x2B // Unused Flag
 #define FLAG_DEFEATED_TATE    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
+#define FLAG_FRY_ROUTE_110   0x2D // Unused Flag
+#define FLAG_FRY_MOSSDEEP    0x2E // Unused Flag
+#define FLAG_FRY_MOSSDEEP_GIVE_TM    0x2F // Unused Flag
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag
 #define FLAG_UNUSED_0x031    0x31 // Unused Flag
 #define FLAG_UNUSED_0x032    0x32 // Unused Flag
@@ -1173,7 +1173,7 @@
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B1F_MASTER_BALL                 0x465 // Unused Flag, leftover from the Ruby Magma hideout
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B1F_MAX_ELIXIR                  0x466 // Unused Flag, leftover from the Ruby Magma hideout
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B2F_NEST_BALL                   0x467 // Unused Flag, leftover from the Ruby Magma hideout
-#define FLAG_FRY_ROUTE104_TM58                                     0x468 // Unused Flag
+#define FLAG_FRY_ROUTE104_GIVE_TM                                   0x468 // Unused Flag
 #define FLAG_ITEM_MT_PYRE_2F_ULTRA_BALL                             0x469
 #define FLAG_ITEM_MT_PYRE_4F_SEA_INCENSE                            0x46A
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_WEST_MAX_REVIVE                 0x46B

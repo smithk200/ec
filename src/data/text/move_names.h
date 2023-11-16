@@ -789,6 +789,7 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_HOLY_DUTY_CPU] = _("Holy Duty"),
     [MOVE_AN_ATTACK] = _("An Attack"),
     [MOVE_GAY_AGENDA] = _("Gay Agenda"),
+    [MOVE_TRAILBLAZE] = _("Trailblaze"),
 };
 #else
 // 12 letters
@@ -1581,6 +1582,7 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_HOLY_DUTY_CPU] = _("Holy Duty"),
     [MOVE_AN_ATTACK] = _("An Attack"),
     [MOVE_GAY_AGENDA] = _("Gay Agenda"),
+    [MOVE_TRAILBLAZE] = _("Trailblaze"),
 };
 #endif
 
