@@ -62,6 +62,7 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 #include "constants/trainers.h"
+#include "constants/opponents.h"
 #include "cable_club.h"
 
 extern struct Evolution gEvolutionTable[][EVOS_PER_MON];

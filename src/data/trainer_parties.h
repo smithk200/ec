@@ -990,7 +990,7 @@ static const struct TrainerMonItemCustomMoves sParty_Berke[] = {
     },
     {
     .iv = 255,
-    .lvl = 100,
+    .lvl = 38,
     .species = SPECIES_LIZAKBAR,
     .heldItem = ITEM_NONE,
     .abilityNums = 0,
@@ -3726,7 +3726,7 @@ static const struct TrainerMonItemCustomMoves sParty_Snoop[] = {
     .heldItem = ITEM_OCCA_BERRY,
     .abilityNums = 2,
     .evs = {6, 0, 252, 0, 252, 0},
-    .moves = {MOVE_SPIKES, MOVE_LEECH_SEED, MOVE_GYRO_BALL, MOVE_PROTECT}
+    .moves = {MOVE_SPIKES, MOVE_CURSE, MOVE_GYRO_BALL, MOVE_PROTECT}
     },
     {
     .iv = 255,

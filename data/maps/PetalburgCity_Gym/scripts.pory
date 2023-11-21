@@ -1556,8 +1556,8 @@ PetalburgCity_Gym_Text_GymStatue:
 
 PetalburgCity_Gym_Text_GymStatueCertified:
 	.string "Petalburg City Pokémon Gym\p"
-	.string "NNorman's Certified Trainers:\n"
-	.string "{PLAYER}$"
+	.string "Norman's Certified Trainers:\n"
+	.string "Fry, {PLAYER}$"
 
 PetalburgCity_Gym_Text_NormanPreRematch:
 	.string "Dad: {PLAYER}…\n"

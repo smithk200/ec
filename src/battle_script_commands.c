@@ -11365,14 +11365,12 @@ static void Cmd_tryKO(void)
         else
         {
             u16 odds = gBattleMoves[gCurrentMove].accuracy;
-            lands = TRUE;
         #if B_SHEER_COLD_ACC >= GEN_7
-            //if (gCurrentMove == MOVE_SHEER_COLD && !IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_ICE))
-                //odds -= 10;
-                lands = TRUE;
+            if (gCurrentMove == MOVE_SHEER_COLD && !IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_ICE))
+                odds -= 10;
         #endif
             if (Random() % 100 + 1 < odds) //making tryko based only on acccuracy rather than levels
-               lands = TRUE;
+                lands = TRUE;
         }
 
         if (lands)

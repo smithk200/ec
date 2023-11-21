@@ -364,12 +364,14 @@ LavaridgeTown_Gym_1F_Text_FlanneryPostBattle:
 	.string "is the Gym Leader.$"
 
 LavaridgeTown_Gym_1F_Text_GymStatue:
-	.string "Lavaridge Town Pokémon Gym$"
+	.string "Lavaridge Town Pokémon Gym\p"
+	.string "Certified Trainers:\n"
+	.string "Fry$"
 
 LavaridgeTown_Gym_1F_Text_GymStatueCertified:
 	.string "Lavaridge Town Pokémon Gym\p"
 	.string "Certified Trainers:\n"
-	.string "{PLAYER}$"
+	.string "Fry, {PLAYER}$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryPreRematch:
 	.string "Hello again!\p"

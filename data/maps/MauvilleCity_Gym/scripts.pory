@@ -396,11 +396,13 @@ MauvilleCity_Gym_Text_WattsonGoForthAndEndeavor:
 
 MauvilleCity_Gym_Text_GymStatue:
 	.string "Mauville City Pokémon Gym$"
+	.string "Bill Nye's Certified Trainers:\n"
+	.string "Fry$"
 
 MauvilleCity_Gym_Text_GymStatueCertified:
 	.string "Mauville City Pokémon Gym\p"
 	.string "Bill Nye's Certified Trainers:\n"
-	.string "{PLAYER}$"
+	.string "Fry, {PLAYER}$"
 
 MauvilleCity_Gym_Text_WattsonPreRematch:
 	.string "Bill Nye: Ah-ha! Here at last!\n"

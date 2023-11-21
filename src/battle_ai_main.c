@@ -1775,21 +1775,29 @@ static s16 AI_CheckBadMove(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
             break;
         case EFFECT_ABSORB:
             if (gTrainerBattleOpponent_A == TRAINER_SNOOP) ///stuff for Snoop Dogg only
-            if (GetMoveDamageResult(move) == MOVE_POWER_BEST)
-                score += 2;
-                switch (AI_DATA->effectiveness[battlerAtk][battlerDef][AI_THINKING_STRUCT->movesetIndex]) //only for Snoop
+                if ((gBattleMons[battlerAtk].species == SPECIES_CLOVENIX) && (effectiveness > AI_EFFECTIVENESS_x1))
+                    score += 10;
+                    break;
+                if ((gBattleMons[battlerAtk].species == SPECIES_CLOVENIX) && (effectiveness == AI_EFFECTIVENESS_x1))
+                    {
+                        if (AI_RandLessThan(128))
+                            score += 5;
+                    }
+                if ((gBattleMons[battlerAtk].species == SPECIES_MARLEYZARD) && (effectiveness > AI_EFFECTIVENESS_x1))
+                    score += 10;
+                    break;
+                if ((gBattleMons[battlerAtk].species == SPECIES_MARLEYZARD) && (effectiveness == AI_EFFECTIVENESS_x1))
                 {
-                    case AI_EFFECTIVENESS_x4:
-                        score += 10;
-                    case AI_EFFECTIVENESS_x2:
+                    if (ShouldRecover(battlerAtk, battlerDef, move, 50))
                         score += 5;
-                    case AI_EFFECTIVENESS_x1:
-                        score += 2;
-                    case AI_EFFECTIVENESS_x0_5:
-                        score -4;
-                    case AI_EFFECTIVENESS_x0_25:
-                        score -= 10;
+                    else if (AI_RandLessThan(100))
+                        score += 5;
+                    else
+                        score -= 5;
                 }
+                if ((gBattleMons[battlerAtk].species == SPECIES_MARLEYZARD) && (effectiveness < AI_EFFECTIVENESS_x1))
+                    score -= 10;
+                    break;
             if (AI_DATA->abilities[battlerDef] == ABILITY_LIQUID_OOZE)
                 score -= 6;
             break;
@@ -2679,7 +2687,19 @@ static s16 AI_TryToFaint(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
     if (gBattleMoves[move].effect == EFFECT_HOLY_DUTY) //&& (AI_THINKING_STRUCT->aiFlags & AI_FLAG_WILL_SUICIDE)) 
     //previous line had unused code, it should acticvate the suicide flag
     //Holy Duty can KO, but at the cost of the opponent's mon (this only applies to Lizakbar currently)
-        score += 70;
+    {
+        if (gTrainerBattleOpponent_A == TRAINER_MOLLY_1)
+            score += 50;
+        else if (gMapHeader.regionMapSectionId == MAPSEC_PETALBURG_CITY) //for a trainer in Norman's gym challenge
+            score += 50;
+        else
+        {
+            if (AI_RandLessThan(128))
+                score ++;
+            else
+                score --;
+        }
+    }
     
     if (CanIndexMoveFaintTarget(battlerAtk, battlerDef, AI_THINKING_STRUCT->movesetIndex, 0) && gBattleMoves[move].effect != EFFECT_EXPLOSION)
     {
@@ -3332,7 +3352,7 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
         {
             if (AI_DATA->hpPercents[battlerAtk] > 90 && AI_RandLessThan(128))
             {
-                score += 2;
+                score += 4;
                 break;
             }
         }
@@ -3378,7 +3398,7 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
         {
             if (AI_DATA->hpPercents[battlerAtk] > 90 && AI_RandLessThan(128))
             {
-                score += 2;
+                score += 4;
                 break;
             }
         }
@@ -4012,7 +4032,11 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
     case EFFECT_STEALTH_ROCK:
     case EFFECT_STICKY_WEB:
     case EFFECT_TOXIC_SPIKES:
-        if ((gTrainerBattleOpponent_A == TRAINER_SNOOP) && (gBattleMons[battlerAtk].species == SPECIES_FERROTHORN) && (gSideTimers[GetBattlerSide(battlerDef)].spikesAmount < 2)) //(gDisableStructs[battlerAtk].isFirstTurn)
+        if ((gTrainerBattleOpponent_A == TRAINER_SNOOP) && (gBattleMons[battlerAtk].species == SPECIES_FERROTHORN) && (gSideTimers[GetBattlerSide(battlerDef)].spikesAmount <= 2)) //(gDisableStructs[battlerAtk].isFirstTurn)
+            score += 50;
+            if ((gSideTimers[GetBattlerSide(battlerDef)].spikesAmount == 2) && AI_RandLessThan(128))
+                score -= 10;
+        if ((gTrainerBattleOpponent_A == TRAINER_JOY) && (gBattleMons[battlerAtk].species == SPECIES_EMOLGA) && (gSideTimers[GetBattlerSide(battlerDef)].spikesAmount < 2)) //(gDisableStructs[battlerAtk].isFirstTurn)
             score += 50;
         if (AI_DATA->abilities[battlerDef] == ABILITY_MAGIC_BOUNCE || CountUsablePartyMons(battlerDef) == 0)
             break;
@@ -4421,19 +4445,27 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
         if (AI_DATA->abilities[battlerAtk] == ABILITY_CONTRARY)
             score += 10;
         if ((gTrainerBattleOpponent_A == TRAINER_SNOOP)  && gBattleMons[battlerDef].statStages[STAT_SPATK] >= 4)//stuff for Snoop Dogg only
-              switch (AI_DATA->effectiveness[battlerAtk][battlerDef][AI_THINKING_STRUCT->movesetIndex]) //only for Snoop
+                //if (GetMoveDamageResult(move) == MOVE_POWER_BEST)
+                //score += 10;
+                //break;
+            {
+                if ((gBattleMons[battlerAtk].species == SPECIES_MARLEYZARD) && (effectiveness > AI_EFFECTIVENESS_x1))
+                    score += 10;
+                else if ((gBattleMons[battlerAtk].species == SPECIES_MARLEYZARD) && (effectiveness == AI_EFFECTIVENESS_x1))
                 {
-                    case AI_EFFECTIVENESS_x4:
-                        score += 6;
-                    case AI_EFFECTIVENESS_x2:
-                        score += 4;
-                    case AI_EFFECTIVENESS_x1:
-                        score += 2;
-                    case AI_EFFECTIVENESS_x0_5:
-                        score -4;
-                    case AI_EFFECTIVENESS_x0_25:
+                    if (AI_RandLessThan(100))
+                        score += 5;
+                    else
+                        score -= 5;
+                }
+                else
+                {
+                    if (AI_RandLessThan(75))
+                        score += 3;
+                    else
                         score -= 10;
                 }
+            }
         break;
     case EFFECT_MAGIC_COAT:
         if (IS_MOVE_STATUS(predictedMove) && AI_GetBattlerMoveTargetType(battlerDef, predictedMove) & (MOVE_TARGET_SELECTED | MOVE_TARGET_OPPONENTS_FIELD | MOVE_TARGET_BOTH))

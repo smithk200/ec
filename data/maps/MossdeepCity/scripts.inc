@@ -4,6 +4,7 @@
 .set LOCALID_GRUNT_4, 13
 .set LOCALID_MAXIE, 14
 .set LOCALID_SCOTT, 16
+.set LOCALID_FRY, 18
 
 MossdeepCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MossdeepCity_OnTransition
@@ -219,6 +220,31 @@ MossdeepCity_Movement_Grunt4EnterSpaceCenter:
 	walk_right
 	step_end
 
+MossdeepCity_Movement_FryExit:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+MossdeepCity_Movement_FryExitEast:
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
 MossdeepCity_EventScript_Man::
 	lock
 	faceplayer
@@ -285,9 +311,24 @@ MossdeepCity_EventScript_Fry::
 
 MossdeepCity_EventScript_FryPostBattle::
 	call_if_unset FLAG_FRY_MOSSDEEP_GIVE_TM, MossdeepCity_EventScript_Item_A_TM
-	msgbox MossdeepCity_Text_FryPostBattle, MSGBOX_AUTOCLOSE
+	msgbox MossdeepCity_Text_FryPostBattle, MSGBOX_DEFAULT
+	call_if_eq VAR_FACING, DIR_EAST, MossdeepCity_EventScript_FryExitEast
+	call_if_eq VAR_FACING, DIR_NORTH, MossdeepCity_EventScript_FryExitOther
+	call_if_eq VAR_FACING, DIR_WEST, MossdeepCity_EventScript_FryExitOther
+	removeobject LOCALID_FRY
+	setflag FLAG_FRY_MOSSDEEP
 	release
 	end
+
+MossdeepCity_EventScript_FryExitEast::
+	applymovement LOCALID_FRY, MossdeepCity_Movement_FryExitEast
+	waitmovement 0
+	return
+
+MossdeepCity_EventScript_FryExitOther::
+	applymovement LOCALID_FRY, MossdeepCity_Movement_FryExit
+	waitmovement 0
+	return
 
 MossdeepCity_EventScript_Item_A_TM::
 	giveitem ITEM_TM30
@@ -327,19 +368,19 @@ MossdeepCity_Movement_ScottExitEast:
 	step_end
 
 MossdeepCity_Text_WantKingsRockStevenGaveMe:
-	.string "I got this from STEVEN, but I don't\n"
+	.string "I got this from Steven, but I don't\n"
 	.string "know what it's good for.\p"
-	.string "I think it's called KING'S ROCK.\n"
+	.string "I think it's called a King's Rock.\n"
 	.string "Do you want it?$"
 
 MossdeepCity_Text_YouCanKeepIt:
 	.string "Why would you want it?\n"
 	.string "You're weird.\p"
 	.string "You can keep it, but keep it a secret\n"
-	.string "from STEVEN.$"
+	.string "from Steven.$"
 
 MossdeepCity_Text_StevensHouseOverThere:
-	.string "STEVEN's house is right over there!$"
+	.string "Steven's house is right over there!$"
 
 MossdeepCity_Text_WhatToDoWithWeirdRock:
 	.string "Yeah, you think so, too! What are you\n"
@@ -350,7 +391,7 @@ MossdeepCity_Text_WailmerWatching:
 	.string "Wailmer.\p"
 	.string "It's called, uh…\n"
 	.string "What was it now…\p"
-	.string "WAI, WAI, WAI…\p"
+	.string "Wai, Wai, Wai…\p"
 	.string "Wailmer watching!$"
 
 MossdeepCity_Text_SpaceCenterReceivedLetter:
@@ -364,17 +405,17 @@ MossdeepCity_Text_SpaceCenterLaunchingRockets:
 	.string "launching huge rockets.$"
 
 MossdeepCity_Text_MossdeepTargetedByMagma:
-	.string "I heard from a SAILOR buddy that\n"
-	.string "TEAM AQUA set up shop in LILYCOVE.\p"
+	.string "I heard from a sailor buddy that\n"
+	.string "Team Aqua set up shop in Lilycove.\p"
 	.string "I also heard that someone came along\n"
 	.string "and wiped the floor with them!\p"
-	.string "But MOSSDEEP here's been targeted\n"
+	.string "But Mossdeep here's been targeted\n"
 	.string "by that Team Magma.\p"
 	.string "If you want to know what they're up to,\n"
 	.string "go visit the Space Center.$"
 
 MossdeepCity_Text_FeelReliefOnLand:
-	.string "I'm a SAILOR, so the sea's obviously\n"
+	.string "I'm a sailor, so the sea's obviously\n"
 	.string "more important to me.\p"
 	.string "But you know? When I get back on land\n"
 	.string "after a long voyage, I do feel relief!$"
@@ -454,6 +495,10 @@ MossdeepCity_Text_FryIntro:
 	.string "It's been a while since we battled!\p"
 	.string "I've just beat Ned Flanders.\n"
 	.string "Isn't he tough?\p"
+	.string "I beat him by the skin of my teeth!\p"
+	.string "After defeating him, it gave me courage\n"
+	.string "to start battling again!\p"
+	.string "Are you ready?\p"
 	.string "Be prepared to be steamrolled\n"
 	.string "by my powerful Pokémon team!$"
 
@@ -469,10 +514,12 @@ MossdeepCity_Text_FryExplainTM:
 
 MossdeepCity_Text_FryPostBattle::
 	.string "I'm going to challenge the Psychic\n"
-	.string "Twins now.\p"
+	.string "Twins soon.\p"
 	.string "Rumor has it that they split off.\n"
 	.string "But I don't care about that.\p"
 	.string "After I beat them, I'm going to\n"
 	.string "challenge my best friend!\p"
 	.string "He's the Gym Leader of\n"
-	.string "Sootopolis City!$"
+	.string "Sootopolis City!\p"
+	.string "I have to train up now.\n"
+	.string "Bye!$"

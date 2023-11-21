@@ -298,11 +298,13 @@ FortreeCity_Gym_Text_WinonaPostBattle:
 
 FortreeCity_Gym_Text_GymStatue:
 	.string "Fortree City Pokémon Gym$"
+	.string "Ned's Certified Trainers:\n"
+	.string "Fry$"
 
 FortreeCity_Gym_Text_GymStatueCertified:
 	.string "Fortree City Pokémon Gym\p"
 	.string "Ned's Certified Trainers:\n"
-	.string "{PLAYER}$"
+	.string "Fry, {PLAYER}$"
 
 FortreeCity_Gym_Text_WinonaPreRematch:
 	.string "Ned: Hello, neighbor! I see\n"

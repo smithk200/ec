@@ -258,7 +258,7 @@ SootopolisCity_Gym_1F_Text_ExplainWaterPulse:
 
 SootopolisCity_Gym_1F_Text_RegisteredJuan:
 	.string "Registered Gym Leader Bender\n"
-	.string "in the POKéNAV.$"
+	.string "in the Pokénav.$"
 
 SootopolisCity_Gym_1F_Text_JuanPostBattle:
 	.string "Go to Ever Grande City, dammit!\n"
@@ -270,11 +270,13 @@ SootopolisCity_Gym_1F_Text_GoGetFortreeBadge:
 
 SootopolisCity_Gym_1F_Text_GymStatue:
 	.string "Sootopolis City Pokémon Gym$"
+	.string "Bender's Certified Trainers:\n"
+	.string "Fry$"
 
 SootopolisCity_Gym_1F_Text_GymStatueCertified:
 	.string "Sootopolis City Pokémon Gym\p"
 	.string "Bender's Certified Trainers:\n"
-	.string "{PLAYER}$"
+	.string "Fry, {PLAYER}$"
 
 SootopolisCity_Gym_1F_Text_JuanPreRematch:
 	.string "Bender: Oh, so you're back\n"

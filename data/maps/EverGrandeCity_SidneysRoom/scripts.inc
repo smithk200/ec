@@ -82,4 +82,4 @@ EverGrandeCity_SidneysRoom_Text_Defeat:
 	.string "With your eyes!$"
 
 EverGrandeCity_SidneysRoom_Text_PostBattleSpeech:
-	.string "Get out of here!$"
+	.string "Get out of here, you pervert!$"
