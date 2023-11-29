@@ -278,5 +278,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_SOOTOPOLIS_GYM_NPC
 	setflag FLAG_FRY_SKY_PILLAR
 	setflag FLAG_GYM_LEADERS_REMATCH_APPEAR
+	setflag FLAG_PETALBURG_GYM_NPC
 	call EventScript_ResetAllBerries
 	end

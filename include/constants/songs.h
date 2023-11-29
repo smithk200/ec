@@ -551,6 +551,7 @@
 #define MUS_VS_FRY                  615
 #define MUS_STICK_FIGURES           616
 #define MUS_HEAVY_LIGHT             617
+#define MUS_VS_TRAINER_DPP          618
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

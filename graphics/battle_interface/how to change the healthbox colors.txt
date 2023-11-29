@@ -1,0 +1,1 @@
+Change the palette in ball_status_bar

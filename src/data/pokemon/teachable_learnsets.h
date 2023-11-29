@@ -24544,6 +24544,7 @@ static const u16 sEmolgaTeachableLearnset[] = {
     MOVE_DOUBLE_TEAM,
     MOVE_FACADE,
     MOVE_FLASH,
+    MOVE_FLASH_CANNON,
     MOVE_FRUSTRATION,
     MOVE_HIDDEN_POWER,
     MOVE_IRON_TAIL,

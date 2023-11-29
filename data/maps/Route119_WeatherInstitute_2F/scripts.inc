@@ -89,7 +89,7 @@ Route119_WeatherInstitute_2F_EventScript_ShellyDefeated::
 Route119_WeatherInstitute_2F_EventScript_ReceiveCastform::
 	msgbox Route119_WeatherInstitute_2F_Text_ThanksPleaseTakePokemon, MSGBOX_DEFAULT
 	setvar VAR_TEMP_1, SPECIES_CASTFORM
-	givemon SPECIES_CASTFORM, 25, ITEM_MYSTIC_WATER
+	givemon SPECIES_CASTFORM, 40, ITEM_MYSTIC_WATER
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, Route119_WeatherInstitute_2F_EventScript_ReceiveCastformParty
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, Route119_WeatherInstitute_2F_EventScript_ReceiveCastformPC
 	goto Common_EventScript_NoMoreRoomForPokemon
@@ -296,13 +296,13 @@ Route119_WeatherInstitute_2F_Text_NoRoomForPokemon:
 	.string "for this Pokémon.$"
 
 Route119_WeatherInstitute_2F_Text_PlayerReceivedCastform:
-	.string "{PLAYER} received CASTFORM!$"
+	.string "{PLAYER} received Castform!$"
 
 Route119_WeatherInstitute_2F_Text_PokemonChangesWithWeather:
 	.string "That Pokémon changes shape according\n"
 	.string "to the weather conditions.\p"
 	.string "There're plenty of them in the\n"
-	.string "INSTITUTE--go ahead and take it.$"
+	.string "Institute--go ahead and take it.$"
 
 Route119_WeatherInstitute_2F_Text_ChangingWeatherRidiculous:
 	.string "I've been researching rain for many\n"
@@ -311,7 +311,7 @@ Route119_WeatherInstitute_2F_Text_ChangingWeatherRidiculous:
 
 Route119_WeatherInstitute_2F_Text_GroudonWeather:
 	.string "I track weather patterns over\n"
-	.string "the HOENN region.\p"
+	.string "the Hoenn region.\p"
 	.string "Presently, a drought has been recorded\n"
 	.string "in {STR_VAR_1}.\p"
 	.string "Could that mean, somewhere near\n"
@@ -319,7 +319,7 @@ Route119_WeatherInstitute_2F_Text_GroudonWeather:
 
 Route119_WeatherInstitute_2F_Text_KyogreWeather:
 	.string "I track weather patterns over\n"
-	.string "the HOENN region.\p"
+	.string "the Hoenn region.\p"
 	.string "Presently, heavy rainfall has been\n"
 	.string "recorded over {STR_VAR_1}.\p"
 	.string "Could that mean, somewhere near\n"

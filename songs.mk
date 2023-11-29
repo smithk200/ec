@@ -55,10 +55,13 @@ $(MID_SUBDIR)/mus_vs_gym_leader.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G120 -V080 -P1
 
 $(MID_SUBDIR)/sandstorm.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V120 -P1
+	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V110 -P1
 
 $(MID_SUBDIR)/heavy_light.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V120 -P1
+	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V110 -P1
+
+$(MID_SUBDIR)/vs_trainer_dpp.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V110 -P1
 
 $(MID_SUBDIR)/bowsercastle3.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V080 -P1
@@ -67,7 +70,7 @@ $(MID_SUBDIR)/vs_cynthia.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G193 -V080 -P1
 
 $(MID_SUBDIR)/leader_encounter.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V080 -P1
+	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V0100 -P1
 
 $(MID_SUBDIR)/vs_fry.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V090 -P1

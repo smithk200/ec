@@ -3550,7 +3550,7 @@ void IncreasePoisonScore(u8 battlerAtk, u8 battlerDef, u16 move, s16 *score)
           || HasMoveEffect(battlerAtk, EFFECT_HEX)
           || HasMoveEffect(battlerAtk, EFFECT_VENOM_DRENCH)
           || AI_DATA->abilities[battlerAtk] == ABILITY_MERCILESS)
-            *(score) += 2;
+            *(score) += 4;
         else
             *(score)++;
     }
@@ -3567,7 +3567,7 @@ void IncreaseBurnScore(u8 battlerAtk, u8 battlerDef, u16 move, s16 *score)
         if (HasMoveWithSplit(battlerDef, SPLIT_PHYSICAL))
         {
             if (CanTargetFaintAi(battlerDef, battlerAtk))
-                *score += 2; // burning the target to stay alive is cool
+                *score += 4; // burning the target to stay alive is cool
         }
 
         if (HasMoveEffect(battlerAtk, EFFECT_HEX) || HasMoveEffect(BATTLE_PARTNER(battlerAtk), EFFECT_HEX))
@@ -3590,9 +3590,9 @@ void IncreaseParalyzeScore(u8 battlerAtk, u8 battlerDef, u16 move, s16 *score)
           || HasMoveEffect(battlerAtk, EFFECT_FLINCH_HIT)
           || gBattleMons[battlerDef].status2 & STATUS2_INFATUATION
           || gBattleMons[battlerDef].status2 & STATUS2_CONFUSION)
-            *score += 4;
+            *score += 6;
         else
-            *score += 2;
+            *score += 3;
     }
 }
 
@@ -3602,7 +3602,7 @@ void IncreaseSleepScore(u8 battlerAtk, u8 battlerDef, u16 move, s16 *score)
         return;
 
     if (AI_CanPutToSleep(battlerAtk, battlerDef, AI_DATA->abilities[battlerDef], move, AI_DATA->partnerMove))
-        *score += 2;
+        *score += 4;
     else
         return;
 
@@ -3626,9 +3626,9 @@ void IncreaseConfusionScore(u8 battlerAtk, u8 battlerDef, u16 move, s16 *score)
         if (gBattleMons[battlerDef].status1 & STATUS1_PARALYSIS
           || gBattleMons[battlerDef].status2 & STATUS2_INFATUATION
           || (AI_DATA->abilities[battlerAtk] == ABILITY_SERENE_GRACE && HasMoveEffect(battlerAtk, EFFECT_FLINCH_HIT)))
-            *score += 3;
+            *score += 4;
         else
-            *score += 2;
+            *score += 3;
     }
 }
 

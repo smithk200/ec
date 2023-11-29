@@ -3230,6 +3230,15 @@ static void DebugAction_Sound_MUS_SelectId(u8 taskId)
     X(PH_NURSE_BLEND) \
     X(PH_NURSE_HELD) \
     X(PH_NURSE_SOLO) \
+    X(MUS_SANDSTORM)\
+    X(MUS_CASTLE) \
+    X(MUS_VS_CYNTHIA) \
+    X(MUS_A_TEST) \
+    X(MUS_LEADER_ENCOUNTER) \
+    X(MUS_VS_FRY) \
+    X(MUS_STICK_FIGURES) \
+    X(MUS_HEAVY_LIGHT) \
+    X(MUS_VS_TRAINER_DPP) \
 
 #define SOUND_LIST_SE \
     X(SE_USE_ITEM) \

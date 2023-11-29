@@ -1775,6 +1775,7 @@ static s16 AI_CheckBadMove(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
             break;
         case EFFECT_ABSORB:
             if (gTrainerBattleOpponent_A == TRAINER_SNOOP) ///stuff for Snoop Dogg only
+            {
                 if ((gBattleMons[battlerAtk].species == SPECIES_CLOVENIX) && (effectiveness > AI_EFFECTIVENESS_x1))
                     score += 10;
                     break;
@@ -1798,6 +1799,12 @@ static s16 AI_CheckBadMove(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
                 if ((gBattleMons[battlerAtk].species == SPECIES_MARLEYZARD) && (effectiveness < AI_EFFECTIVENESS_x1))
                     score -= 10;
                     break;
+            }
+            if (ShouldRecover(battlerAtk, battlerDef, move, 50))
+            {
+                if (AI_RandLessThan(128))
+                        score += 2;
+            }
             if (AI_DATA->abilities[battlerDef] == ABILITY_LIQUID_OOZE)
                 score -= 6;
             break;

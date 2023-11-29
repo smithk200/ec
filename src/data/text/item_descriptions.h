@@ -3299,7 +3299,9 @@ static const u8 sTM58Desc[] = _( // Todo
     "?????");
 
 static const u8 sTM59Desc[] = _( // Todo
-    "?????");
+    "Leaps from tall\n"
+    "grass and raises\n"
+    "Speed.");
 
 static const u8 sTM60Desc[] = _( // Todo
     "?????");

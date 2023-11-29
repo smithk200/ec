@@ -1142,6 +1142,21 @@ PetalburgCity_Gym_EventScript_GymStatue::
 	releaseall
 	end
 
+PetalburgCity_Gym_EventScript_WarpDude::
+	lock
+	faceplayer
+	msgbox PetalburgCity_Gym_WarpDude_AskToWarp, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq FortreeCity_Gym_WarpDude_No
+	warp MAP_PETALBURG_CITY_GYM, 4, 3
+	release
+	end
+
+PetalburgCity_Gym_1F_Trigger_CompletedGymPuzzle::
+	clearflag FLAG_PETALBURG_GYM_NPC
+	releaseall
+	end
+
 PetalburgCity_Gym_Text_DadYoureHereWithYourPokemon:
 	.string "Dad: Hm?\p"
 	.string "Well, if it isn't {PLAYER}!\n"
@@ -1151,7 +1166,7 @@ PetalburgCity_Gym_Text_DadYoureHereWithYourPokemon:
 	.string "Oh, I see.\n"
 	.string "You're with your Pokémon.\p"
 	.string "Hm… Then I guess you're going to\n"
-	.string "become a TRAINER like me, {PLAYER}.\p"
+	.string "become a Trainer like me, {PLAYER}.\p"
 	.string "That's great news!\n"
 	.string "I'll be looking forward to it!$"
 
@@ -1594,3 +1609,7 @@ PetalburgCity_Gym_Text_NormanRematchNeedTwoMons:
 	.string "capable of battle?\p"
 	.string "Sorry, but you'll have to come back\n"
 	.string "with at least two Pokémon.$"
+
+PetalburgCity_Gym_WarpDude_AskToWarp:
+	.string "Do you want me to warp you\n"
+	.string "to Gym Leader Norman?$"

@@ -5493,32 +5493,40 @@ const u8 gVenowattPokedexText[] = _(
 const u8 gAdesignPokedexText[] = _(
     "This is a Pokémon.");
 const u8 gBacubPokedexText[] = _(
-    "Bacub’s skin is particularly tasty after being\n"
-    "fried and is a common breakfast food.");
+    "Bacub’s skin is particularly tasty\n"
+    "after being fried and is a\n"
+    "common breakfast food.");
 const u8 gUrswinePokedexText[] = _(
     "This Pokémon is extremely territorial.\n"
-    "It will tear down anything in its way, even big boulders.\n"
+    "It will tear down anything\n"
+    "in its way, even big boulders.\n"
     "It also smells nice.");
 const u8 gClovenixPokedexText[] = _(
-    "Called the Pokémon that never dies, when Clovenix is in\n"
-    "peril, it becomes stronger and rises from its own ashes.");
+    "Called the Pokémon that never dies,\n"
+    "when Clovenix is in peril, it becomes stronger\n"
+    "and rises from its own ashes.");
 const u8 gTricientPokedexText[] = _(
-    "In ancient times, Tricient would use its large, hard forehead\n"
-    "to smash apart boulders in search of tasty Lanshil.");
+    "In ancient times, Tricient would\n"
+    "use its large, hard forehead\n"
+    "to smash apart boulders in search\n"
+    "of tasty Lanshil.");
 const u8 gTricillionPokedexText[] = _(
     "Tricillion was known as the enforcer.\n"
     "Whenever there was a fight, it would break it\n"
     "up using its large head.");
 const u8 gInbitweenPokedexText[] = _(
-    "It follows men around as if they were hypnotized.\n"
-    "Although it has a big horn, it is very soft and\n"
+    "It follows men around as if they\n"
+    "were hypnotized. Although it has a\n"
+    "big horn, it is very soft and\n"
     "sensitive to touch.");
 const u8 gGeighPokedexText[] = _(
-    "When Geigh runs, small rainbows can be seen around\n"
-    "its legs. Its wings are small, but they can support\n"
+    "When Geigh runs, small rainbows\n"
+    "can be seen around its legs. Its wings\n"
+    "are small, but they can support\n"
     "its whole weight.");
 const u8 gDragkingPokedexText[] = _(
-    "Dragking try to give off the impression of being female,\n"
+    "Dragking try to give off the\n"
+    "impression of being female,\n"
     "but everyone knows that they’re male.");
 const u8 gWyrdeerPokedexText[] = _(
     "The black orbs shine with an uncanny light\n"
