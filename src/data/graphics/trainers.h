@@ -145,8 +145,8 @@ const u32 gTrainerPalette_LeaderWattson[] = INCBIN_U32("graphics/trainers/front_
 const u32 gTrainerFrontPic_LeaderFlannery[] = INCBIN_U32("graphics/trainers/front_pics/leader_flannery.4bpp.lz");
 const u32 gTrainerPalette_LeaderFlannery[] = INCBIN_U32("graphics/trainers/front_pics/leader_flannery.gbapal.lz");
 
-const u32 gTrainerFrontPic_LeaderNew_Flannery[] = INCBIN_U32("graphics/trainers/front_pics/new_flannery.4bpp.lz");
-const u32 gTrainerPalette_LeaderNew_Flannery[] = INCBIN_U32("graphics/trainers/front_pics/new_flannery.gbapal.lz");
+const u32 gTrainerFrontPic_LeaderNew_Flannery[] = INCBIN_U32("graphics/trainers/front_pics/leader_molly.4bpp.lz");
+const u32 gTrainerPalette_LeaderNew_Flannery[] = INCBIN_U32("graphics/trainers/front_pics/leader_molly.gbapal.lz");
 
 const u32 gTrainerFrontPic_LeaderNorman[] = INCBIN_U32("graphics/trainers/front_pics/leader_norman.4bpp.lz");
 const u32 gTrainerPalette_LeaderNorman[] = INCBIN_U32("graphics/trainers/front_pics/leader_norman.gbapal.lz");
