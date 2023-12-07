@@ -158,7 +158,7 @@
 #define TRAINER_DARRIN                      154
 #define TRAINER_TATE_2                      155
 #define TRAINER_JEROME                      156
-#define TRAINER_MATTHEW                     157
+#define TRAINER_MATTEO                      157
 #define TRAINER_DAVID                       158
 #define TRAINER_SPENCER                     159
 #define TRAINER_ROLAND                      160
@@ -202,7 +202,7 @@
 #define TRAINER_DALTON_3                    198
 #define TRAINER_DALTON_4                    199
 #define TRAINER_DALTON_5                    200
-#define TRAINER_COLE                        201
+#define TRAINER_MATTHEW                     201
 #define TRAINER_JEFF                        202
 #define TRAINER_AXLE                        203
 #define TRAINER_JACE                        204
@@ -287,7 +287,7 @@
 #define TRAINER_KAREN_3                     283
 #define TRAINER_KAREN_4                     284
 #define TRAINER_KAREN_5                     285
-#define TRAINER_KATE_AND_JOY                286
+#define TRAINER_JOY_ROUTE_121               286
 #define TRAINER_ANNA_AND_MEG_1              287
 #define TRAINER_ANNA_AND_MEG_2              288
 #define TRAINER_ANNA_AND_MEG_3              289

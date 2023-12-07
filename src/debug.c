@@ -1120,6 +1120,7 @@ static void DebugAction_Util_Warp_SelectWarp(u8 taskId)
         //If there's no warp with the number available, warp to the center of the map.
         SetWarpDestinationToMapWarp(gTasks[taskId].data[5], gTasks[taskId].data[6], gTasks[taskId].data[7]);
         DoWarp();
+        Overworld_ChangeMusicToDefault();
         ResetInitialPlayerAvatarState();
         DebugAction_DestroyExtraWindow(taskId);
     }

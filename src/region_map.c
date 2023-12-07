@@ -2018,6 +2018,7 @@ static void CB_ExitFlyMap(void)
                         SetWarpDestinationToHealLocation(sMapHealLocations[sFlyMap->regionMap.mapSecId][2]);
                     else
                         SetWarpDestinationToMapWarp(sMapHealLocations[sFlyMap->regionMap.mapSecId][0], sMapHealLocations[sFlyMap->regionMap.mapSecId][1], WARP_ID_NONE);
+                        Overworld_ChangeMusicToDefault();
                     break;
                 }
                 ReturnToFieldFromFlyMapSelect();

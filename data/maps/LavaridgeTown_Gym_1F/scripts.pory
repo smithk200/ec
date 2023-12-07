@@ -1,5 +1,5 @@
 raw `
-.set LOCALID_COLE, 2
+.set LOCALID_MATTHEW, 2
 .set LOCALID_GERALD, 3
 .set LOCALID_AXLE, 4
 .set LOCALID_DANIELLE, 5
@@ -36,7 +36,7 @@ LavaridgeTown_Gym_1F_EventScript_SetTrainerTempVars::
 	setvar VAR_TEMP_D, 0
 	setvar VAR_TEMP_E, 0
 	setvar VAR_TEMP_F, 0
-	goto_if_defeated TRAINER_COLE, LavaridgeTown_Gym_1F_EventScript_SetGeraldTempVar
+	goto_if_defeated TRAINER_MATTHEW, LavaridgeTown_Gym_1F_EventScript_SetGeraldTempVar
 	setvar VAR_TEMP_B, 1
 LavaridgeTown_Gym_1F_EventScript_SetGeraldTempVar::
 	goto_if_defeated TRAINER_GERALD, LavaridgeTown_Gym_1F_EventScript_SetAxleTempVar
@@ -51,8 +51,8 @@ LavaridgeTown_Gym_1F_EventScript_EndSetTrainerTempVars::
 	return
 
 LavaridgeTown_Gym_1F_EventScript_CheckBuryTrainers::
-	goto_if_defeated TRAINER_COLE, LavaridgeTown_Gym_1F_EventScript_CheckBuryGerald
-	setobjectmovementtype LOCALID_COLE, MOVEMENT_TYPE_BURIED
+	goto_if_defeated TRAINER_MATTHEW, LavaridgeTown_Gym_1F_EventScript_CheckBuryGerald
+	setobjectmovementtype LOCALID_MATTHEW, MOVEMENT_TYPE_BURIED
 LavaridgeTown_Gym_1F_EventScript_CheckBuryGerald::
 	goto_if_defeated TRAINER_GERALD, LavaridgeTown_Gym_1F_EventScript_CheckBuryAxle
 	setobjectmovementtype LOCALID_GERALD, MOVEMENT_TYPE_BURIED
@@ -121,9 +121,9 @@ LavaridgeTown_Gym_1F_EventScript_FlanneryRematch::
 	msgbox LavaridgeTown_Gym_1F_Text_FlanneryPostRematch, MSGBOX_AUTOCLOSE
 	end
 
-LavaridgeTown_Gym_1F_EventScript_Cole::
-	trainerbattle TRAINER_BATTLE_CONTINUE_SCRIPT, TRAINER_COLE, LOCALID_COLE, LavaridgeTown_Gym_1F_Text_ColeIntro, LavaridgeTown_Gym_1F_Text_ColeDefeat, LavaridgeTown_Gym_EventScript_CheckTrainerScript
-	msgbox LavaridgeTown_Gym_1F_Text_ColePostBattle, MSGBOX_AUTOCLOSE
+LavaridgeTown_Gym_1F_EventScript_Matthew::
+	trainerbattle TRAINER_BATTLE_CONTINUE_SCRIPT, TRAINER_MATTHEW, LOCALID_MATTHEW, LavaridgeTown_Gym_1F_Text_MatthewIntro, LavaridgeTown_Gym_1F_Text_MatthewDefeat, LavaridgeTown_Gym_EventScript_CheckTrainerScript
+	msgbox LavaridgeTown_Gym_1F_Text_MatthewPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 LavaridgeTown_Gym_EventScript_CheckTrainerScript::
@@ -221,18 +221,16 @@ LavaridgeTown_Gym_1F_Text_GymGuideAdvice:
 LavaridgeTown_Gym_1F_Text_GymGuidePostVictory:
 	.string "Yow! That was a scorching-hot battle!$"
 
-LavaridgeTown_Gym_1F_Text_ColeIntro:
-	.string "I liked Flannery.\n"
-	.string "She was so sexy!$"
+LavaridgeTown_Gym_1F_Text_MatthewIntro:
+	.string "Slugma balls!$"
 
-LavaridgeTown_Gym_1F_Text_ColeDefeat:
-	.string "I was blinded by love…$"
+LavaridgeTown_Gym_1F_Text_MatthewDefeat:
+	.string "Even my Slugma army couldn't\n"
+	.string "defeat you…$"
 
-LavaridgeTown_Gym_1F_Text_ColePostBattle:
-	.string "Damn, I really wanted to date\n"
-	.string "Flannery.\p"
-	.string "Since our new Gym Leader is five\n"
-	.string "years old, I can't date her.$"
+LavaridgeTown_Gym_1F_Text_MatthewPostBattle:
+	.string "SLUGMA FOR THE WIN!!!\n"
+	.string "LESSGO!!!!$"
 
 LavaridgeTown_Gym_1F_Text_AxleIntro:
 	.string "Have you heard of Poppy from\n"
@@ -284,17 +282,17 @@ LavaridgeTown_Gym_1F_Text_DaniellePostBattle:
 	.string "Lemme smoke my weed in peace!$"
 
 LavaridgeTown_Gym_B1F_Text_JaceIntro:
-	.string "Come on, get with it!\n"
-	.string "Let's go before my feelings cool!$"
+	.string "I liked Flannery.\n"
+	.string "She was so sexy!$"
 
 LavaridgeTown_Gym_B1F_Text_JaceDefeat:
-	.string "It's so hot, and yet my heart is\n"
-	.string "clutched by ice…$"
+	.string "I was blinded by love…$"
 
 LavaridgeTown_Gym_B1F_Text_JacePostBattle:
-	.string "The way the battling spirit burns\n"
-	.string "within you, you may stand a chance\l"
-	.string "against our Leader.$"
+	.string "Damn, I really wanted to date\n"
+	.string "Flannery.\p"
+	.string "Since our new Gym Leader is five\n"
+	.string "years old, I can't date her.$"
 
 LavaridgeTown_Gym_B1F_Text_JeffIntro:
 	.string "See how the flames blaze wildly?\n"

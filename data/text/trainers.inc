@@ -3206,20 +3206,6 @@ Route121_Text_KateNotEnoughMons:
 	.string "we can't battle with you.\p"
 	.string "That would be bullying.$"
 
-Route121_Text_JoyIntro:
-	.string "Joy: I'm a member of the Elite Four!$"
-
-Route121_Text_JoyDefeat:
-	.string "Joy: Oh. I lost.$"
-
-Route121_Text_JoyPostBattle:
-	.string "Joy: I'll see you again.../n"
-	.string "When I face you in the Elite Four.$"
-
-Route121_Text_JoyNotEnoughMons:
-	.string "Joy: You need at least two Pokémon\n"
-	.string "if you're going to challenge us!$"
-
 Route121_Text_JessicaIntro:
 	.string "Stop! Have a good look at my precious\n"
 	.string "Pokémon!$"

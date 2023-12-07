@@ -102,12 +102,13 @@ Route121_EventScript_Tammy::
 	end
 
 Route121_EventScript_Kate::
-	trainerbattle_double TRAINER_KATE_AND_JOY, Route121_Text_KateIntro, Route121_Text_KateDefeat, Route121_Text_KateNotEnoughMons
-	msgbox Route121_Text_KatePostBattle, MSGBOX_AUTOCLOSE
+	lock
+	faceplayer
+	msgbox Route121_Text_Kate, MSGBOX_AUTOCLOSE
 	end
 
 Route121_EventScript_Joy::
-	trainerbattle_double TRAINER_KATE_AND_JOY, Route121_Text_JoyIntro, Route121_Text_JoyDefeat, Route121_Text_JoyNotEnoughMons
+	trainerbattle_single TRAINER_JOY_ROUTE_121, Route121_Text_JoyIntro, Route121_Text_JoyDefeat
 	msgbox Route121_Text_JoyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -173,17 +174,35 @@ Route121_EventScript_RematchCristin::
 	msgbox Route121_Text_CristinPostRematch, MSGBOX_AUTOCLOSE
 	end
 
+Route121_Text_Kate:
+	.string "If only I had actually been a Trainer!\n"
+	.string "Think of the team I would have had!$"
+
+Route121_Text_JoyIntro:
+	.string "Joy: I'm a member of the Elite Four!$"
+
+Route121_Text_JoyDefeat:
+	.string "Joy: Oh. I lost.$"
+
+Route121_Text_JoyPostBattle:
+	.string "Joy: I'll see you again…/n"
+	.string "When I face you in the Elite Four.$"
+
+Route121_Text_JoyNotEnoughMons:
+	.string "Joy: You need at least two Pokémon\n"
+	.string "if you're going to challenge us!$"
+
 Route121_Text_OkayMoveOutToMtPyre:
 	.string "Okay!\n"
-	.string "We're to move out to MT. PYRE!$"
+	.string "We're to move out to Mt. Pyre!$"
 
 Route121_Text_AheadLoomsMtPyre:
-	.string "Ahead looms MT. PYRE…\p"
+	.string "Ahead looms Mt. Pyre…\p"
 	.string "It is a natural monument to the spirits \n"
 	.string "of departed Pokémon…$"
 
 Route121_Text_MtPyrePierSign:
-	.string "MT. PYRE PIER\p"
+	.string "Mt. Pyre Pier\p"
 	.string "…The sign is old and worn out.\n"
 	.string "The words are barely legible…$"
 
