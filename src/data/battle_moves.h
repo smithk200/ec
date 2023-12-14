@@ -1017,7 +1017,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT_Z] =
     {
         #if B_UPDATED_MOVE_DATA >= GEN_6
             .power = 90,
-            .target = MOVE_TARGET_FOES_AND_ALLY,
+            //.target = MOVE_TARGET_FOES_AND_ALLY,
         #elif B_UPDATED_MOVE_DATA == GEN_4 || B_UPDATED_MOVE_DATA == GEN_5
             .power = 95,
             .target = MOVE_TARGET_FOES_AND_ALLY,
