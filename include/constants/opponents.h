@@ -454,17 +454,17 @@
 #define TRAINER_GRACE                       450
 #define TRAINER_TANYA                       451
 #define TRAINER_SHARON                      452
-#define TRAINER_NIKKI                       453
+#define TRAINER_LOLA                        453
 #define TRAINER_BRENDA                      454
 #define TRAINER_KATIE                       455
 #define TRAINER_SUSIE                       456
-#define TRAINER_KARA                        457
-#define TRAINER_DANA                        458
-#define TRAINER_SIENNA                      459
+#define TRAINER_ALICE_2                     457
+#define TRAINER_MIDORI                      458
+#define TRAINER_EMILY                       459 //NOT my cousin!!! Emily is a common SJW name.
 #define TRAINER_DEBRA                       460
 #define TRAINER_LINDA                       461
 #define TRAINER_KAYLEE                      462
-#define TRAINER_LAUREL                      463
+#define TRAINER_ELLA                        463
 #define TRAINER_CARLEE                      464
 #define TRAINER_JENNY_2                     465
 #define TRAINER_JENNY_3                     466

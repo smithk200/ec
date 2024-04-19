@@ -125,10 +125,10 @@ DewfordTown_Gym_EventScript_CheckBrenden::
 	goto_if_not_defeated TRAINER_BRENDEN, DewfordTown_Gym_EventScript_CheckCristian
 	addvar VAR_0x8000, 1
 DewfordTown_Gym_EventScript_CheckCristian::
-	goto_if_not_defeated TRAINER_CRISTIAN, DewfordTown_Gym_EventScript_CheckLilith
+	goto_if_not_defeated TRAINER_CRISTIAN, DewfordTown_Gym_EventScript_CheckElla
 	addvar VAR_0x8000, 1
-DewfordTown_Gym_EventScript_CheckLilith::
-	goto_if_not_defeated TRAINER_LILITH, DewfordTown_Gym_EventScript_StopCountingTrainers
+DewfordTown_Gym_EventScript_CheckElla::
+	goto_if_not_defeated TRAINER_ELLA, DewfordTown_Gym_EventScript_StopCountingTrainers
 	addvar VAR_0x8000, 1
 DewfordTown_Gym_EventScript_StopCountingTrainers::
 	return
@@ -238,12 +238,12 @@ DewfordTown_Gym_EventScript_CristianBrightenRoom::
 	release
 	end
 
-DewfordTown_Gym_EventScript_Lilith::
-	trainerbattle_single TRAINER_LILITH, DewfordTown_Gym_Text_LilithIntro, DewfordTown_Gym_Text_LilithDefeat, DewfordTown_Gym_EventScript_LilithBrightenRoom
-	msgbox DewfordTown_Gym_Text_LilithPostBattle, MSGBOX_AUTOCLOSE
+DewfordTown_Gym_EventScript_Ella::
+	trainerbattle_single TRAINER_ELLA, DewfordTown_Gym_Text_EllaIntro, DewfordTown_Gym_Text_EllaDefeat, DewfordTown_Gym_EventScript_EllaBrightenRoom
+	msgbox DewfordTown_Gym_Text_EllaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-DewfordTown_Gym_EventScript_LilithBrightenRoom::
+DewfordTown_Gym_EventScript_EllaBrightenRoom::
 	call DewfordTown_Gym_EventScript_BrightenRoom
 	release
 	end
@@ -342,19 +342,19 @@ DewfordTown_Gym_Text_LauraPostBattle:
 	.string "I battle in the dark to make my heart\n"
 	.string "stronger.\p"
 	.string "But because it's so dark, I can never\n"
-	.string "see BRAWLY's face…$"
+	.string "see Brawly's face…$"
 
-DewfordTown_Gym_Text_LilithIntro:
-	.string "Ufufu…\n"
-	.string "Are you stumbling around in the dark?$"
+DewfordTown_Gym_Text_EllaIntro:
+	.string "Hi there!\n"
+	.string "It's dark in here!$"
 
-DewfordTown_Gym_Text_LilithDefeat:
-	.string "Oh, you…\n"
-	.string "I don't want to know you!$"
+DewfordTown_Gym_Text_EllaDefeat:
+	.string "Brawly is an easy Gym Leader\n"
+	.string "to beat. I even beat him!$"
 
-DewfordTown_Gym_Text_LilithPostBattle:
-	.string "You deserve to stay lost and end up\n"
-	.string "back at the entrance again!$"
+DewfordTown_Gym_Text_EllaPostBattle:
+	.string "Say hi to my friend Molly\n"
+	.string "for me, okay?$"
 
 DewfordTown_Gym_Text_BrendenIntro:
 	.string "I'll show you the gumption of\n"

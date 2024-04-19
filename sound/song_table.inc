@@ -620,6 +620,8 @@ gSongTable::
 	song stick_figures, 0, 0
 	song heavy_light, 0, 0
 	song vs_trainer_dpp, 0, 0
+	song waluigi_pinball, 0, 0
+	song smbw_factory, 0, 0
 
 	.align 2
 dummy_song_header:

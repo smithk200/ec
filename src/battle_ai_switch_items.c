@@ -18,6 +18,8 @@
 #include "constants/battle_move_effects.h"
 #include "constants/items.h"
 #include "constants/moves.h"
+#include "constants/species.h"
+#include "constants/opponents.h"
 
 // this file's functions
 static bool8 HasSuperEffectiveMoveAgainstOpponents(bool8 noRng);
@@ -26,6 +28,160 @@ static bool8 ShouldUseItem(void);
 static bool32 AiExpectsToFaintPlayer(void);
 static bool32 AI_ShouldHeal(u32 healAmount);
 static bool32 AI_OpponentCanFaintAiWithMod(u32 healAmount);
+
+static bool32 HasBadOdds2(void)
+{
+    //Variable initialization
+    u32 battler, emitresult;
+	u8 opposingPosition, atkType1, atkType2, defType1, defType2, effectiveness;
+    s32 i, damageDealt = 0, maxDamageDealt = 0, damageTaken = 0, maxDamageTaken = 0;
+    u32 aiMove, playerMove, aiBestMove = MOVE_NONE, aiAbility = GetBattlerAbility(battler), opposingBattler;
+    bool32 getsOneShot = FALSE, hasStatusMove = FALSE, hasSuperEffectiveMove = FALSE;
+	u16 typeEffectiveness = UQ_4_12(1.0); //baseline typing damage
+    u16 aiMoveEffect;
+    u32 typeDmg=UQ_4_12(1.0); //baseline typing damage
+
+    // Only use this if AI_FLAG_SMART_SWITCHING is set for the trainer
+    if (!(AI_THINKING_STRUCT->aiFlags & AI_FLAG_SMART_SWITCHING))
+        return FALSE;
+
+    // Won't bother configuring this for double battles
+    if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
+        return FALSE;
+
+	opposingPosition = BATTLE_OPPOSITE(GetBattlerPosition(battler));
+    opposingBattler = GetBattlerAtPosition(opposingPosition);
+
+    // Gets types of player (opposingBattler) and computer (battler)
+	atkType1 = gBattleMons[opposingBattler].type1;
+	atkType2 = gBattleMons[opposingBattler].type2;
+	defType1 = gBattleMons[battler].type1;
+	defType2 = gBattleMons[battler].type2;
+
+    // Check AI moves for damage dealt
+    for (i = 0; i < MAX_MON_MOVES; i++)
+    {
+        aiMove = gBattleMons[battler].moves[i];
+        //aiMoveEffect = aiMove.effect; //gBattleMons[gActiveBattler].moves[i]
+        if (aiMove != MOVE_NONE)
+        {
+            // Check if mon has an "important" status move
+            if (aiMove == MOVE_REFLECT || aiMove == MOVE_LIGHT_SCREEN 
+            || aiMove == MOVE_SPIKES || aiMove == MOVE_TOXIC_SPIKES || aiMove == MOVE_STEALTH_ROCK || aiMove == MOVE_STICKY_WEB || aiMove == MOVE_LEECH_SEED
+            || aiMove == MOVE_EXPLOSION || aiMove == MOVE_SELF_DESTRUCT || aiMove == MOVE_HOLY_DUTY 
+            || aiMove == MOVE_SLEEP_POWDER || aiMove == MOVE_YAWN || aiMove == MOVE_LOVELY_KISS || aiMove == MOVE_GRASS_WHISTLE || aiMove == MOVE_HYPNOSIS  || MOVE_SPORE
+            || aiMove == MOVE_TOXIC || aiMove == MOVE_BANEFUL_BUNKER 
+            || aiMove == MOVE_WILL_O_WISP 
+            || aiMove == MOVE_TRICK || aiMove == MOVE_TRICK_ROOM || aiMove== MOVE_WONDER_ROOM || aiMove ==  MOVE_PSYCHO_SHIFT || aiMove == MOVE_FAKE_OUT
+            || aiMove == MOVE_STUN_SPORE || aiMove == MOVE_THUNDER_WAVE || aiMove == MOVE_NUZZLE || aiMove == MOVE_GLARE
+            )
+            {
+                hasStatusMove = TRUE;
+            }
+
+            // Only check damage if move has power
+            if ((gBattleMoves[aiMove].power) != 0)
+            {
+                // Check if mon has a super effective move
+                if (AI_GetTypeEffectiveness(aiMove, battler, opposingBattler) >= UQ_4_12(2.0))
+                    hasSuperEffectiveMove = TRUE;
+
+                // Get maximum damage mon can deal
+                damageDealt = AI_DATA->simulatedDmg[battler][opposingBattler][i];
+                if(damageDealt > maxDamageDealt)
+                {
+                    maxDamageDealt = damageDealt;
+                    aiBestMove = aiMove;
+                }
+
+            }
+        }
+    }
+
+    //Calculates the type advantage
+    typeDmg *= UQ_4_12_TO_INT(GetTypeModifier(atkType1, defType1));
+	if (atkType2!=atkType1)
+		typeDmg *=UQ_4_12_TO_INT(GetTypeModifier(atkType2, defType1));
+	if (defType2!=defType1)
+	{
+		typeDmg *=UQ_4_12_TO_INT(GetTypeModifier(atkType1, defType2));
+		if (atkType2!=atkType1)
+			typeDmg *=UQ_4_12_TO_INT(GetTypeModifier(atkType2, defType2));
+	}
+
+    // Get max damage mon could take
+    for (i = 0; i < MAX_MON_MOVES; i++)
+    {
+        playerMove = gBattleMons[opposingBattler].moves[i];
+        if (playerMove != MOVE_NONE && gBattleMoves[playerMove].power != 0)
+        {
+            damageTaken = AI_CalcDamage(playerMove, opposingBattler, battler, &effectiveness, FALSE);
+            if (damageTaken > maxDamageTaken)
+                maxDamageTaken = damageTaken;
+        }
+    }
+
+    // Check if mon gets one shot
+    if(maxDamageTaken > gBattleMons[battler].hp)
+    {
+        getsOneShot = TRUE;
+    }
+
+    // Check if current mon can outspeed and KO in spite of bad matchup, and don't switch out if it can
+    if(damageDealt > gBattleMons[opposingBattler].hp)
+    {
+        if (AI_WhoStrikesFirst(battler, opposingBattler, aiBestMove) == AI_IS_FASTER)
+            return FALSE;
+    }
+
+    // If we don't have any other viable options, don't switch out
+    if (AI_DATA->mostSuitableMonId[battler] == PARTY_SIZE)
+        return FALSE;
+
+    // Start assessing whether or not mon has bad odds
+    // Jump straight to swtiching out in cases where mon gets OHKO'd
+    if (((getsOneShot && gBattleMons[opposingBattler].speed > gBattleMons[battler].speed) // If the player OHKOs and outspeeds OR OHKOs, doesn't outspeed but isn't 2HKO'd
+            || (getsOneShot && gBattleMons[opposingBattler].speed <= gBattleMons[battler].speed && maxDamageDealt < gBattleMons[opposingBattler].hp / 2))
+        && (gBattleMons[battler].hp >= gBattleMons[battler].maxHP / 2 // And the current mon has at least 1/2 their HP, or 1/4 HP and Regenerator
+            || (aiAbility == ABILITY_REGENERATOR
+            && gBattleMons[battler].hp >= gBattleMons[battler].maxHP / 4)))
+    {
+        // 50% chance to stay in regardless
+        if (Random() % 2 == 0)
+            return FALSE;
+
+        // Switch mon out
+        else
+            gBattleStruct->AI_monToSwitchIntoId[battler] = PARTY_SIZE;
+            BtlController_EmitTwoReturnValues(1, B_ACTION_SWITCH, 0);
+            return TRUE;
+    }
+
+    // General bad type matchups have more wiggle room
+	if (typeEffectiveness >= UQ_4_12(2.0)) // If the player has at least a 2x type advantage
+	{
+		if (!hasSuperEffectiveMove // If the AI doesn't have a super effective move
+		&& (gBattleMons[battler].hp >= gBattleMons[battler].maxHP / 2 // And the current mon has at least 1/2 their HP, or 1/4 HP and Regenerator
+            || (aiAbility == ABILITY_REGENERATOR
+            && gBattleMons[battler].hp >= gBattleMons[battler].maxHP / 4)))
+		{
+            // Then check if they have an important status move, which is worth using even in a bad matchup
+            if (hasStatusMove)
+                return FALSE;
+
+            // 50% chance to stay in regardless
+            if (Random() % 2 == 0)
+                return FALSE;
+
+            // Switch mon out
+            else
+                gBattleStruct->AI_monToSwitchIntoId[battler] = PARTY_SIZE;
+                BtlController_EmitTwoReturnValues(1, B_ACTION_SWITCH, 0);
+                return TRUE;
+		}
+	}
+	return FALSE;
+}
 
 static bool8 HasBadOdds(void)
 {
@@ -111,6 +267,67 @@ static bool8 AiCanSuicide(void) //unused and leftover
                     }
                     return FALSE;
                 }
+    }
+    return FALSE;
+}
+
+static bool32 AreAttackingStatsLowered(void)
+{
+    s8 attackingStage = gBattleMons[gActiveBattler].statStages[STAT_ATK];
+    s8 spAttackingStage = gBattleMons[gActiveBattler].statStages[STAT_SPATK];
+
+    // Only use this if AI_FLAG_SMART_SWITCHING is set for the trainer
+    if (!(AI_THINKING_STRUCT->aiFlags & AI_FLAG_SMART_SWITCHING))
+        return FALSE;
+
+    // Physical attacker
+    if (gBattleMons[gActiveBattler].attack > gBattleMons[gActiveBattler].spAttack)
+    {
+        // Don't switch if attack isn't below -1
+        if (attackingStage > DEFAULT_STAT_STAGE - 2)
+            return FALSE;
+        // 50% chance if attack at -2 and have a good candidate mon
+        else if (attackingStage == DEFAULT_STAT_STAGE - 2)
+        {
+            if (AI_DATA->mostSuitableMonId[gActiveBattler] != PARTY_SIZE && (Random() & 1))
+            {
+                gBattleStruct->AI_monToSwitchIntoId[gActiveBattler] = PARTY_SIZE;
+                BtlController_EmitTwoReturnValues(1, B_ACTION_SWITCH, 0);
+                return TRUE;
+            }
+        }
+        // If at -3 or worse, switch out regardless
+        else if (attackingStage < DEFAULT_STAT_STAGE - 2)
+        {
+            gBattleStruct->AI_monToSwitchIntoId[gActiveBattler] = PARTY_SIZE;
+            BtlController_EmitTwoReturnValues(1, B_ACTION_SWITCH, 0);
+            return TRUE;
+        }
+    }
+
+    // Special attacker
+    else
+    {
+        // Don't switch if attack isn't below -1
+        if (spAttackingStage > DEFAULT_STAT_STAGE - 2)
+            return FALSE;
+        // 50% chance if attack at -2 and have a good candidate mon
+        else if (spAttackingStage == DEFAULT_STAT_STAGE - 2)
+        {
+            if (AI_DATA->mostSuitableMonId[gActiveBattler] != PARTY_SIZE && (Random() & 1))
+            {
+                gBattleStruct->AI_monToSwitchIntoId[gActiveBattler] = PARTY_SIZE;
+                BtlController_EmitTwoReturnValues(1, B_ACTION_SWITCH, 0);
+                return TRUE;
+            }
+        }
+        // If at -3 or worse, switch out regardless
+        else if (spAttackingStage < DEFAULT_STAT_STAGE - 2)
+        {
+            gBattleStruct->AI_monToSwitchIntoId[gActiveBattler] = PARTY_SIZE;
+            BtlController_EmitTwoReturnValues(1, B_ACTION_SWITCH, 0);
+            return TRUE;
+        }
     }
     return FALSE;
 }
@@ -781,11 +998,15 @@ bool32 ShouldSwitch(void)
     if (FindMonThatAbsorbsOpponentsMove())
         return TRUE;
 
-    //These Functions can prompt switch to generic party members
+    //These functions can prompt switch to generic party members
     if (ShouldSwitchIfAllBadMoves())
         return TRUE;
     if (ShouldSwitchIfAbilityBenefit())
         return TRUE;
+    if (AreAttackingStatsLowered())
+		return TRUE;
+    if (HasBadOdds2())
+		return TRUE;
     if (HasBadOdds())
 		return TRUE;
     

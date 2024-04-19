@@ -12158,6 +12158,190 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_CAVE_OF_SJWHALE_1F",
+          "base_label": "gCave_Of_Sjwhale_1F0",
+          "land_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 45,
+                "max_level": 46,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 47,
+                "max_level": 48,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 46,
+                "max_level": 47,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 47,
+                "max_level": 48,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 46,
+                "max_level": 47,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 45,
+                "max_level": 46,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 46,
+                "max_level": 47,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 47,
+                "max_level": 48,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 45,
+                "max_level": 46,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 46,
+                "max_level": 46,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 47,
+                "max_level": 47,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 45,
+                "max_level": 46,
+                "species": "SPECIES_SJWHALE"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 12,
+            "mons": [
+              {
+                "min_level": 45,
+                "max_level": 47,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 46,
+                "max_level": 48,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 45,
+                "max_level": 47,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 45,
+                "max_level": 48,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 48,
+                "max_level": 48,
+                "species": "SPECIES_SJWHALE"
+              }
+            ]
+          },
+          "rock_smash_mons": {
+            "encounter_rate": 0,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 0,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SJWHALE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SJWHALE"
+              }
+            ]
+          }
         }
       ]
     },

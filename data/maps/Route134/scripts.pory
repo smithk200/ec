@@ -12,11 +12,6 @@ Route134_EventScript_Jack::
 	msgbox Route134_Text_JackPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route134_EventScript_Laurel::
-	trainerbattle_single TRAINER_LAUREL, Route134_Text_LaurelIntro, Route134_Text_LaurelDefeat
-	msgbox Route134_Text_LaurelPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route134_EventScript_Alex::
 	trainerbattle_single TRAINER_ALEX, Route134_Text_AlexIntro, Route134_Text_AlexDefeat
 	msgbox Route134_Text_AlexPostBattle, MSGBOX_AUTOCLOSE

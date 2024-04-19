@@ -1077,3 +1077,7 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Route130House3/scripts.inc"
 
 	.include "data/maps/Route130House4/scripts.inc"
+
+	.include "data/maps/Cave_Of_Sjwhale_2F/scripts.inc"
+
+	.include "data/maps/Cave_Of_Sjwhale_3F/scripts.inc"

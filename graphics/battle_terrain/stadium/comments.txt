@@ -1,0 +1,7 @@
+Palette 3 corresponds to Tumblrita.
+Palette 4 corresponds to Captain Floyd.
+Palette 5 corresponds to Joy.
+Palette 6 corresponds to Snoop.
+Palette 7 corresponds to Cynthia.
+IDK what Palettes 1 and 2 correspond to.
+Also I have no idea which palette is the proper match for "tiles.png". Will work on soon.

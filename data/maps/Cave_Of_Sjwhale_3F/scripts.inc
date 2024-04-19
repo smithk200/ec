@@ -1,0 +1,36 @@
+Cave_Of_Sjwhale_3F_MapScripts::
+	.byte 0
+
+Cave_Of_Sjwhale_EventScript_Adesign::
+	lockall
+	waitse
+	playmoncry SPECIES_ADESIGN, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setwildbattle SPECIES_ADESIGN, 70
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Cave_Of_Sjwhale_EventScript_DefeatedAdesign
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Cave_Of_Sjwhale_EventScript_RanFromAdesign
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, Cave_Of_Sjwhale_EventScript_RanFromAdesign
+	setflag FLAG_DEFEATED_ADESIGN
+	releaseall
+	end
+
+Cave_Of_Sjwhale_EventScript_DefeatedAdesign::
+	setflag FLAG_DEFEATED_ADESIGN
+	goto Cave_Of_Sjwhale_EventScript_DefeatedAdesign2
+	end
+
+Cave_Of_Sjwhale_EventScript_DefeatedAdesign2::
+	fadescreenswapbuffers FADE_TO_BLACK
+	removeobject 1
+	fadescreenswapbuffers FADE_FROM_BLACK
+	releaseall
+	end
+
+Cave_Of_Sjwhale_EventScript_RanFromAdesign:
+    release
+    end

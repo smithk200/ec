@@ -59,7 +59,7 @@
 #define FLAG_FRY_MOSSDEEP_GIVE_TM    0x2F // Unused Flag
 #define FLAG_PETALBURG_GYM_NPC    0x30 // Unused Flag
 #define FLAG_MAUVILLE_PUZZLE_COMPLETE    0x31 // Unused Flag
-#define FLAG_UNUSED_0x032    0x32 // Unused Flag
+#define FLAG_DEFEATED_ADESIGN    0x32 // Unused Flag
 #define FLAG_UNUSED_0x033    0x33 // Unused Flag
 #define FLAG_UNUSED_0x034    0x34 // Unused Flag
 #define FLAG_UNUSED_0x035    0x35 // Unused Flag

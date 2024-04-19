@@ -4,6 +4,7 @@
 #include "battle_anim.h"
 #include "battle_ai_util.h"
 #include "battle_ai_main.h"
+#include "battle_controllers.h"
 #include "battle_factory.h"
 #include "battle_setup.h"
 #include "battle_z_move.h"
@@ -346,7 +347,7 @@ static void SetBattlerAiData(u8 battlerId)
     AI_DATA->moveLimitations[battlerId] = CheckMoveLimitations(battlerId, 0, MOVE_LIMITATIONS_ALL);
 }
 
-void GetAiLogicData(void)
+void GetAiLogicData(void) //called "SetAiLogicDataForTurn" in newer versions of expansion
 {
     u32 battlerAtk, battlerDef, i, move;
     u8 effectiveness;
@@ -399,7 +400,30 @@ void GetAiLogicData(void)
     }
 }
 
-static u8 ChooseMoveOrAction_Singles(void)
+static bool32 AI_SwitchMonIfSuitable(u32 battler, bool32 doubleBattle)
+{
+    u32 monToSwitchId = AI_DATA->mostSuitableMonId[battler];
+    //if (monToSwitchId != PARTY_SIZE && IsValidForBattle(&GetBattlerParty(battler)[monToSwitchId]))
+    {
+        gBattleMoveDamage = monToSwitchId;
+        // Edge case: See if partner already chose to switch into the same mon
+        if (doubleBattle)
+        {
+            u32 partner = BATTLE_PARTNER(battler);
+            if (AI_DATA->shouldSwitchMon & gBitTable[partner] && AI_DATA->monToSwitchId[partner] == monToSwitchId)
+            {
+                return FALSE;
+            }
+        }
+        AI_DATA->shouldSwitchMon |= gBitTable[battler];
+        AI_DATA->monToSwitchId[battler] = monToSwitchId;
+        return TRUE;
+    }
+    return FALSE;
+}
+
+static u8 ChooseMoveOrAction_Singles(void) //split into many functions in newer versions of expansion, contains AI_ShouldSwitchIfBadMoves as well
+// as a host of other functions
 {
     u8 currentMoveArray[MAX_MON_MOVES];
     u8 consideredMoveArray[MAX_MON_MOVES];
@@ -441,7 +465,7 @@ static u8 ChooseMoveOrAction_Singles(void)
         && AI_THINKING_STRUCT->aiFlags & (AI_FLAG_CHECK_VIABILITY | AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_PREFER_BATON_PASS))
     {
         // Consider switching if all moves are worthless to use.
-        if (GetTotalBaseStat(gBattleMons[sBattler_AI].species) >= 400 // Mon is not weak. Originally 310.
+        if (GetTotalBaseStat(gBattleMons[sBattler_AI].species) >= 310 // Mon is not weak.
             && gBattleMons[sBattler_AI].hp >= gBattleMons[sBattler_AI].maxHP / 2) // Mon has more than 50% of its HP
         {
             s32 cap = AI_THINKING_STRUCT->aiFlags & (AI_FLAG_CHECK_VIABILITY) ? 98 : 93; //the first one was originally 95
@@ -449,9 +473,12 @@ static u8 ChooseMoveOrAction_Singles(void)
             {
                 if (AI_THINKING_STRUCT->score[i] > cap) //a threshold where if any move score is above that, we don't decide to switch
                     break;
+                if ((gTrainerBattleOpponent_A == TRAINER_SNOOP) && (gBattleMons[sBattler_AI].species == SPECIES_VENUSAUR)) //Snoop likes to switch him out for some reason
+                    break;
             }
 
-            if (i == MAX_MON_MOVES && GetMostSuitableMonToSwitchInto() != PARTY_SIZE)
+            if (i == MAX_MON_MOVES && GetMostSuitableMonToSwitchInto() != PARTY_SIZE) //the line is "if (i == MAX_BATTLERS_COUNT && AI_SwitchMonIfSuitable(battler, doubleBattle))"
+            //in newer versions of expansion
             {
                 AI_THINKING_STRUCT->switchMon = TRUE;
                 return AI_CHOICE_SWITCH;
@@ -2830,6 +2857,9 @@ static s16 AI_TryToFaint(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
             score++;
     }
 
+    if (((AI_DATA->simulatedDmg[battlerAtk][battlerDef][AI_THINKING_STRUCT->movesetIndex]) > 150))
+            score += 50;
+
     return score;
 }
 
@@ -3235,10 +3265,14 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
     u32 i;
     // We only check for moves that have a 20% chance or more for their secondary effect to happen because moves with a smaller chance are rather worthless. We don't want the AI to use those.
     bool32 sereneGraceBoost = (AI_DATA->abilities[battlerAtk] == ABILITY_SERENE_GRACE && (gBattleMoves[move].secondaryEffectChance >= 20 && gBattleMoves[move].secondaryEffectChance < 100));
-
+    
     // Targeting partner, check benefits of doing that instead
     if (IsTargetingPartner(battlerAtk, battlerDef))
         return score;
+
+    //Should switch if AI is going to faint and can't outspeed the player
+    if ((CanTargetFaintAi(battlerDef, battlerAtk)) && (AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_SLOWER))
+        score -= 20;
 
     // check always hits
     if (!IS_MOVE_STATUS(move) && gBattleMoves[move].accuracy == 0)

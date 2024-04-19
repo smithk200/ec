@@ -5509,16 +5509,16 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_DEFAULT_MOVES(sParty_Sharon),
     },
 
-    [TRAINER_NIKKI] =
+    [TRAINER_LOLA] =
     {
-        .trainerClass = TRAINER_CLASS_SWIMMER_F,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_SWIMMER,
-        .trainerPic = TRAINER_PIC_SWIMMER_F,
-        .trainerName = _("Nikki"),
-        .items = {},
+        .trainerClass = TRAINER_CLASS_FEMINIST,
+        .encounterMusic_gender = F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_FEMINIST,
+        .trainerName = _("Lola"),
+        .items = {ITEM_FULL_RESTORE},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_Nikki),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_Lola),
     },
 
     [TRAINER_BRENDA] =
@@ -5557,40 +5557,40 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_DEFAULT_MOVES(sParty_Susie),
     },
 
-    [TRAINER_KARA] =
+    [TRAINER_ALICE_2] =
     {
-        .trainerClass = TRAINER_CLASS_SWIMMER_F,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_SWIMMER,
-        .trainerPic = TRAINER_PIC_SWIMMER_F,
-        .trainerName = _("Kara"),
-        .items = {},
+        .trainerClass = TRAINER_CLASS_FEMINIST,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_FEMINIST,
+        .trainerName = _("Alice"),
+        .items = {ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_Kara),
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY,
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_Alice2),
     },
 
-    [TRAINER_DANA] =
+    [TRAINER_MIDORI] =
     {
-        .trainerClass = TRAINER_CLASS_SWIMMER_F,
+        .trainerClass = TRAINER_CLASS_FEMINIST,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_SWIMMER,
-        .trainerPic = TRAINER_PIC_SWIMMER_F,
-        .trainerName = _("Dana"),
+        .trainerPic = TRAINER_PIC_LASS,
+        .trainerName = _("Midori"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_Dana),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_Midori),
     },
 
-    [TRAINER_SIENNA] =
+    [TRAINER_EMILY] =
     {
-        .trainerClass = TRAINER_CLASS_SWIMMER_F,
+        .trainerClass = TRAINER_CLASS_FEMINIST,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_SWIMMER,
         .trainerPic = TRAINER_PIC_SWIMMER_F,
-        .trainerName = _("Sienna"),
-        .items = {},
+        .trainerName = _("Emily"),
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_NONE, ITEM_NONE},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_Sienna),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_Emily),
     },
 
     [TRAINER_DEBRA] =
@@ -5629,16 +5629,16 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_DEFAULT_MOVES(sParty_Kaylee),
     },
 
-    [TRAINER_LAUREL] =
+    [TRAINER_ELLA] =
     {
-        .trainerClass = TRAINER_CLASS_SWIMMER_F,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_SWIMMER,
-        .trainerPic = TRAINER_PIC_SWIMMER_F,
-        .trainerName = _("Laurel"),
+        .trainerClass = TRAINER_CLASS_YOUNGSTER,
+        .encounterMusic_gender = F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_PIC_SCHOOL_KID_F,
+        .trainerName = _("Ella"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_Laurel),
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_CHECK_VIABILITY,
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_Ella),
     },
 
     [TRAINER_CARLEE] =
@@ -6951,9 +6951,9 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_LILITH] =
     {
-        .trainerClass = TRAINER_CLASS_BATTLE_GIRL,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_INTENSE,
-        .trainerPic = TRAINER_PIC_BATTLE_GIRL,
+        .trainerClass = TRAINER_CLASS_FEMINIST,
+        .encounterMusic_gender = F_TRAINER_FEMALE,
+        .trainerPic = TRAINER_CLASS_FEMINIST,
         .trainerName = _("Lilith"),
         .items = {},
         .doubleBattle = FALSE,

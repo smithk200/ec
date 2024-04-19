@@ -1,3 +1,54 @@
 Cave_Of_Sjwhale_1F_MapScripts::
 	.byte 0
 
+Cave_Of_Sjwhale_EventScript_Emily::
+	trainerbattle_single TRAINER_EMILY, Cave_Of_Sjwhale_Text_EmilyIntro, Cave_Of_Sjwhale_Text_EmilyDefeat
+	msgbox Cave_Of_Sjwhale_Text_EmilyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Cave_Of_Sjwhale_EventScript_Lola::
+	trainerbattle_single TRAINER_LOLA, Cave_Of_Sjwhale_Text_LolaIntro, Cave_Of_Sjwhale_Text_LolaDefeat
+	msgbox Cave_Of_Sjwhale_Text_LolaPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Cave_Of_Sjwhale_EventScript_Midori::
+	trainerbattle_single TRAINER_MIDORI, Cave_Of_Sjwhale_Text_MidoriIntro, Cave_Of_Sjwhale_Text_MidoriDefeat
+	msgbox Cave_Of_Sjwhale_Text_MidoriPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Cave_Of_Sjwhale_Text_EmilyIntro:
+    .string "Eek!\n"
+    .string "Did you touch me?$"
+
+Cave_Of_Sjwhale_Text_EmilyDefeat:
+    .string "I'm going to call the cops on\n"
+    .string "you for sexual assault!$"
+
+Cave_Of_Sjwhale_Text_EmilyPostBattle:
+    .string "I'm not eye candy for you,\n"
+    .string "you misogynistic asshole!$"
+
+Cave_Of_Sjwhale_Text_LolaIntro:
+    .string "I'm body positive!\p"
+    .string "I eat 100 pounds of food a day\l$"
+    .string "and I've never felt happier!$"
+
+Cave_Of_Sjwhale_Text_LolaDefeat:
+    .string "How dare you say this isn't \n"
+    .string "healthy, you body-negative,\l"
+    .string "white degenerate!$"
+
+Cave_Of_Sjwhale_Text_LolaPostBattle:
+    .string "(jiggles her fat around obnoxiously)$"
+
+Cave_Of_Sjwhale_Text_MidoriIntro:
+    .string "uwu!\n"
+    .string "i love soft, cute things!\p"
+    .string "and i'm a cute catgirl uwu!$"
+
+Cave_Of_Sjwhale_Text_MidoriDefeat:
+    .string "uwu...$"
+
+Cave_Of_Sjwhale_Text_MidoriPostBattle:
+    .string "uwu catgirl vibes cute transgirl\n"
+    .string "catgirl pls vtuber love!!$"

@@ -4500,6 +4500,26 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Route130House4/border.bin",
       "blockdata_filepath": "data/layouts/Route130House4/map.bin"
+    },
+    {
+      "id": "LAYOUT_CAVE_OF_SJWHALE_2F",
+      "name": "Cave_Of_Sjwhale_2F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Cave_Of_Sjwhale_2F/border.bin",
+      "blockdata_filepath": "data/layouts/Cave_Of_Sjwhale_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_CAVE_OF_SJWHALE_3F",
+      "name": "Cave_Of_Sjwhale_3F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Cave_Of_Sjwhale_3F/border.bin",
+      "blockdata_filepath": "data/layouts/Cave_Of_Sjwhale_3F/map.bin"
     }
   ]
 }

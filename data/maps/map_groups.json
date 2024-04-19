@@ -441,7 +441,9 @@
     "TerraCave_End",
     "AlteringCave",
     "MeteorFalls_StevensCave",
-    "Cave_Of_Sjwhale_1F"
+    "Cave_Of_Sjwhale_1F",
+    "Cave_Of_Sjwhale_2F",
+    "Cave_Of_Sjwhale_3F"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

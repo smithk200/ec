@@ -31,11 +31,6 @@ Route131_EventScript_Susie::
 	msgbox Route131_Text_SusiePostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route131_EventScript_Kara::
-	trainerbattle_single TRAINER_KARA, Route131_Text_KaraIntro, Route131_Text_KaraDefeat
-	msgbox Route131_Text_KaraPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route131_EventScript_Reli::
 	trainerbattle_double TRAINER_RELI_AND_IAN, Route131_Text_ReliIntro, Route131_Text_ReliDefeat, Route131_Text_ReliNotEnoughMons
 	msgbox Route131_Text_ReliPostBattle, MSGBOX_AUTOCLOSE
