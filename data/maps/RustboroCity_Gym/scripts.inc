@@ -197,7 +197,7 @@ RustboroCity_Gym_Text_RoxanneDefeat:
 	.string "now.$"
 
 RustboroCity_Gym_Text_ReceivedStoneBadge:
-	.string "{PLAYER} received the Stone Bdge\n"
+	.string "{PLAYER} received the Stone Badge\n"
 	.string "from Roxanne.$"
 
 RustboroCity_Gym_Text_StoneBadgeInfoTakeThis:

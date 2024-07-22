@@ -2759,7 +2759,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Axle[] = {
     {
     .iv = 100,
     .lvl = 31,
-    .species = SPECIES_IGUALLAH,
+    .species = SPECIES_CHARAGON,
     }
 };
 
@@ -2775,7 +2775,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Keegan[] = {
     {
     .iv = 120,
     .lvl = 32,
-    .species = SPECIES_CHARAGON,
+    .species = SPECIES_IGUALLAH,
     }
 };
 

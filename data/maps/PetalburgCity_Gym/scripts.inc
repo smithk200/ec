@@ -282,7 +282,9 @@ PetalburgCity_Gym_EventScript_BeginWallyTutorial2::
 	clearflag FLAG_HIDE_PETALBURG_GYM_WALLY
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL
 	special InitBirchState
+	fadescreenswapbuffers FADE_TO_BLACK
 	warp MAP_PETALBURG_CITY_GYM, 4, 108
+	fadescreenswapbuffers FADE_FROM_BLACK
 	waitstate
 	release
 	end
@@ -1408,7 +1410,7 @@ PetalburgCity_Gym_Text_ExplainFacade:
 	.string "situation into an advantage.$"
 
 PetalburgCity_Gym_Text_DadHappyAndSad:
-	.string "Dad: As the GYM LEADER, I can't\n"
+	.string "Dad: As the Gym Leader, I can't\n"
 	.string "express how upset I am…\p"
 	.string "But as a father, it makes me both\n"
 	.string "happy and a little sad. It's odd…$"
@@ -1419,7 +1421,7 @@ PetalburgCity_Gym_Text_PleaseComeWithMe:
 	.string "I have something I want you to have.$"
 
 PetalburgCity_Gym_Text_LetMeBorrowPlayer:
-	.string "NORMAN, you don't mind, do you?\p"
+	.string "Norman, you don't mind, do you?\p"
 	.string "Let me borrow your {PLAYER}{KUN} for\n"
 	.string "a minute or two.$"
 
@@ -1440,16 +1442,16 @@ PetalburgCity_Gym_Text_DadNoAmountOfTrainingIsEnough:
 PetalburgCity_Gym_Text_GymGuideAdvice:
 	.string "Hey, how's it going, CHAMPION-\n"
 	.string "bound {PLAYER}?\p"
-	.string "The doors in this GYM open when you\n"
-	.string "beat the awaiting TRAINERS.\p"
+	.string "The doors in this Gym open when you\n"
+	.string "beat the awaiting Trainers.\p"
 	.string "Whoops! The doors in this room are\n"
 	.string "already open, so don't attack me!\p"
-	.string "The TRAINERS of PETALBURG GYM\n"
+	.string "The Trainers of Petalburg Gym\n"
 	.string "use all kinds of items.\p"
 	.string "The door at the left leads to\n"
-	.string "the SPEED Room.\p"
+	.string "the Speed Room.\p"
 	.string "The door at the right leads to\n"
-	.string "the ACCURACY Room.\p"
+	.string "the Acucracy Room.\p"
 	.string "The room's name will be on\n"
 	.string "the door, so choose carefully.\p"
 	.string "Once you've chosen the door…\n"
@@ -1474,7 +1476,7 @@ PetalburgCity_Gym_Text_RandallPostBattle:
 	.string "Go on to the next room where a new\n"
 	.string "challenge awaits you.\p"
 	.string "At the left is the Confusion Room.\p"
-	.string "The right door leads to the DEFENSE\n"
+	.string "The right door leads to the Defense\n"
 	.string "Room.$"
 
 PetalburgCity_Gym_Text_RandallPostBadge:
@@ -1494,11 +1496,11 @@ PetalburgCity_Gym_Text_ParkerDefeat:
 	.string "You share a strong bond together.$"
 
 PetalburgCity_Gym_Text_ParkerPostBattle:
-	.string "The next room is the STRENGTH Room.\n"
+	.string "The next room is the Strength Room.\n"
 	.string "Can you withstand brute force?$"
 
 PetalburgCity_Gym_Text_ParkerPostBadge:
-	.string "After you beat our LEADER, the\n"
+	.string "After you beat our Leader, the\n"
 	.string "training has become a lot tougher.$"
 
 PetalburgCity_Gym_Text_GeorgeIntro:

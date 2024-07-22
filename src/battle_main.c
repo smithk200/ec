@@ -4143,7 +4143,8 @@ static void HandleTurnActionSelectionState(void)
                     {
                         BtlController_EmitChooseItem(BUFFER_A, gBattleStruct->battlerPartyOrders[gActiveBattler]);
                         MarkBattlerForControllerExec(gActiveBattler);
-                        gItemLimit++;
+                        if (gActiveBattler == 0) //ONLY when the player uses an item. Should be either 0 or 1...?
+                            gItemLimit++;
                     }
                     break;
                 case B_ACTION_SWITCH:

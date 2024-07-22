@@ -468,13 +468,13 @@ static u8 ChooseMoveOrAction_Singles(void) //split into many functions in newer 
         if (GetTotalBaseStat(gBattleMons[sBattler_AI].species) >= 310 // Mon is not weak.
             && gBattleMons[sBattler_AI].hp >= gBattleMons[sBattler_AI].maxHP / 2) // Mon has more than 50% of its HP
         {
-            s32 cap = AI_THINKING_STRUCT->aiFlags & (AI_FLAG_CHECK_VIABILITY) ? 98 : 93; //the first one was originally 95
+            s32 cap = AI_THINKING_STRUCT->aiFlags & (AI_FLAG_CHECK_VIABILITY) ? 95 : 93; //the first one was originally 95
             for (i = 0; i < MAX_MON_MOVES; i++)
             {
                 if (AI_THINKING_STRUCT->score[i] > cap) //a threshold where if any move score is above that, we don't decide to switch
                     break;
-                if ((gTrainerBattleOpponent_A == TRAINER_SNOOP) && (gBattleMons[sBattler_AI].species == SPECIES_VENUSAUR)) //Snoop likes to switch him out for some reason
-                    break;
+                //if ((gTrainerBattleOpponent_A == TRAINER_SNOOP) && (gBattleMons[sBattler_AI].species == SPECIES_VENUSAUR)) //Snoop likes to switch him out for some reason
+                    //break;
             }
 
             if (i == MAX_MON_MOVES && GetMostSuitableMonToSwitchInto() != PARTY_SIZE) //the line is "if (i == MAX_BATTLERS_COUNT && AI_SwitchMonIfSuitable(battler, doubleBattle))"
@@ -736,6 +736,13 @@ static s16 AI_CheckBadMove(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
           || AI_DATA->holdEffects[battlerDef] == HOLD_EFFECT_AIR_BALLOON
           || (gStatuses3[battlerDef] & (STATUS3_MAGNET_RISE | STATUS3_TELEKINESIS)))
           && move != MOVE_THOUSAND_ARROWS)
+        {
+            RETURN_SCORE_MINUS(20);
+        }
+
+        //check grass immunities, putting this here just in case
+        if (moveType == TYPE_GRASS
+          && ((AI_DATA->abilities[battlerDef] == ABILITY_SAP_SIPPER)))
         {
             RETURN_SCORE_MINUS(20);
         }
@@ -3364,6 +3371,8 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
             IncreaseSleepScore(battlerAtk, battlerDef, move, &score);
         break;
     case EFFECT_ABSORB:
+        if ((gTrainerBattleOpponent_A == TRAINER_MOLLY_1) && ((AI_DATA->abilities[battlerDef] == ABILITY_SAP_SIPPER)))
+            score -= 50;
         if (AI_DATA->holdEffects[battlerAtk] == HOLD_EFFECT_BIG_ROOT)
             score++;
         if (effectiveness <= AI_EFFECTIVENESS_x0_5 && AI_RandLessThan(50))

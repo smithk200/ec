@@ -58,16 +58,16 @@ $(MID_SUBDIR)/sandstorm.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G191 -V110 -P1
 
 $(MID_SUBDIR)/waluigi_pinball.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V100 -P1
+	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V090 -P1
 
 $(MID_SUBDIR)/smbw_factory.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V120 -P1
 
 $(MID_SUBDIR)/heavy_light.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V110 -P1
+	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V100 -P1
 
 $(MID_SUBDIR)/vs_trainer_dpp.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V110 -P1
+	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V090 -P1
 
 $(MID_SUBDIR)/bowsercastle3.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V080 -P1

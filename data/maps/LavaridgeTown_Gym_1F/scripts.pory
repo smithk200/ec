@@ -245,17 +245,16 @@ LavaridgeTown_Gym_1F_Text_AxlePostBattle:
 	.string "know our Leader.$"
 
 LavaridgeTown_Gym_B1F_Text_KeeganIntro:
-	.string "Play with fire, and you get burned.$"
+	.string "FOR PALESTINE!!!$"
 
 LavaridgeTown_Gym_B1F_Text_KeeganDefeat:
-	.string "You have no chance against\n"
-	.string "against our Gym Leader!$"
+	.string "Darn...$"
 
 LavaridgeTown_Gym_B1F_Text_KeeganPostBattle:
-	.string "Your skill is real…\n"
-	.string "But our Leader is strong.\p"
-	.string "If you don't watch yourself, you'll\n"
-	.string "get kicked in the ass.$"
+	.string "You know, if you support Israel,\n"
+	.string "you actually support genocide.\p"
+	.string "Palestinians are kind, gentle\n"
+	.string "people fo, you bigot!$"
 
 LavaridgeTown_Gym_1F_Text_GeraldIntro:
 	.string "Can your Pokémon withstand\n"
