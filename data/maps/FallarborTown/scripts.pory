@@ -153,19 +153,23 @@ FallarborTown_TradeThanks::
 FallarborTown_Text_ShadyCharactersCozmosHome:
 	.string "Something's happening,\n"
 	.string "and I don't like it!\p"
-	.string "I've seen shady characters wandering\n"
-	.string "in and out of Prof. Cozmo's home…$"
+	.string "I've seen some weirdos wandering\n"
+	.string "in and out of Prof. Cozmo's home…\p"
+	.string "They were saying something about a\n"
+	.string "Meteriote?$"
 
 FallarborTown_Text_RegionKnownForMeteors:
-	.string "This region's been known for meteors\n"
-	.string "since the olden days.\p"
-	.string "They say Meteor Falls was gouged out\n"
-	.string "by a falling meteorite long ago.$"
+	.string "Now we have the capability to create\n"
+	.string "Generation 3 Pokémon games with new\l"
+	.string "features.\p"
+	.string "Why didn't the creator implement\n"
+	.string "Dynamaxing or Terrastalizing?$"
 
 FallarborTown_Text_MyPreciousAzurill:
 	.string "See! Take a look!\n"
 	.string "This is my precious Azurill!\p"
-	.string "It's slick and smooth and plushy, too!$"
+	.string "It's soft as a cushion and\n"
+	.string "and you can bounce on it!!$"
 
 FallarborTown_Text_Azurill:
 	.string "Azurill: Rooreelooo.$"
@@ -176,7 +180,7 @@ FallarborTown_Text_HaveYouChallengedFlannery:
 	.string "She defeated Flannery like three\n"
 	.string "months ago.\p"
 	.string "I have no idea how, but that girl\n"
-	.string "has a lot of talent!.$"
+	.string "has a lot of talent!$"
 
 FallarborTown_Text_BattleTentSign:
 	.string "BATTLE TENT FALLARBOR SITE\n"

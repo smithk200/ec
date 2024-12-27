@@ -4520,6 +4520,16 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Cave_Of_Sjwhale_3F/border.bin",
       "blockdata_filepath": "data/layouts/Cave_Of_Sjwhale_3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_MONEY_ROOM",
+      "name": "MoneyRoom_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/MoneyRoom/border.bin",
+      "blockdata_filepath": "data/layouts/MoneyRoom/map.bin"
     }
   ]
 }

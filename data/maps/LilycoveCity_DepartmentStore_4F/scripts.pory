@@ -36,7 +36,6 @@ LilycoveCity_DepartmentStore_4F_Pokemart_AttackTMs:
 	.2byte ITEM_TM52  @ Dazzling Gleam 
 	.2byte ITEM_TM51  @ Chaos Dunk
 	.2byte ITEM_TM26  @ Earthquake
-	.2byte ITEM_TM46  @ Thief 
 	.2byte ITEM_TM54  @ X-Scissor 
 	.2byte ITEM_TM57  @ False Swipe
 	.2byte ITEM_TM53  @ Giga Impact  

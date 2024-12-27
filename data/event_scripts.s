@@ -1081,3 +1081,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Cave_Of_Sjwhale_2F/scripts.inc"
 
 	.include "data/maps/Cave_Of_Sjwhale_3F/scripts.inc"
+
+	.include "data/maps/MoneyRoom/scripts.inc"

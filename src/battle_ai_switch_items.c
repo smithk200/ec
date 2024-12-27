@@ -1224,7 +1224,7 @@ static u32 GetBestMonDmg(struct Pokemon *party, int firstId, int lastId, u8 inva
 u8 GetMostSuitableMonToSwitchInto(void)
 {
     u32 opposingBattler = 0;
-    u32 bestMonId = 0; //in upcomming it's PARTY_SIZE, but no need to mess with it
+    u32 bestMonId = 0; //in upcoming it's PARTY_SIZE, but no need to mess with it
     u8 battlerIn1 = 0, battlerIn2 = 0;
     s32 firstId = 0;
     s32 lastId = 0; // + 1

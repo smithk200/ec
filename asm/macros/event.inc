@@ -732,6 +732,11 @@
 	.elseif \type == TRAINER_BATTLE_HILL
 		.4byte \pointer1 @ text
 		.4byte \pointer2 @ text
+	.elseif \type == TRAINER_BATTLE_TWO_TRAINERS_NO_INTRO
+		.4byte \pointer1 @ text
+		.4byte \pointer2 @ text
+		.4byte \pointer3 @ text
+		.4byte \pointer4 @ text
 	.endif
 	.endm
 

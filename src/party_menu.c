@@ -5,6 +5,7 @@
 #include "battle_controllers.h"
 #include "battle_gfx_sfx_util.h"
 #include "battle_interface.h"
+#include "battle_main.h"
 #include "battle_pike.h"
 #include "battle_pyramid.h"
 #include "battle_pyramid_bag.h"
@@ -3747,6 +3748,7 @@ static void CursorCb_FieldMove(u8 taskId)
             default:
                 gPartyMenu.exitCallback = CB2_ReturnToField;
                 Task_ClosePartyMenu(taskId);
+                Overworld_ChangeMusicToDefault();
                 break;
             }
         }
@@ -4251,7 +4253,7 @@ void CB2_ShowPartyMenuForItemUse(void)
         if (GetPocketByItemId(gSpecialVar_ItemId) == POCKET_TM_HM)
             msgId = PARTY_MSG_TEACH_WHICH_MON;
         else
-            msgId = PARTY_MSG_USE_ON_WHICH_MON;
+            msgId = PARTY_MSG_USE_ON_WHICH_MON; //item-use can go here
 
         task = Task_HandleChooseMonInput;
     }
@@ -4396,6 +4398,10 @@ void ItemUseCB_Medicine(u8 taskId, TaskFunc task)
     {
         cannotUse = TRUE;
     }
+    if (gItemLimit > 4) //can't use more than 4 items in battle
+    {
+        cannotUse = TRUE;
+    }
     else
     {
         canHeal = IsHPRecoveryItem(item);
@@ -4412,7 +4418,15 @@ void ItemUseCB_Medicine(u8 taskId, TaskFunc task)
     {
         gPartyMenuUseExitCallback = FALSE;
         PlaySE(SE_SELECT);
-        DisplayPartyMenuMessage(gText_WontHaveEffect, TRUE);
+        if (gItemLimit > 4)
+        {
+            DisplayPartyMenuMessage(gText_ItemLimitHasBeenReached, TRUE);
+        }
+        else
+        {
+            DisplayPartyMenuMessage(gText_WontHaveEffect, TRUE);
+        }
+        
         ScheduleBgCopyTilemapToVram(2);
         gTasks[taskId].func = task;
     }
@@ -6179,11 +6193,12 @@ void OpenPartyMenuInBattle(u8 partyAction)
     UpdatePartyToBattleOrder();
 }
 
+//if (gItemLimit > 4)
 void ChooseMonForInBattleItem(void)
-{
-    InitPartyMenu(PARTY_MENU_TYPE_IN_BATTLE, GetPartyLayoutFromBattleType(), PARTY_ACTION_USE_ITEM, FALSE, PARTY_MSG_USE_ON_WHICH_MON, Task_HandleChooseMonInput, CB2_ReturnToBagMenu);
-    ReshowBattleScreenDummy();
-    UpdatePartyToBattleOrder();
+{  
+        InitPartyMenu(PARTY_MENU_TYPE_IN_BATTLE, GetPartyLayoutFromBattleType(), PARTY_ACTION_USE_ITEM, FALSE, PARTY_MSG_USE_ON_WHICH_MON, Task_HandleChooseMonInput, CB2_ReturnToBagMenu);
+        ReshowBattleScreenDummy();
+        UpdatePartyToBattleOrder();
 }
 
 static u8 GetPartyMenuActionsTypeInBattle(struct Pokemon *mon)

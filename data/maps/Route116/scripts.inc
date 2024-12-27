@@ -351,13 +351,18 @@ Route116_EventScript_Johnson::
 	msgbox Route116_Text_JohnsonPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+Route116_EventScript_WLC::
+	trainerbattle_single TRAINER_WLC_1, Route116_Text_WLCIntro, Route116_Text_WLCDefeat
+	msgbox Route116_Text_WLCPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 Route116_Text_ScoundrelMadeOffWithPeeko:
 	.string "Ohhh, what am I to do?\p"
-	.string "We were on our walk, PEEKO and I, when\n"
+	.string "We were on our walk, Peeko and I, when\n"
 	.string "we were jumped by an odd thug…\p"
 	.string "The scoundrel made off with my\n"
-	.string "darling PEEKO!\p"
-	.string "Wrrrooooooaaaar! PEEKO!$"
+	.string "darling Peeko!\p"
+	.string "Wrrrooooooaaaar! Peeko!$"
 
 Route116_Text_WantToDigTunnel:
 	.string "Nnn… Roar!\p"
@@ -439,21 +444,21 @@ Route116_Text_CantFindGlassesNotHere:
 
 Route116_Text_NotWhatImLookingFor:
 	.string "Hmm…\n"
-	.string "These are BLACKGLASSES.\l"
+	.string "These are Blackglasses.\l"
 	.string "They're not what I'm looking for…$"
 
 Route116_Text_RouteSignRustboro:
-	.string "ROUTE 116\n"
-	.string "{LEFT_ARROW} RUSTBORO CITY$"
+	.string "Route 116\n"
+	.string "{LEFT_ARROW} Rustboro City$"
 
 Route116_Text_RusturfTunnelSign:
-	.string "RUSTURF TUNNEL\n"
-	.string "“Linking RUSTBORO and VERDANTURF\p"
+	.string "Rustsurf Tunnel\n"
+	.string "“Linking Rustboro and Verdanturf\p"
 	.string "“The tunnel project has been\n"
 	.string "canceled.”$"
 
 Route116_Text_TunnelersRestHouse:
-	.string "TUNNELER'S REST HOUSE$"
+	.string "Tunneler's Rest House$"
 
 Route116_Text_TrainerTipsBToStopEvolution:
 	.string "Trainer Tips\p"
@@ -470,3 +475,19 @@ Route116_Text_TrainerTipsBagHasPockets:
 	.string "Joy is 7.\p"
 	.string "They are children.\p"
 	.string "Just so you know.$"
+
+Route116_Text_WLCIntro:
+	.string "Dr. William Lane Craig: Hi! I'm\n"
+	.string "Dr. William Lane Craig!\p"
+	.string "I'm a professor of theology!\p"
+	.string "If children live in a pagan culture,\n"
+	.string "we need to KILL THEM!!!\p"
+	.string "(pulls out shotgun)$"
+
+Route116_Text_WLCDefeat:
+	.string "Darn, I couldn't kill your Pokémon…$"
+
+Route116_Text_WLCPostBattle:
+	.string "I will come for you next time! I will\n"
+	.string "kill all the children whose culture goes\l"
+	.string "against the mighty God!$"

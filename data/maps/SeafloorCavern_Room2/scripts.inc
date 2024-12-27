@@ -8,4 +8,4 @@ SeafloorCavern_Room2_ILoveGeodudeAndZubat::
 
 SeafloorCavern_Room2_ILoveGeodudeAndZubat_Text:
 	.string "I just love Geodude and Zubat!\n"
-	.string "You'll only find them here!"
+	.string "You'll only find them here!$"

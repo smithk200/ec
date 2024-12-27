@@ -496,15 +496,6 @@ static const struct MatchCallTrainerTextInfo sMatchCallTrainers[] =
         .differentRouteMatchCallTextId = TEXT_ID(REQ_TOPIC_DIFF_ROUTE, 5),
     },
     {
-        .trainerId = TRAINER_MARIA_1,
-        .unused = 0,
-        .battleTopicTextIds = BATTLE_TEXT_IDS(9),
-        .generalTextId = TEXT_ID(GEN_TOPIC_PERSONAL, 37),
-        .battleFrontierRecordStreakTextIndex = 9,
-        .sameRouteMatchCallTextId = TEXT_ID(REQ_TOPIC_SAME_ROUTE, 9),
-        .differentRouteMatchCallTextId = TEXT_ID(REQ_TOPIC_DIFF_ROUTE, 9),
-    },
-    {
         .trainerId = TRAINER_ABIGAIL_1,
         .unused = 0,
         .battleTopicTextIds = BATTLE_TEXT_IDS(9),
@@ -1145,17 +1136,6 @@ static u32 GetActiveMatchCallTrainerId(u32 activeMatchCallId)
 */
 bool32 TryStartMatchCall(void)
 {
-    if (FlagGet(FLAG_HAS_MATCH_CALL)
-        && UpdateMatchCallStepCounter()
-        && UpdateMatchCallMinutesCounter()
-        && CheckMatchCallChance()
-        && MapAllowsMatchCall()
-        && SelectMatchCallTrainer())
-    {
-        StartMatchCall();
-        return TRUE;
-    }
-
     return FALSE;
 }
 

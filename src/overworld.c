@@ -409,6 +409,7 @@ static void Overworld_ResetStateAfterWhiteOut(void)
     FlagClear(FLAG_SYS_SAFARI_MODE);
     FlagClear(FLAG_SYS_USE_STRENGTH);
     FlagClear(FLAG_SYS_USE_FLASH);
+    //FlagClear(B_FLAG_NO_BAG_USE);
 #if VAR_TERRAIN != 0
     VarSet(VAR_TERRAIN, 0);
 #endif
@@ -1157,8 +1158,8 @@ void Overworld_PlaySpecialMapMusic(void)
             music = gSaveBlock1Ptr->savedMusic;
         else if (GetCurrentMapType() == MAP_TYPE_UNDERWATER)
             music = MUS_UNDERWATER;
-        else if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
-            music = MUS_SURF;
+        //else if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
+            //music = MUS_SURF;
     }
 
     if (music != GetCurrentMapMusic())
@@ -1185,8 +1186,8 @@ static void TransitionMapMusic(void)
         {
             if (currentMusic == MUS_UNDERWATER || currentMusic == MUS_SURF)
                 return;
-            if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
-                newMusic = MUS_SURF;
+            //if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
+                //newMusic = MUS_SURF;
         }
         if (newMusic != currentMusic)
         {

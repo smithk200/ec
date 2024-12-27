@@ -468,7 +468,7 @@ static u8 ChooseMoveOrAction_Singles(void) //split into many functions in newer 
         if (GetTotalBaseStat(gBattleMons[sBattler_AI].species) >= 310 // Mon is not weak.
             && gBattleMons[sBattler_AI].hp >= gBattleMons[sBattler_AI].maxHP / 2) // Mon has more than 50% of its HP
         {
-            s32 cap = AI_THINKING_STRUCT->aiFlags & (AI_FLAG_CHECK_VIABILITY) ? 95 : 93; //the first one was originally 95
+            s32 cap = AI_THINKING_STRUCT->aiFlags & (AI_FLAG_CHECK_VIABILITY) ? 95 : 93;
             for (i = 0; i < MAX_MON_MOVES; i++)
             {
                 if (AI_THINKING_STRUCT->score[i] > cap) //a threshold where if any move score is above that, we don't decide to switch
@@ -755,28 +755,12 @@ static s16 AI_CheckBadMove(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
         switch (effectiveness)
         {
         case AI_EFFECTIVENESS_x0:
-            RETURN_SCORE_MINUS(40);
+            RETURN_SCORE_MINUS(20);
             break;
         case AI_EFFECTIVENESS_x0_125:
         case AI_EFFECTIVENESS_x0_25:
-            RETURN_SCORE_MINUS(20);
+            RETURN_SCORE_MINUS(10);
             break;
-        case AI_EFFECTIVENESS_x0_5:
-            if (GetMoveDamageResult(move) == MOVE_POWER_BEST) //idk why this is but sometimes their best move will be a non-effective type
-            {
-                break;
-            }
-            else
-            {
-                RETURN_SCORE_MINUS(10);
-                break;
-            }
-        case AI_EFFECTIVENESS_x1:
-            if (GetMoveDamageResult(move) == MOVE_POWER_WEAK) //don't want to use a weak move
-            {
-            RETURN_SCORE_MINUS(5);
-            break;
-            }
         }
 
         // target ability checks
@@ -2741,11 +2725,11 @@ static s16 AI_TryToFaint(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
                 score --;
         }
     }
-    
+
     if (CanIndexMoveFaintTarget(battlerAtk, battlerDef, AI_THINKING_STRUCT->movesetIndex, 0) && gBattleMoves[move].effect != EFFECT_EXPLOSION)
     {
         // this move can faint the target
-        if (WillAIStrikeFirst() || GetMovePriority(battlerAtk, move) > 0)
+        if (!WillAIStrikeFirst() || GetMovePriority(battlerAtk, move) > 0)
             score += 4; // we go first or we're using priority move
         else
             score += 2;
@@ -2863,9 +2847,6 @@ static s16 AI_TryToFaint(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
         else
             score++;
     }
-
-    if (((AI_DATA->simulatedDmg[battlerAtk][battlerDef][AI_THINKING_STRUCT->movesetIndex]) > 150))
-            score += 50;
 
     return score;
 }
@@ -3364,14 +3345,14 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
             break;
     case EFFECT_SLEEP:
     case EFFECT_YAWN:
-        if ((gTrainerBattleOpponent_A == TRAINER_BENDER_1) && (!(gBattleMons[battlerDef].status1 & STATUS1_SLEEP)) && (!(IS_BATTLER_OF_TYPE(battlerDef, TYPE_GRASS)))) 
+        if ((gTrainerBattleOpponent_A == TRAINER_BENDER_1) && (!(gBattleMons[battlerDef].status1 & STATUS1_SLEEP)) && (!(IS_BATTLER_OF_TYPE(battlerDef, TYPE_GRASS))) && (!(AI_DATA->abilities[battlerDef] == ABILITY_SAP_SIPPER)))
         //Bender needs to set up a spore combo with Motherfuck, but we don't want to use Spore on a grass type or while the other mon is asleep
             score += 50;
         if (AI_RandLessThan(128))
             IncreaseSleepScore(battlerAtk, battlerDef, move, &score);
         break;
     case EFFECT_ABSORB:
-        if ((gTrainerBattleOpponent_A == TRAINER_MOLLY_1) && ((AI_DATA->abilities[battlerDef] == ABILITY_SAP_SIPPER)))
+        if (((AI_DATA->abilities[battlerDef] == ABILITY_SAP_SIPPER)) && (gBattleMoves[move].type == TYPE_GRASS))
             score -= 50;
         if (AI_DATA->holdEffects[battlerAtk] == HOLD_EFFECT_BIG_ROOT)
             score++;
@@ -3923,6 +3904,10 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
     case EFFECT_DESTINY_BOND:
         if (AI_WhoStrikesFirst(battlerAtk, battlerDef, move) == AI_IS_FASTER && CanTargetFaintAi(battlerDef, battlerAtk))
             score += 3;
+        if ((gBattleMons[battlerAtk].species == SPECIES_MOTHERFUCK) && (gStatuses3[battlerDef] & STATUS3_PERISH_SONG))
+            score += 3;
+        if ((gBattleMons[battlerAtk].species == SPECIES_MOTHERFUCK) && IS_BATTLER_OF_TYPE(battlerDef, TYPE_ICE)) //ice mons likely have an ice move, which Motherfuck is weak to. Going to find mons with an ice move later
+            score += 3;
         break;
     case EFFECT_SPITE:
         //TODO - predicted move
@@ -4110,6 +4095,8 @@ static s16 AI_CheckViability(u8 battlerAtk, u8 battlerDef, u16 move, s16 score)
         break;
     case EFFECT_PERISH_SONG:
         if (IsBattlerTrapped(battlerDef, TRUE))
+            score += 3;
+        if ((gBattleMons[battlerAtk].species == SPECIES_MOTHERFUCK) && (!(gStatuses3[battlerDef] & STATUS3_PERISH_SONG))) //if not perish songed, use perish song
             score += 3;
         break;
     case EFFECT_SANDSTORM:

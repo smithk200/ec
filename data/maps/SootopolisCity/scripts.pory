@@ -1408,7 +1408,7 @@ SootopolisCity_Movement_DestroyTask::
 SootopolisCity_Text_GymSign:
 	.string "Sootopolis City Pokémon Gym\n"
 	.string "Leader: Bender\p"
-	.string "He can bend\n"
+	.string "“He can bend\n"
 	.string "the unbendable girder!”$"
 
 SootopolisCity_Text_CitySign:

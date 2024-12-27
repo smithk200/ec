@@ -644,8 +644,8 @@ DewfordTown_Text_TinyIslandCommunity:
 	.string "everyone picks up on it right away.$"
 
 DewfordTown_Text_TownSign:
-	.string "DEWFORD TOWN\n"
-	.string "“A tiny island in the blue sea.”$"
+	.string "Dewford Town\n"
+	.string "“A pathetic island in the ginormous sea.”$"
 
 DewfordTown_Text_GymSign:
 	.string "Dewford Town Pokémon Gym\n"
@@ -709,18 +709,18 @@ DewfordTown_Text_GettingItchToFish:
 DewfordTown_Text_GiveYouOneOfMyRods:
 	.string "I hear you, and I like what\n"
 	.string "you're saying!\p"
-	.string "I'll give you one of my fishing RODS.$"
+	.string "I'll give you one of my fishing rods.$"
 
 DewfordTown_Text_ThrowInFishingAdvice:
 	.string "And, as an added bonus, I'll even throw\n"
 	.string "in a little fishing advice!\p"
 	.string "First, you want to face the water,\n"
-	.string "then use the ROD.\p"
+	.string "then use the rod.\p"
 	.string "Focus your mind…\n"
-	.string "If you get a bite, pull on the ROD.\p"
+	.string "If you get a bite, pull on the rod.\p"
 	.string "Sometimes you can snag something\n"
 	.string "immediately, but with bigger catches,\l"
-	.string "you need to time the pulls on your ROD\l"
+	.string "you need to time the pulls on your rod\l"
 	.string "to haul them in.$"
 
 DewfordTown_Text_ThatsTooBadThen:
@@ -739,12 +739,12 @@ DewfordTown_Text_FishingAdvice:
 	.string "Oh, hey, don't get down on yourself!\n"
 	.string "I'll give you a little fishing advice.\p"
 	.string "First, you want to face the water,\n"
-	.string "then use the ROD.\p"
+	.string "then use the rod.\p"
 	.string "Focus your mind…\n"
-	.string "If you get a bite, pull the ROD.\p"
+	.string "If you get a bite, pull the rod.\p"
 	.string "Sometimes you can snag something\n"
 	.string "immediately, but with bigger catches,\l"
-	.string "you need to time the pulls on your ROD\l"
+	.string "you need to time the pulls on your rod\l"
 	.string "to haul them in.$"
 
 DewfordTown_Text_XIsTheBiggestHappeningThingRight:

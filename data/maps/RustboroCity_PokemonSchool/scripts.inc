@@ -261,10 +261,10 @@ RustboroCity_PokemonSchool_Text_ExplainQuickClaw:
 
 RustboroCity_PokemonSchool_Text_TradingRightNow:
 	.string "I'm trading Pokémon with my friend\n"
-	.string "right now.$"
+	.string "right now. Stop bothering me!$"
 
 RustboroCity_PokemonSchool_Text_AlwaysWantedSeedot:
-	.string "I always wanted a SEEDOT, and\n"
+	.string "I always wanted a Seedot, and\n"
 	.string "I'm finally getting one!$"
 
 RustboroCity_PokemonSchool_Text_PokemontCantUseManMadeItems:
@@ -293,13 +293,13 @@ RustboroCity_PokemonSchool_Text_StudentsNotes:
 	.string "Pokémon are to be caught using\n"
 	.string "POKé BALLS.\p"
 	.string "Up to six Pokémon can accompany\n"
-	.string "a TRAINER.\p"
-	.string "A TRAINER is someone who catches\n"
+	.string "a Trainer.\p"
+	.string "A Trainer is someone who catches\n"
 	.string "Pokémon, raises them, and battles\l"
 	.string "with them.\p"
-	.string "A TRAINER's mission is to defeat\n"
-	.string "the strong TRAINERS who await\l"
-	.string "challengers in Pokémon GYMS.$"
+	.string "A Trainer's mission is to defeat\n"
+	.string "the strong TrainerS who await\l"
+	.string "challengers in Pokémon Gyms.$"
 
 RustboroCity_PokemonSchool_Text_ScottMetAlreadyCut:
 	.string "Hello? Didn't we meet before?\n"
@@ -307,11 +307,11 @@ RustboroCity_PokemonSchool_Text_ScottMetAlreadyCut:
 	.string "Let me introduce myself.\n"
 	.string "My name's SCOTT.\p"
 	.string "I've been traveling everywhere in\n"
-	.string "search of outstanding TRAINERS.\p"
+	.string "search of outstanding TrainerS.\p"
 	.string "More specifically, I'm looking for\n"
 	.string "Pokémon battle experts.\p"
 	.string "So, what brings you to this SCHOOL?\n"
-	.string "Are you a TRAINER, too?\p"
+	.string "Are you a Trainer, too?\p"
 	.string "The first thing you should do is to\n"
 	.string "have a Pokémon learn the move CUT.\p"
 	.string "If I remember correctly, someone in\n"
@@ -329,7 +329,7 @@ RustboroCity_PokemonSchool_Text_ScottStoneBadge:
 	.string "But, you know, I would've loved to see\n"
 	.string "you in battle.\p"
 	.string "It's hard to tell what you're like as\n"
-	.string "a TRAINER from a LEAGUE BADGE.$"
+	.string "a Trainer from a LEAGUE BADGE.$"
 
 RustboroCity_PokemonSchool_Text_ScottMetAlreadyStoneBadge:
 	.string "Hello? Didn't we meet before?\n"
@@ -337,14 +337,14 @@ RustboroCity_PokemonSchool_Text_ScottMetAlreadyStoneBadge:
 	.string "Let me introduce myself.\n"
 	.string "My name's SCOTT.\p"
 	.string "I've been traveling everywhere in\n"
-	.string "search of outstanding TRAINERS.\p"
+	.string "search of outstanding TrainerS.\p"
 	.string "More specifically, I'm looking for\n"
 	.string "Pokémon battle experts.\p"
 	.string "Oh, what's that?\n"
 	.string "It's a STONE BADGE, isn't it?\p"
 	.string "That's pretty impressive, I'd say, for\n"
-	.string "a starting TRAINER like yourself.\p"
+	.string "a starting Trainer like yourself.\p"
 	.string "But, you know, I would've loved to see\n"
 	.string "you in battle.\p"
 	.string "It's hard to tell what you're like as\n"
-	.string "a TRAINER from a LEAGUE BADGE.$"
+	.string "a Trainer from a LEAGUE BADGE.$"

@@ -1078,6 +1078,7 @@ Route104_Text_ImNotATrainer:
 	.string "Oh, no, I'm not a Trainer.\p"
 	.string "But that's right, if Trainer lock eyes,\n"
 	.string "it's a challenge to battle.\p"
+	.string "It's rude that they don't ask you first.\p"
 	.string "If you don't want to battle, stay out\n"
 	.string "of their sight.$"
 
@@ -1114,7 +1115,7 @@ Route104_Text_RouteSignPetalburg:
 	.string "{RIGHT_ARROW} Petalburg City$"
 
 Route104_Text_RouteSignRustboro:
-	.string "ROUTE 1O4\n"
+	.string "Route 1O4\n"
 	.string "{UP_ARROW} Rustboro City$"
 
 Route104_Text_PrettyPetalFlowShop:
@@ -1127,7 +1128,7 @@ Route104_Text_TrainerTipsDoubleBattles:
 	.string "be in for a bad time!$"
 
 Route104_Text_MayWeShouldRegister:
-	.string "MAY: Oh, hi, {PLAYER}{KUN}!\p"
+	.string "May: Oh, hi, {PLAYER}{KUN}!\p"
 	.string "DEVON upgraded your POKéNAV with\n"
 	.string "the MATCH CALL system, huh?\p"
 	.string "We should register each other so we\n"
@@ -1138,7 +1139,7 @@ Route104_Text_RegisteredMay:
 	.string "in the POKéNAV.$"
 
 Route104_Text_MayHowsYourPokedex:
-	.string "MAY: Oh, by the way, {PLAYER}{KUN},\n"
+	.string "May: Oh, by the way, {PLAYER}{KUN},\n"
 	.string "how's your POKéDEX coming along?$"
 
 Route104_Text_MayMinesDecentLetsBattle:
@@ -1223,5 +1224,5 @@ Route104_Text_BrendanPostBattle:
 	.string "at handling Pokémon.\p"
 	.string "But, you know, you shouldn't just be\n"
 	.string "making Pokémon battle.\p"
-	.string "Like MR. BRINEY, it's important to\n"
+	.string "Like Mr. Briney, it's important to\n"
 	.string "become friends with your Pokémon.$"

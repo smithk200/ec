@@ -900,8 +900,8 @@ static bool8 IsRunningDisallowedByMetatile(u8 tile)
 {
     if (MetatileBehavior_IsRunningDisallowed(tile))
         return TRUE;
-    if (MetatileBehavior_IsFortreeBridge(tile) && (PlayerGetElevation() & 1) == 0)
-        return TRUE;
+    //if (MetatileBehavior_IsFortreeBridge(tile) && (PlayerGetElevation() & 1) == 0)
+        //return TRUE;
     return FALSE;
 }
 
@@ -979,11 +979,13 @@ void GetOnOffBike(u8 transitionFlags)
         Overworld_ClearSavedMusic();
         Overworld_PlaySpecialMapMusic();
     }
-    else
+    else //don't want special music for biking
     {
         SetPlayerAvatarTransitionFlags(transitionFlags);
-        Overworld_SetSavedMusic(MUS_CYCLING);
-        Overworld_ChangeMusicTo(MUS_CYCLING);
+        Overworld_ClearSavedMusic();
+        Overworld_PlaySpecialMapMusic();
+        //Overworld_SetSavedMusic(MUS_CYCLING);
+        //Overworld_ChangeMusicTo(MUS_CYCLING);
     }
 }
 

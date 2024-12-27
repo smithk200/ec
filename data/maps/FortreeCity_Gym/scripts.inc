@@ -213,7 +213,7 @@ FortreeCity_Gym_Text_FlintDefeat:
 FortreeCity_Gym_Text_FlintPostBattle:
 	.string "Ned is holy and he's strong.\n"
 	.string "He's the ultimate Leader!\p"
-	.string "Priase be!$"
+	.string "Praise be!$"
 
 FortreeCity_Gym_Text_AshleyIntro:
 	.string "Ned taught me personally!\n"

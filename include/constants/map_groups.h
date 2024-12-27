@@ -274,6 +274,7 @@
 #define MAP_SPECIAL_DEFENSE_ROOM               (22 | (16 << 8))
 #define MAP_SPEED_ROOM                         (23 | (16 << 8))
 #define MAP_EXPERIENCE_ROOM                    (24 | (16 << 8))
+#define MAP_MONEY_ROOM                         (25 | (16 << 8))
 
 // gMapGroup_IndoorRoute104
 #define MAP_ROUTE104_MR_BRINEYS_HOUSE         (0 | (17 << 8))

@@ -655,8 +655,10 @@ Route111_Text_TrainerTipsSpAtkSpDef:
 	.string "Trainer Tips\p"
 	.string "I didn't have time\n"
 	.string "to create shinies for each\l"
-	.string "Clovermon because I don't\l"
-	.string "have time.\p"
+	.string "Clovermon because I have\l"
+	.string "have to deal with class, \l"
+	.string "work, my parents, and other\l" 
+	.string "things.\p"
 	.string "Deal with it.$"
 
 Route111_Text_ShouldBeMirageTowerAroundHere:

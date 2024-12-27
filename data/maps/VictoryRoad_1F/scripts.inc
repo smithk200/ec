@@ -120,6 +120,11 @@ VictoryRoad_1F_EventScript_Katelynn::
 	msgbox VictoryRoad_1F_Text_KatelynnPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+VictoryRoad_1F_EventScript_WLC::
+	trainerbattle_single TRAINER_WLC_2, VictoryRoad_1F_Text_WLCIntro, VictoryRoad_1F_Text_WLCDefeat
+	msgbox VictoryRoad_1F_Text_WLCPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 VictoryRoad_1F_Text_WallyNotGoingToLoseAnymore:
 	.string "Wally: Hi! {PLAYER}! (cough)\p"
 	.string "I bet you're surprised to see me here!\p"
@@ -184,17 +189,17 @@ VictoryRoad_1F_Text_AlbertPostBattle:
 
 VictoryRoad_1F_Text_HopeIntro:
 	.string "This seemingly infinite and harsh road\n"
-	.string "lives up to its name of VICTORY.$"
+	.string "lives up to its name of victory.$"
 
 VictoryRoad_1F_Text_HopeDefeat:
 	.string "Your battle style is fantastic…$"
 
 VictoryRoad_1F_Text_HopePostBattle:
 	.string "You seem to have the potential for\n"
-	.string "becoming the CHAMPION.$"
+	.string "becoming the Champion.$"
 
 VictoryRoad_1F_Text_QuincyIntro:
-	.string "What is the VICTORY ROAD?\n"
+	.string "What is the Victory Road?\n"
 	.string "I'll tell you if you win!$"
 
 VictoryRoad_1F_Text_QuincyDefeat:
@@ -218,3 +223,19 @@ VictoryRoad_1F_Text_KatelynnDefeat:
 VictoryRoad_1F_Text_KatelynnPostBattle:
 	.string "Humph, go right on ahead.\n"
 	.string "See if I care.$"
+
+VictoryRoad_1F_Text_WLCIntro:
+	.string "It is I, Dr. William Lane Craig!\n"
+	.string "We meet again, on Victory Road!\p"
+	.string "This time I'll kill you for real!\n"
+	.string "DIE, UNHOLY PAGAN CHILD!!!\p"
+	.string "(pulls out shotgun)$"
+
+VictoryRoad_1F_Text_WLCDefeat:
+	.string "Not this time, too!$"
+
+VictoryRoad_1F_Text_WLCPostBattle:
+	.string "It's always you pagans who defeat\n"
+	.string "us holy Christians.\p"
+	.string "I should have killed you back\n"
+	.string "in Rustboro!$"

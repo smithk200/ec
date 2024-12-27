@@ -372,8 +372,8 @@
 #define TRAINER_DYLAN_5                     368
 #define TRAINER_MARIA_1                     369
 #define TRAINER_MARIA_2                     370
-#define TRAINER_MARIA_3                     371
-#define TRAINER_MARIA_4                     372
+#define TRAINER_WLC_1                       371 //replace match call trainers to create new trainers
+#define TRAINER_WLC_2                       372
 #define TRAINER_MARIA_5                     373
 #define TRAINER_CAMDEN                      374
 #define TRAINER_DEMETRIUS                   375

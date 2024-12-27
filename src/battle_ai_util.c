@@ -3541,7 +3541,7 @@ void IncreasePoisonScore(u8 battlerAtk, u8 battlerDef, u16 move, s16 *score)
     if (AI_CanPoison(battlerAtk, battlerDef, AI_DATA->abilities[battlerDef], move, AI_DATA->partnerMove) && AI_DATA->hpPercents[battlerDef] > 20)
     {
         if (!HasDamagingMove(battlerDef))
-            *score += 2;
+            *score += 4;
 
         if (AI_THINKING_STRUCT->aiFlags & AI_FLAG_STALL && HasMoveEffect(battlerAtk, EFFECT_PROTECT))
             (*score)++;    // stall tactic
@@ -3567,7 +3567,7 @@ void IncreaseBurnScore(u8 battlerAtk, u8 battlerDef, u16 move, s16 *score)
         if (HasMoveWithSplit(battlerDef, SPLIT_PHYSICAL))
         {
             if (CanTargetFaintAi(battlerDef, battlerAtk))
-                *score += 4; // burning the target to stay alive is cool
+                *score += 2; // burning the target to stay alive is cool
         }
 
         if (HasMoveEffect(battlerAtk, EFFECT_HEX) || HasMoveEffect(BATTLE_PARTNER(battlerAtk), EFFECT_HEX))

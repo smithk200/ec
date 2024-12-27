@@ -67,7 +67,7 @@ $(MID_SUBDIR)/heavy_light.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V100 -P1
 
 $(MID_SUBDIR)/vs_trainer_dpp.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V090 -P1
+	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V080 -P1
 
 $(MID_SUBDIR)/bowsercastle3.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G197 -V080 -P1

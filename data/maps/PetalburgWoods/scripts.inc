@@ -394,21 +394,21 @@ PetalburgWoods_Text_ICouldntWin:
 
 PetalburgWoods_Text_ImOutOfPokeBalls:
 	.string "I caught a bunch of Pokémon.\n"
-	.string "Now I'm out of POKé BALLS.$"
+	.string "Now I'm out of Poké Balls.$"
 
 PetalburgWoods_Text_InstantlyPopularWithBugPokemon:
-	.string "If you take BUG Pokémon to school,\n"
+	.string "If you take Bug Pokémon to school,\n"
 	.string "you get to be instantly popular!$"
 
 PetalburgWoods_Text_CantBePopularIfILose:
 	.string "I can't be popular if I lose.$"
 
 PetalburgWoods_Text_PeopleRespectYou:
-	.string "If you have a big BUG Pokémon,\n"
+	.string "If you have a big Bug Pokémon,\n"
 	.string "people respect you for it.$"
 
 PetalburgWoods_Text_IWantRematch1:
-	.string "I want a rematch when my BUG\n"
+	.string "I want a rematch when my Bug\n"
 	.string "Pokémon grow up!\p"
 	.string "I'm registering you in my POKéNAV!$"
 
@@ -418,7 +418,7 @@ PetalburgWoods_Text_IWantRematch2:
 	.string "I'm registering you in my POKéNAV!$"
 
 PetalburgWoods_Text_MyPokemonHaveGrown:
-	.string "My BUG Pokémon have grown.\n"
+	.string "My Bug Pokémon have grown.\n"
 	.string "I'll be popular again.$"
 
 PetalburgWoods_Text_CantBePopularIfLose:
@@ -444,8 +444,8 @@ PetalburgWoods_Text_HiddenItemsExplanation:
 
 PetalburgWoods_Text_TryUsingThisItem:
 	.string "Oh, neat!\n"
-	.string "That's the BADGE from RUSTBORO GYM!\p"
-	.string "You must be a TRAINER.\n"
+	.string "That's the Badge from Rustboro Gym!\p"
+	.string "You must be a Trainer.\n"
 	.string "You should try using this item.$"
 
 PetalburgWoods_Text_MiracleSeedExplanation:

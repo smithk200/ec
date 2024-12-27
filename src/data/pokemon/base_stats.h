@@ -9217,12 +9217,12 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_VIBRAVA] =
     {
-        .baseHP        = 50,
-        .baseAttack    = 70,
-        .baseDefense   = 50,
-        .baseSpeed     = 70,
-        .baseSpAttack  = 50,
-        .baseSpDefense = 50,
+        .baseHP        = 60,
+        .baseAttack    = 80,
+        .baseDefense   = 60,
+        .baseSpeed     = 80,
+        .baseSpAttack  = 60,
+        .baseSpDefense = 60,
         .type1 = TYPE_GROUND,
         .type2 = TYPE_DRAGON,
         .catchRate = 120,
@@ -9246,12 +9246,12 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_FLYGON] =
     {
-        .baseHP        = 80,
-        .baseAttack    = 100,
-        .baseDefense   = 80,
-        .baseSpeed     = 100,
-        .baseSpAttack  = 80,
-        .baseSpDefense = 80,
+        .baseHP        = 90,
+        .baseAttack    = 110,
+        .baseDefense   = 85,
+        .baseSpeed     = 110,
+        .baseSpAttack  = 110,
+        .baseSpDefense = 85,
         .type1 = TYPE_GROUND,
         .type2 = TYPE_DRAGON,
         .catchRate = 45,
@@ -9904,7 +9904,7 @@ const struct BaseStats gBaseStats[] =
 
     [SPECIES_TROPIUS] =
     {
-        .baseHP        = 99,
+        .baseHP        = 120,
         .baseAttack    = 68,
         .baseDefense   = 83,
         .baseSpeed     = 51,
@@ -9921,7 +9921,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_SLOW,
         .eggGroup1 = EGG_GROUP_MONSTER,
         .eggGroup2 = EGG_GROUP_GRASS,
-        .abilities = {ABILITY_CHLOROPHYLL, ABILITY_SOLAR_POWER, ABILITY_HARVEST},
+        .abilities = {ABILITY_CHLOROPHYLL, ABILITY_SOLAR_POWER, ABILITY_THICK_FAT},
         .bodyColor = BODY_COLOR_GREEN,
         .noFlip = FALSE,
     },

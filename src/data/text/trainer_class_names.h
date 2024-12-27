@@ -69,4 +69,5 @@ const u8 gTrainerClassNames[][13] = {
     [TRAINER_CLASS_PHILIP_2] = _("Philip"),
     [TRAINER_CLASS_FEMINIST] = _("Feminist"),
     [TRAINER_CLASS_SCIENTIST] = _("Scientist"),
+    [TRAINER_CLASS_DOCTOR] = _("Dr."),
 };
