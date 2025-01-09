@@ -26,12 +26,13 @@ FortreeCity_House5_Text_TreeHousesAreGreat:
 	.string "living together with Pokémon.$"
 
 FortreeCity_House5_Text_AdaptedToNature:
-	.string "Pokémon and people have adapted to\n"
-	.string "nature for survival.\p"
+	.string "Pokémon, people, and nature were\n"
+	.string "created by God to coexist peacefully.\p"
 	.string "There's no need to make nature\n"
-	.string "conform to the way we want to live.$"
+	.string "conform to our design.\p"
+	.string "It's against God's will!$"
 
 FortreeCity_House5_Text_Zigzagoon:
-	.string "ZIGZAGOON: Bufuu!$"
+	.string "Zigzagoon: Bufuu!$"
 
 `

@@ -199,73 +199,72 @@ RustboroCity_DevonCorp_3F_EventScript_RareRocksDisplay::
 	end
 
 RustboroCity_DevonCorp_3F_Text_MrStoneIHaveFavor:
-	.string "I'm MR. STONE, the PRESIDENT of\n"
-	.string "the DEVON CORPORATION.\p"
+	.string "I'm Mr. Biden, the President of\n"
+	.string "the Devon Corporation.\p"
 	.string "I'd just got word about you!\p"
 	.string "You saved our staff not just once,\n"
 	.string "but twice!\p"
-	.string "I have a favor to ask of an amazing\n"
-	.string "person like you.\p"
-	.string "I understand that you're delivering\n"
-	.string "a package to SLATEPORT's SHIPYARD.\p"
-	.string "Well, on the way, could you stop off in\n"
-	.string "DEWFORD TOWN?\p"
-	.string "I was hoping that you'd deliver a\n"
-	.string "LETTER to STEVEN in DEWFORD.$"
+	.string "Kamala tells me I should have fired\n"
+	.string "him, but... Huh?\p"
+	.string "Why am I here?\p"
+	.string "I uh, have this letter.\p"
+	.string "Well, could you stop off in\n"
+	.string "uh, what was that town?\p"
+	.string "Ah, Dewford!\n"
+	.string "Send the letter to STEVEN in DEWFORD.\p"
+	.string "I don't know why I am CAPTIALIZING\n"
+	.string "my LETTERS when I SPEAK!$"
 
 RustboroCity_DevonCorp_3F_Text_MrStoneWantYouToHaveThis:
-	.string "MR. STONE: Now, you should know that\n"
-	.string "I am a great PRESIDENT.\p"
+	.string "Mr. Biden: Now, you should know that\n"
+	.string "I am a great President.\p"
 	.string "So, I'd never be so cheap as to ask\n"
 	.string "a favor for nothing in return.\p"
 	.string "That's why I want you to have this!$"
 
 RustboroCity_DevonCorp_3F_Text_ReceivedPokenav:
-	.string "{PLAYER} received a POKéNAV.$"
+	.string "{PLAYER} received a Pokénav.$"
 
 RustboroCity_DevonCorp_3F_Text_MrStoneExplainPokenavRestUp:
-	.string "MR. STONE: That device…\p"
-	.string "It's a Pokémon NAVIGATOR, or POKéNAV\n"
-	.string "for short.\p"
-	.string "It's an indispensable tool for any\n"
-	.string "TRAINER on an adventure.\p"
-	.string "It has a map of the HOENN region.\p"
-	.string "You can check the locations of\n"
-	.string "DEWFORD and SLATEPORT easily!\p"
-	.string "By the way, I've heard that sinister\n"
-	.string "criminals--MAGMA and AQUA, I believe--\l"
-	.string "have been making trouble far and wide.\p"
-	.string "I think it would be best if you rested\n"
-	.string "up before you go on your way.$"
+	.string "Mr. Biden: That device…\p"
+	.string "It's a Pokénav.\n"
+	.string "I forgot what it does, again?\p"
+	.string "What's that?p"
+	.string "You need to GOOGLE what this does?\p"
+	.string "Damn you kids and your fancy smartphones!\p"
+	.string "You can do ANYTHING with those!\p"
+	.string "I got hairy legs\n"
+	.string "that turn blond in the sun...$"
 
 RustboroCity_DevonCorp_3F_Text_MrStoneGoWithCautionAndCare:
-	.string "MR. STONE: Well, then, {PLAYER}{KUN},\n"
-	.string "go with caution and care!$"
+	.string "Mr. Biden: Why are you here?\n"
+	.string "I don't remember why you're here!$"
 
 RustboroCity_DevonCorp_3F_Text_CountingOnYou:
-	.string "MR. STONE: I'm counting on you!$"
+	.string "Mr. Biden: Huh?$"
 
 RustboroCity_DevonCorp_3F_Text_ThankYouForDeliveringLetter:
-	.string "MR. STONE: You delivered my LETTER?\n"
-	.string "Thank you kindly!\p"
-	.string "This is my way of thanking you.\n"
-	.string "It should help you, a TRAINER.$"
+	.string "Mr. Biden: You delivered my Letter?\n"
+	.string "I didn't give you one.\p"
+	.string "Do me a favor.\n"
+	.string "Take THIS and leave.$"
 
 RustboroCity_DevonCorp_3F_Text_ExplainExpShare:
-	.string "Mr. Stone: The Vs. Seeker.$"
+	.string "Mr. Biden: The Vs. Seeker.$"
 
 RustboroCity_DevonCorp_3F_Text_NotFamiliarWithTrends:
-	.string "MR. STONE: Since my youth, I've immersed\n"
+	.string "Mr. Biden: Since my youth, I've immersed\n"
 	.string "myself in work.\p"
-	.string "Consequently, I'm not familiar with\n"
-	.string "trends and that sort of thing.\p"
-	.string "But do young people all want to be\n"
-	.string "TRAINERS in the Pokémon LEAGUE?$"
+	.string "I'm working to get re-elected.\p"
+	.string "Hopefully, I can be president again\n"
+	.string "because I don't forget!\n"
+	.string "Like a...\p"
+	.string "What was that animal again?$"
 
 RustboroCity_DevonCorp_3F_Text_ThisIs3rdFloorWaitHere:
-	.string "This is the DEVON CORPORATION's\n"
+	.string "This is the Devon Corporation's\n"
 	.string "third floor.\p"
-	.string "Our PRESIDENT's OFFICE is on\n"
+	.string "Our President's office is on\n"
 	.string "this floor.\p"
 	.string "Anyway, I can't tell you how much I'm\n"
 	.string "grateful for what you've done.\p"
@@ -281,7 +280,7 @@ RustboroCity_DevonCorp_3F_Text_ThisIs3rdFloorWaitHere:
 	.string "Could you wait here a second?$"
 
 RustboroCity_DevonCorp_3F_Text_WordWithPresidentComeWithMe:
-	.string "Our PRESIDENT would like to have\n"
+	.string "Our President would like to have\n"
 	.string "a word with you.\p"
 	.string "Please come with me.$"
 
@@ -299,6 +298,6 @@ RustboroCity_DevonCorp_3F_Text_RepeatAndTimerHugelyPopular:
 
 RustboroCity_DevonCorp_3F_Text_RareRocksDisplay:
 	.string "It's a collection of rare rocks and\n"
-	.string "stones assembled by the PRESIDENT.$"
+	.string "stones assembled by the President.$"
 
 `

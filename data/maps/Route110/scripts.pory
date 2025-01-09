@@ -976,7 +976,7 @@ Route110_Text_TrainerTipsPrlzSleep:
 Route110_Text_TrainerTipsRegisterItems:
 	.string "Trainer Tips\p"
 	.string "This hack is for people who are\n"
-	.string "adults or are not offended.\l"
+	.string "adults or are not offended\l"
 	.string "by Pokémon Clover.\p"
 	.string "Hope you figured out that by now.$"
 

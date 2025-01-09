@@ -731,11 +731,16 @@ PetalburgCity_Text_ThisIsGymSign:
 	.string "Now you know for next time, idiot!$"
 
 PetalburgCity_Text_WaterReflection:
-	.string "My face is reflected in the water.\p"
-	.string "It's a shining grin full of hope…\p"
-	.string "Or it could be a look of somber silence\n"
-	.string "struggling with fear…\p"
-	.string "What do you see reflected in your face?$"
+	.string "This reflecting water makes you think.\p"
+	.string "It makes me think about that poor boy Wally…\n"
+	.string "who has cancer.\p"
+	.string "I wish I could do something to help him.\p"
+	.string "… … … … … … … … … … … …\p"
+	.string "Did you know?\n"
+	.string "The creator of this game, smithj200?\p"
+	.string "His dad got cancer a while back.\n"
+	.string "Spring of 2024, I think.\n"
+	.string "Poor guy. I hope he gets better soon.$"
 
 PetalburgCity_Text_FullPartyExplanation:
 	.string "Let's say you have six Pokémon.\n"

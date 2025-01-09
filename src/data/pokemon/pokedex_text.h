@@ -5516,9 +5516,7 @@ const u8 gTricillionPokedexText[] = _(
     "up using its large head.");
 const u8 gInbitweenPokedexText[] = _(
     "It follows men around as if they\n"
-    "were hypnotized. Although it has a\n"
-    "big horn, it is very soft and\n"
-    "sensitive to touch.");
+    "were hypnotized. It is very gay.");
 const u8 gGeighPokedexText[] = _(
     "When Geigh runs, small rainbows\n"
     "can be seen around its legs. Its wings\n"

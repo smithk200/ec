@@ -23,8 +23,8 @@ EventScriptEverGrandeCityFryDefeated::
 	end
 
 Philip_J_Fry_2_Intro:
-	.string "Hi there! Are you ready to face\n"
-	.string "the Champion yet?\p"
+	.string "Philip J. Fry: Hi there! Are you\n"
+	.string "ready to face the Champion yet?\p"
 	.string "I faced her, and I couldn't defeat\n"
 	.string "her yet. Her Garchomp was what got\l"
 	.string "me in the end.\p"

@@ -4147,7 +4147,7 @@ static const struct TrainerMonItemCustomMoves sParty_Norman1[] = {
 static const struct TrainerMonItemCustomMoves sParty_Ned1[] = {
    {
     .iv = 255,
-    .lvl = 47,
+    .lvl = 46,
     .species = SPECIES_CAROLINE,
     .heldItem = ITEM_YACHE_BERRY,
     .abilityNums = 0,
@@ -4156,7 +4156,7 @@ static const struct TrainerMonItemCustomMoves sParty_Ned1[] = {
     },
     {
     .iv = 255,
-    .lvl = 48,
+    .lvl = 47,
     .species = SPECIES_STARAPTOR,
     .heldItem = ITEM_LEFTOVERS,
     .abilityNums = 0,
@@ -4165,7 +4165,7 @@ static const struct TrainerMonItemCustomMoves sParty_Ned1[] = {
     },
     {
     .iv = 255,
-    .lvl = 49,
+    .lvl = 48,
     .species = SPECIES_SMOXILON,
     .heldItem = ITEM_TOXIC_PLATE,
     .abilityNums = 0,
@@ -4174,7 +4174,7 @@ static const struct TrainerMonItemCustomMoves sParty_Ned1[] = {
     },
     {
     .iv = 255,
-    .lvl = 49,
+    .lvl = 48,
     .species = SPECIES_CORVIKNIGHT,
     .heldItem = ITEM_METAL_COAT,
     .abilityNums = 0,
@@ -4183,7 +4183,7 @@ static const struct TrainerMonItemCustomMoves sParty_Ned1[] = {
     },
     {
     .iv = 255,
-    .lvl = 50,
+    .lvl = 49,
     .species = SPECIES_ZAPDOS,
     .heldItem = ITEM_ZAP_PLATE,
     .abilityNums = 0,
@@ -4192,7 +4192,7 @@ static const struct TrainerMonItemCustomMoves sParty_Ned1[] = {
     },
     {
     .iv = 255,
-    .lvl = 51,
+    .lvl = 50,
     .species = SPECIES_SPRUCIFIX,
     .heldItem = ITEM_POWER_HERB,
     .abilityNums = 0,

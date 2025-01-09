@@ -604,11 +604,16 @@ DewfordTown_EventScript_TrendyPhraseBoy::
 	call Common_EventScript_BufferTrendyPhrase
 	msgbox DewfordTown_Text_XIsTheBiggestHappeningThingRight, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, DewfordTown_EventScript_ConfirmTrendyPhrase
-	goto_if_eq VAR_RESULT, NO, DewfordTown_EventScript_RejectTrendyPhrase
+	goto_if_eq VAR_RESULT, NO, DewfordTown_EventScript_RejectTrendyPhrase2
 	end
 
 DewfordTown_EventScript_ConfirmTrendyPhrase::
 	msgbox DewfordTown_Text_YeahDefinitionOfInRightNow, MSGBOX_DEFAULT
+	release
+	end
+
+DewfordTown_EventScript_RejectTrendyPhrase2
+	msgbox DewfordTown_Text_IDontGiveAFuck, MSGBOX_DEFAULT
 	release
 	end
 
@@ -752,14 +757,14 @@ DewfordTown_Text_XIsTheBiggestHappeningThingRight:
 	.string "I like what's hip, happening, and trendy.\n"
 	.string "I'm always checking it out.\p"
 	.string "Listen, have you heard about this new\n"
-	.string "“{STR_VAR_1}”?\p"
+	.string "“Smart Phone”?\p"
 	.string "That's right!\n"
 	.string "Of course you know!\p"
 	.string "I mean, sheesh,\n"
-	.string "“{STR_VAR_1}”…\l"
+	.string "“Smart Phone”…\l"
 	.string "It's the hottest thing in cool!\p"
 	.string "Wherever you're from,\n"
-	.string "“{STR_VAR_1}”\l"
+	.string "“Smart Phone”\l"
 	.string "is the biggest happening thing, right?$"
 
 DewfordTown_Text_TellMeWhatsNewAndIn:
@@ -799,6 +804,11 @@ DewfordTown_Text_HearOfAnyTrendsComeShareWithMe:
 
 DewfordTown_Text_YeahDefinitionOfInRightNow:
 	.string "Yeah, absolutely right!\p"
-	.string "“{STR_VAR_1}” is the\n"
+	.string "“Smart Phone” is the\n"
 	.string "definition of “in” right now.$"
+
+DewfordTown_Text_IDontGiveAFuck:
+	.string "I don't give a fuck!\n"
+	.string "“Smart Phone” is the\n"
+	.string "definition of “in” right now!$"
 `

@@ -100,7 +100,7 @@ VerdanturfTown_Text_GuyTryingToBustThroughCave:
 	.string "bust up boulders so he can bust out\l"
 	.string "through to the other side.\p"
 	.string "It'd be great if we could go through…\n"
-	.string "It'll make it easy to visit RUSTBORO.$"
+	.string "It'll make it easy to visit Rustboro.$"
 
 VerdanturfTown_Text_EasyToGetToRustboroNow:
 	.string "That cave next to the Pokémon MART\n"
@@ -114,7 +114,7 @@ VerdanturfTown_Text_TownSign:
 	.string "ailments, including cancer.”$"
 
 VerdanturfTown_Text_WandasHouse:
-	.string "WANDA'S HOUSE$"
+	.string "Wanda's House$"
 
 VerdanturfTown_Text_BattleTentSign:
 	.string "BATTLE TENT VERDANTURF SITE\n"

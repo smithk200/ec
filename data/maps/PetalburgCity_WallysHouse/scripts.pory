@@ -132,7 +132,7 @@ PetalburgCity_WallysHouse_Text_WallyLeftWithoutTelling:
 	.string "But our Wally left.\p"
 	.string "He wanted to be the best Pokémon\n"
 	.string "trainer in existence before\l"
-	.string "the cancer killed him.$"
+	.string "the cancer kills him.$"
 
 
 `

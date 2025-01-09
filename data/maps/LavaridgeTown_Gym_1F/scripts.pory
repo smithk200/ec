@@ -254,7 +254,7 @@ LavaridgeTown_Gym_B1F_Text_KeeganPostBattle:
 	.string "You know, if you support Israel,\n"
 	.string "you actually support genocide.\p"
 	.string "Palestinians are kind, gentle\n"
-	.string "people fo, you bigot!$"
+	.string "people, you bigot!$"
 
 LavaridgeTown_Gym_1F_Text_GeraldIntro:
 	.string "Can your Pokémon withstand\n"
@@ -294,11 +294,10 @@ LavaridgeTown_Gym_B1F_Text_JacePostBattle:
 	.string "years old, I can't date her.$"
 
 LavaridgeTown_Gym_B1F_Text_JeffIntro:
-	.string "See how the flames blaze wildly?\n"
-	.string "They flare in anticipation of my win!$"
+	.string "You play with fire, you get burned.$"
 
 LavaridgeTown_Gym_B1F_Text_JeffDefeat:
-	.string "Something didn't go right.$"
+	.string "Aw, shit.$"
 
 LavaridgeTown_Gym_B1F_Text_JeffPostBattle:
 	.string "Well, so what? I say so what?\n"
@@ -306,19 +305,15 @@ LavaridgeTown_Gym_B1F_Text_JeffPostBattle:
 	.string "…Don't even think about trying it!$"
 
 LavaridgeTown_Gym_B1F_Text_EliIntro:
-	.string "As much as I love mountains,\n"
-	.string "I especially love volcanoes.$"
+	.string "Percussion is better than saxophone!$"
 
 LavaridgeTown_Gym_B1F_Text_EliDefeat:
-	.string "Well, it seems to me I lost without\n"
-	.string "ever being in control.$"
+	.string "Damn you!$"
 
 LavaridgeTown_Gym_B1F_Text_EliPostBattle:
-	.string "I stay here because I became a fan\n"
-	.string "of Flannery's power.\p"
-	.string "Huh?\p"
-	.string "Flannery's not the Gym Leader\n"
-	.string "anymore?$"
+	.string "I used to think Flannery was pretty\n"
+	.string "good for a Gym Leader, but she's no match\l"
+	.string "for Mollly!$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryIntro:
 	.string "Hi!$"
@@ -344,13 +339,13 @@ LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis:
 
 LavaridgeTown_Gym_1F_Text_ExplainOverheat:
 	.string "That TM50 contains Overheat.\p"
-	.string "That move inflicts serious damage on\n"
-	.string "the opponent.\p"
-	.string "But it also sharply cuts the\n"
-	.string "Special Attack of the Pokémon\l"
-	.string "using it.\p"
-	.string "It might not\n"
-	.string "be suitable for longer battles.$"
+	.string "That move damages on\n"
+	.string "the opponent really bad.\p"
+	.string "But it also cuts the\n"
+	.string "Special Attack of your Pokémon\l"
+	.string "real bad.\p"
+	.string "You might wanna switch the Pokémon out.\p"
+	.string "Like I do!$"
 
 LavaridgeTown_Gym_1F_Text_RegisteredFlannery:
 	.string "Registered Gym Leader Molly\n"

@@ -324,44 +324,46 @@ PetalburgWoods_Text_NotAOneToBeFound:
 	.string "Not a one to be found…$"
 
 PetalburgWoods_Text_HaveYouSeenShroomish:
-	.string "Hello, have you seen any Pokémon\n"
-	.string "called SHROOMISH around here?\p"
-	.string "I really love that Pokémon.$"
+	.string "Hello, have you seen any\n"
+	.string "marijuana around here?\p"
+	.string "I really love that substance.$"
 
 PetalburgWoods_Text_IWasGoingToAmbushYou:
 	.string "I was going to ambush you, but you\n"
-	.string "had to dawdle in PETALBURG WOODS\l"
+	.string "had to dawdle in Petalburg\l"
 	.string "forever, didn't you?\p"
 	.string "I got sick of waiting, so here I am!$"
 
 PetalburgWoods_Text_HandOverThosePapers:
-	.string "You! DEVON RESEARCHER!\p"
+	.string "You! Devon Researcher!\p"
 	.string "Hand over those papers!$"
 
 PetalburgWoods_Text_YouHaveToHelpMe:
 	.string "Aiyeeeh!\p"
-	.string "You're a Pokémon TRAINER, aren't you?\n"
-	.string "You've got to help me, please!$"
+	.string "You're a Pokémon Trainer, aren't you?\n"
+	.string "You've got to help me, please!\p"
+	.string "I'm too pathetic to be a Pokémon\n"
+	.string "Trainer!\p"
+	.string "Plus, I'm high!$"
 
 PetalburgWoods_Text_NoOneCrossesTeamAqua:
-	.string "Hunh? What do you think you're doing?\n"
+	.string "Waht the hell?\n"
+	.string "What do you think you're doing?\l"
 	.string "What, you're going to protect him?\p"
 	.string "No one who crosses Team Aqua\n"
-	.string "gets any mercy, not even a kid!\p"
+	.string "gets any mercy, not even a stupid!\l"
+	.string "idiot like you!\p"
 	.string "Come on and battle me!$"
 
 PetalburgWoods_Text_YoureKiddingMe:
-	.string "You're kidding me! You're tough!$"
+	.string "You're kidding me! I lost!$"
 
 PetalburgWoods_Text_YouveGotSomeNerve:
-	.string "Grrr… You've got some nerve\n"
-	.string "meddling with Team Aqua!\l"
-	.string "Come on and battle me again!\p"
-	.string "I wish I could say that, but I'm out of\n"
-	.string "Pokémon…\p"
-	.string "And, hey, we of Team Aqua are also\n"
-	.string "after something in RUSTBORO.\p"
-	.string "I'll let you go today!$"
+	.string "Damn… You've got some nerve\n"
+	.string "meddling with Team Aqua!\p"
+	.string "If the cops hadn't taken away my license\n"
+	.string "to kill, I'd have killed you by now!\n"
+	.string "Go! Scram!$"
 
 PetalburgWoods_Text_ThatWasAwfullyClose:
 	.string "Whew…\n"
@@ -387,7 +389,7 @@ PetalburgWoods_Text_YoureLoadedWithItems:
 PetalburgWoods_Text_GoBugPokemonTeam:
 	.string "I caught a whole bunch of Pokémon!\p"
 	.string "Go, go, go!\n"
-	.string "My BUG Pokémon team!$"
+	.string "My Bug Pokémon team!$"
 
 PetalburgWoods_Text_ICouldntWin:
 	.string "I have all these Pokémon,\n"
@@ -405,18 +407,20 @@ PetalburgWoods_Text_CantBePopularIfILose:
 	.string "I can't be popular if I lose.$"
 
 PetalburgWoods_Text_PeopleRespectYou:
-	.string "If you have a big Bug Pokémon,\n"
-	.string "people respect you for it.$"
+	.string "Bug types suck, and I should have known\n"
+	.string "that.\p"
+	.string "Though Bug-type moves are good.\p"
+	.string "They're strong against Dark, Psychic, and Grass!$"
 
 PetalburgWoods_Text_IWantRematch1:
 	.string "I want a rematch when my Bug\n"
 	.string "Pokémon grow up!\p"
-	.string "I'm registering you in my POKéNAV!$"
+	.string "I'm registering you in my Pokénav!$"
 
 PetalburgWoods_Text_IWantRematch2:
-	.string "I want a rematch when my BUG \n"
+	.string "I want a rematch when my Bug \n"
 	.string "Pokémon grow up!\p"
-	.string "I'm registering you in my POKéNAV!$"
+	.string "I'm registering you in my Pokénav!$"
 
 PetalburgWoods_Text_MyPokemonHaveGrown:
 	.string "My Bug Pokémon have grown.\n"
@@ -450,10 +454,10 @@ PetalburgWoods_Text_TryUsingThisItem:
 	.string "You should try using this item.$"
 
 PetalburgWoods_Text_MiracleSeedExplanation:
-	.string "It's a MIRACLE SEED.\n"
+	.string "It's a Miracle Seed.\n"
 	.string "If a Pokémon holds that item, its\l"
-	.string "GRASS-type moves become stronger.\p"
-	.string "Besides MIRACLE SEED, I think there are\n"
+	.string "Grass-type moves become stronger.\p"
+	.string "Besides Miracle Seed, I think there are\n"
 	.string "other convenient items for Pokémon\l"
 	.string "to hold.$"
 

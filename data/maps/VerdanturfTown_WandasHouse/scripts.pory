@@ -104,7 +104,12 @@ VerdanturfTown_WandasHouse_Text_StrongerSpeechShort:
 	.string "Wally: Please watch me, {PLAYER}.\n"
 	.string "I'm going to get stronger than you.\p"
 	.string "When I do, I'm going to challenge you\n"
-	.string "to another battle.$"
+	.string "to another battle.\p"
+	.string "(coughs violently)\p"
+	.string "My doctors say that my cancer\n"
+	.string "is a stage 3.\p"
+	.string "I hope that I can face the Champion\n"
+	.string "before I die…$"
 
 VerdanturfTown_WandasHouse_Text_WallysNextDoor:
 	.string "Uncle: Oh! {PLAYER}{KUN}!\n"

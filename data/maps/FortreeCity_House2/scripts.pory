@@ -9,16 +9,6 @@ FortreeCity_House2_EventScript_HiddenPowerGiver::
 	call_if_unset FLAG_MET_HIDDEN_POWER_GIVER, FortreeCity_House2_EventScript_Greeting
 	msgbox FortreeCity_House2_Text_CoinInWhichHand, MSGBOX_DEFAULT
 	multichoice 21, 8, MULTI_RIGHTLEFT, TRUE
-	switch VAR_RESULT
-	case 1, FortreeCity_House2_EventScript_WrongGuess
-	msgbox FortreeCity_House2_Text_CorrectTryAgainWhichHand, MSGBOX_DEFAULT
-	multichoice 21, 8, MULTI_RIGHTLEFT, TRUE
-	switch VAR_RESULT
-	case 1, FortreeCity_House2_EventScript_WrongGuess
-	msgbox FortreeCity_House2_Text_CorrectTryAgainWhichHand2, MSGBOX_DEFAULT
-	multichoice 21, 8, MULTI_RIGHTLEFT, TRUE
-	switch VAR_RESULT
-	case 0, FortreeCity_House2_EventScript_WrongGuess
 	msgbox FortreeCity_House2_Text_YourHiddenPowerHasAwoken, MSGBOX_DEFAULT
 	giveitem ITEM_TM10
 	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
@@ -67,13 +57,14 @@ FortreeCity_House2_Text_CorrectTryAgainWhichHand2:
 	.string "The right or left?$"
 
 FortreeCity_House2_Text_YourHiddenPowerHasAwoken:
-	.string "Oh! Splendid!\n"
+	.string "Oh! Haha! You were right!\n"
+	.string "It doesn't matter!\l"
 	.string "Your hidden power has awoken!\p"
 	.string "Here, take this and awaken the hidden\n"
 	.string "power of your Pokémon.$"
 
 FortreeCity_House2_Text_ExplainHiddenPower:
-	.string "HIDDEN POWER is a move that changes\n"
+	.string "Hidden Power is a move that changes\n"
 	.string "with the Pokémon.$"
 
 FortreeCity_House2_Text_YouGuessedWrong:
